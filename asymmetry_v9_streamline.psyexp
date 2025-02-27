@@ -1,0 +1,897 @@
+﻿<?xml version="1.0" ?>
+<PsychoPy2experiment encoding="utf-8" version="2024.2.4">
+  <Settings>
+    <Param val="use prefs" valType="str" updates="None" name="Audio latency priority"/>
+    <Param val="use prefs" valType="str" updates="None" name="Audio lib"/>
+    <Param val="" valType="str" updates="None" name="Completed URL"/>
+    <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
+    <Param val="u'results/%s_subj%s_order%s_%s' % (expName, expInfo['subj'], expInfo['block_order'], expInfo['date'])" valType="code" updates="None" name="Data filename"/>
+    <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
+    <Param val="Thank you for your patience." valType="str" updates="None" name="End Message"/>
+    <Param val="{'subj': '', 'block_order': '1 or 2'}" valType="code" updates="None" name="Experiment info"/>
+    <Param val="True" valType="bool" updates="None" name="Force stereo"/>
+    <Param val="True" valType="bool" updates="None" name="Full-screen window"/>
+    <Param val="" valType="str" updates="None" name="HTML path"/>
+    <Param val="" valType="str" updates="None" name="Incomplete URL"/>
+    <Param val="testMonitor" valType="str" updates="None" name="Monitor"/>
+    <Param val="[]" valType="list" updates="None" name="Resources"/>
+    <Param val="False" valType="bool" updates="None" name="Save csv file"/>
+    <Param val="False" valType="bool" updates="None" name="Save excel file"/>
+    <Param val="False" valType="bool" updates="None" name="Save hdf5 file"/>
+    <Param val="False" valType="bool" updates="None" name="Save log file"/>
+    <Param val="True" valType="bool" updates="None" name="Save psydat file"/>
+    <Param val="True" valType="bool" updates="None" name="Save wide csv file"/>
+    <Param val="1" valType="num" updates="None" name="Screen"/>
+    <Param val="True" valType="bool" updates="None" name="Show info dlg"/>
+    <Param val="False" valType="bool" updates="None" name="Show mouse"/>
+    <Param val="height" valType="str" updates="None" name="Units"/>
+    <Param val="" valType="str" updates="None" name="Use version"/>
+    <Param val="[1440, 900]" valType="list" updates="None" name="Window size (pixels)"/>
+    <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+    <Param val="" valType="str" updates="None" name="backgroundImg"/>
+    <Param val="avg" valType="str" updates="None" name="blendMode"/>
+    <Param val="float" valType="str" updates="None" name="clockFormat"/>
+    <Param val="{'thisRow.t': 'priority.CRITICAL', 'expName': 'priority.LOW'}" valType="dict" updates="None" name="colPriority"/>
+    <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+    <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+    <Param val="warning" valType="code" updates="None" name="consoleLoggingLevel"/>
+    <Param val="default" valType="str" updates="None" name="ecSampleRate"/>
+    <Param val="100.1.1.1" valType="str" updates="None" name="elAddress"/>
+    <Param val="FILTER_LEVEL_2" valType="str" updates="None" name="elDataFiltering"/>
+    <Param val="FILTER_LEVEL_OFF" valType="str" updates="None" name="elLiveFiltering"/>
+    <Param val="EYELINK 1000 DESKTOP" valType="str" updates="None" name="elModel"/>
+    <Param val="ELLIPSE_FIT" valType="str" updates="None" name="elPupilAlgorithm"/>
+    <Param val="PUPIL_AREA" valType="str" updates="None" name="elPupilMeasure"/>
+    <Param val="1000" valType="num" updates="None" name="elSampleRate"/>
+    <Param val="False" valType="bool" updates="None" name="elSimMode"/>
+    <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
+    <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
+    <Param val="asymmetry_v8" valType="str" updates="None" name="expName"/>
+    <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
+    <Param val="None" valType="str" updates="None" name="eyetracker"/>
+    <Param val="" valType="code" updates="None" name="frameRate"/>
+    <Param val="Attempting to measure frame rate of screen, please wait..." valType="str" updates="None" name="frameRateMsg"/>
+    <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
+    <Param val="4242" valType="num" updates="None" name="gpPort"/>
+    <Param val="PsychToolbox" valType="str" updates="None" name="keyboardBackend"/>
+    <Param val="exp" valType="code" updates="None" name="logging level"/>
+    <Param val="True" valType="bool" updates="None" name="measureFrameRate"/>
+    <Param val="('MIDDLE_BUTTON',)" valType="list" updates="None" name="mgBlink"/>
+    <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
+    <Param val="0.5" valType="num" updates="None" name="mgSaccade"/>
+    <Param val="neon.local" valType="str" updates="None" name="plCompanionAddress"/>
+    <Param val="8080" valType="num" updates="None" name="plCompanionPort"/>
+    <Param val="True" valType="bool" updates="None" name="plCompanionRecordingEnabled"/>
+    <Param val="0.6" valType="num" updates="None" name="plConfidenceThreshold"/>
+    <Param val="True" valType="bool" updates="None" name="plPupilCaptureRecordingEnabled"/>
+    <Param val="" valType="str" updates="None" name="plPupilCaptureRecordingLocation"/>
+    <Param val="127.0.0.1" valType="str" updates="None" name="plPupilRemoteAddress"/>
+    <Param val="50020" valType="num" updates="None" name="plPupilRemotePort"/>
+    <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
+    <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
+    <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
+    <Param val="False" valType="bool" updates="None" name="rush"/>
+    <Param val="time" valType="str" updates="None" name="sortColumns"/>
+    <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
+    <Param val="" valType="str" updates="None" name="tbModel"/>
+    <Param val="60" valType="num" updates="None" name="tbSampleRate"/>
+    <Param val="" valType="str" updates="None" name="tbSerialNo"/>
+    <Param val="pyglet" valType="str" updates="None" name="winBackend"/>
+  </Settings>
+  <Routines>
+    <Routine name="new_block">
+      <RoutineSettingsComponent name="new_block" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="new_block" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="block_start_code" plugin="None">
+        <Param val="import random, numpy as np&amp;#10;" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="import * as random from 'random';&amp;#10;import * as np from 'numpy';&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="block_outcome, block_bonus = 0, 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="[block_outcome, block_bonus] = [0, 0];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="[block_outcome, block_bonus] = [0, 0];&amp;#10;block_start_txt = `Press space to begin block ${blockN}`;&amp;#10;trial_rows = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(40);&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push((i + ((blockN - 1) * 40)));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="block_outcome, block_bonus = 0, 0&amp;#10;block_start_txt = f'Press space to begin block {blockN}'&amp;#10;&amp;#10;trial_rows = [i + (blockN-1) * 40 for i in range(40)]" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="block_start_code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <TextComponent name="block_start_text" plugin="None">
+        <Param val="1.0000, 1.0000, 1.0000" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="block_start_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$block_start_txt" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <KeyboardComponent name="block_start_resp" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="block_start_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+    </Routine>
+    <Routine name="task">
+      <RoutineSettingsComponent name="task" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="task" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="rand_divider_slider" plugin="None">
+        <Param val="from psychopy.hardware import keyboard&amp;#10;kb = keyboard.Keyboard()" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="import {keyboard} from 'psychopy/hardware';&amp;#10;kb = new keyboard.Keyboard();&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="leftPressed, rightPressed, sliderMoved = .0, .0, .0&amp;#10;positions = []&amp;#10;debug_task_txt = ''" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="[leftPressed, rightPressed, sliderMoved] = [0.0, 0.0, 0.0];&amp;#10;positions = [];&amp;#10;debug_task_txt = &quot;&quot;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="[leftPressed, rightPressed, sliderMoved] = [0.0, 0.0, 0.0];&amp;#10;positions = [];&amp;#10;debug_task_txt = `Trial ${(trial_key + 1)}`;&amp;#10;kb.clearEvents();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="leftPressed, rightPressed, sliderMoved = .0, .0, .0&amp;#10;positions = []&amp;#10;debug_task_txt = f'Trial {trial_key+1}'&amp;#10;&amp;#10;# to collect responses&amp;#10;kb.clearEvents()" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="# for some reason psychopy doesnt remember this assignment&amp;#10;if slider.markerPos == None:&amp;#10;    slider.markerPos = anchor&amp;#10;&amp;#10;if (not leftPressed and kb.getKeys(['left'], waitRelease=False, clear=False))\&amp;#10;or (leftPressed and not kb.getKeys(['left'], waitRelease=True, clear=False)):&amp;#10;    leftPressed, sliderMoved = 1, 1&amp;#10;    if slider.markerPos &gt;= (-.4 + .01):&amp;#10;        slider.markerPos -= 0.01&amp;#10;elif not leftPressed or kb.getKeys(['left'], waitRelease=True, clear=True):&amp;#10;    leftPressed = 0&amp;#10;    &amp;#10;if (not rightPressed and kb.getKeys(['right'], waitRelease=False, clear=False))\&amp;#10;or (rightPressed and not kb.getKeys(['right'], waitRelease=True, clear=False)):&amp;#10;    rightPressed, sliderMoved = 1, 1    &amp;#10;    if slider.markerPos &lt;= (.4 - .01):&amp;#10;        slider.markerPos += 0.01&amp;#10;elif not rightPressed or kb.getKeys(['right'], waitRelease=True, clear=True):&amp;#10;    rightPressed = 0&amp;#10;&amp;#10;positions.append(slider.markerPos)&amp;#10;&amp;#10;# check psychopy_notes for link&amp;#10;&amp;#10;################################## debugging&amp;#10;#if (slider.markerPos &gt;= disp_divider and target &gt;= disp_divider)\&amp;#10;#or (slider.markerPos &lt;= disp_divider and target &lt;= disp_divider):&amp;#10;#    correct = 1&amp;#10;#    outcome = 2 if context == 'rew' else 1&amp;#10;#&amp;#10;#    error = abs(target - slider.markerPos)&amp;#10;#    addn_pts = 1 - 1.5 * error&amp;#10;#    &amp;#10;#else:&amp;#10;#    correct = -1&amp;#10;#    outcome = -1 if context == 'rew' else -2&amp;#10;#    error = abs(target - slider.markerPos)&amp;#10;#    addn_pts = - 1.5 * error &amp;#10;#    &amp;#10;#net_reward = outcome + addn_pts&amp;#10;#&amp;#10;#debug_task_txt  = f'{addn_pts:.03f}'&amp;#10;&amp;#10;################################## end of debugging" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if ((slider.markerPos === null)) {&amp;#10;    slider.markerPos = anchor;&amp;#10;}&amp;#10;if ((((! leftPressed) &amp;&amp; kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: false, &quot;clear&quot;: false})) || (leftPressed &amp;&amp; (! kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: false}))))) {&amp;#10;    [leftPressed, sliderMoved] = [1, 1];&amp;#10;    if ((slider.markerPos &gt;= ((- 0.4) + 0.01))) {&amp;#10;        slider.markerPos -= 0.01;&amp;#10;    }&amp;#10;} else {&amp;#10;    if (((! leftPressed) || kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: true}))) {&amp;#10;        leftPressed = 0;&amp;#10;    }&amp;#10;}&amp;#10;if ((((! rightPressed) &amp;&amp; kb.getKeys([&quot;right&quot;], {&quot;waitRelease&quot;: false, &quot;clear&quot;: false})) || (rightPressed &amp;&amp; (! kb.getKeys([&quot;right&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: false}))))) {&amp;#10;    [rightPressed, sliderMoved] = [1, 1];&amp;#10;    if ((slider.markerPos &lt;= (0.4 - 0.01))) {&amp;#10;        slider.markerPos += 0.01;&amp;#10;    }&amp;#10;} else {&amp;#10;    if (((! rightPressed) || kb.getKeys([&quot;right&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: true}))) {&amp;#10;        rightPressed = 0;&amp;#10;    }&amp;#10;}&amp;#10;positions.push(slider.markerPos);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="psychoJS.experiment.addData(&quot;positions&quot;, positions);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="thisExp.addData('positions', positions)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="rand_divider_slider" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <ImageComponent name="img1" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="$img1_file" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="img1" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="-.6, 0" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val=".5,.5" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="3" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+      </ImageComponent>
+      <ImageComponent name="img2" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="$img2_file" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="img2" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val=".6, 0" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val=".5,.5" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="3" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+      </ImageComponent>
+      <PolygonComponent name="divider_line" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="1.0000, 1.0000, 1.0000" valType="color" updates="constant" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="1.0000, 1.0000, 1.0000" valType="color" updates="constant" name="lineColor"/>
+        <Param val="5" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="divider_line" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="90" valType="num" updates="constant" name="ori"/>
+        <Param val="$disp_div, 0" valType="list" updates="set every repeat" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="line" valType="str" updates="None" name="shape"/>
+        <Param val=".2,0" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="3" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
+      <PolygonComponent name="slider_line" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="1.0000, 1.0000, 1.0000" valType="color" updates="constant" name="fillColor"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="1.0000, 1.0000, 1.0000" valType="color" updates="constant" name="lineColor"/>
+        <Param val="5" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="4" valType="int" updates="constant" name="nVertices"/>
+        <Param val="slider_line" valType="code" updates="None" name="name"/>
+        <Param val="1" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="0, 0" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="line" valType="str" updates="None" name="shape"/>
+        <Param val=".8,.0" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="3" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="list" updates="constant" name="vertices"/>
+      </PolygonComponent>
+      <SliderComponent name="slider" plugin="None">
+        <Param val="" valType="color" updates="constant" name="borderColor"/>
+        <Param val="" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="1.0000, -.5000, 1.0000" valType="color" updates="constant" name="fillColor"/>
+        <Param val="False" valType="bool" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val=".001" valType="num" updates="constant" name="granularity"/>
+        <Param val="" valType="code" updates="None" name="initVal"/>
+        <Param val="" valType="list" updates="constant" name="labels"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="slider" valType="code" updates="None" name="name"/>
+        <Param val="1" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="0,0" valType="list" updates="constant" name="pos"/>
+        <Param val="False" valType="bool" updates="constant" name="readOnly"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val=".8,.05" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="3" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="constant" name="storeHistory"/>
+        <Param val="True" valType="bool" updates="constant" name="storeRating"/>
+        <Param val="True" valType="bool" updates="constant" name="storeRatingTime"/>
+        <Param val="('labels45',)" valType="list" updates="constant" name="styleTweaks"/>
+        <Param val="slider" valType="str" updates="constant" name="styles"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="(-.4,-.3,-.2,-.1,.0,.1,.2,.3,.4)" valType="list" updates="constant" name="ticks"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+      </SliderComponent>
+      <KeyboardComponent name="slider_resp" plugin="None">
+        <Param val="'left','right'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="slider_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="3" valType="code" updates="constant" name="stopVal"/>
+        <Param val="all keys" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+      <KeyboardComponent name="submit_resp" plugin="None">
+        <Param val="'space'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="" valType="str" updates="constant" name="correctAns"/>
+        <Param val="" valType="str" updates="None" name="deviceLabel"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="constant" name="discard previous"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="True" valType="bool" updates="constant" name="forceEndRoutine"/>
+        <Param val="submit_resp" valType="code" updates="None" name="name"/>
+        <Param val="press" valType="str" updates="constant" name="registerOn"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="3" valType="code" updates="constant" name="stopVal"/>
+        <Param val="last key" valType="str" updates="constant" name="store"/>
+        <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
+        <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
+      </KeyboardComponent>
+      <TextComponent name="debug_task_text" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.03" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="debug_task_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="0,-.2" valType="list" updates="set every frame" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="3" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$debug_task_txt" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="feedback">
+      <RoutineSettingsComponent name="feedback" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="feedback" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="fb_code" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="correct, outcome = .0, .0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="[correct, outcome] = [0.0, 0.0];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;no_resp_txt = &quot;&quot;;&amp;#10;[coinLR, coinM, crossLR, crossM] = [0, 0, 0, 0];&amp;#10;[correct, outcome] = [0, 0];&amp;#10;if (((sliderMoved &amp;&amp; (! (submit_resp.keys === null))) &amp;&amp; _pj.in_es6(&quot;space&quot;, submit_resp.keys))) {&amp;#10;    if ((((slider.markerPos &gt;= disp_div) &amp;&amp; (target_pos &gt;= disp_div)) || ((slider.markerPos &lt;= disp_div) &amp;&amp; (target_pos &lt;= disp_div)))) {&amp;#10;        correct = 1;&amp;#10;        outcome = ((valence === &quot;rew&quot;) ? 2 : 1);&amp;#10;        if ((outcome === 2)) {&amp;#10;            coinLR = 1;&amp;#10;        } else {&amp;#10;            if ((outcome === 1)) {&amp;#10;                coinM = 1;&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        correct = (- 1);&amp;#10;        outcome = ((valence === &quot;rew&quot;) ? (- 1) : (- 2));&amp;#10;        if ((outcome === (- 2))) {&amp;#10;            [coinLR, crossLR] = [1, 1];&amp;#10;        } else {&amp;#10;            if ((outcome === (- 1))) {&amp;#10;                [coinM, crossM] = [1, 1];&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    block_outcome += outcome;&amp;#10;    bonus = (1 - Math.pow((target_pos - slider.markerPos), 2));&amp;#10;    block_bonus += bonus;&amp;#10;} else {&amp;#10;    if ((! sliderMoved)) {&amp;#10;        no_resp_txt = &quot;You must move the slider!&quot;;&amp;#10;    } else {&amp;#10;        no_resp_txt = &quot;Respond faster!&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="no_resp_txt = ''&amp;#10;coinLR, coinM, crossLR, crossM = 0, 0, 0, 0&amp;#10;correct, outcome = 0, 0&amp;#10;&amp;#10;if sliderMoved and not submit_resp.keys == None and 'space' in submit_resp.keys:&amp;#10;    &amp;#10;    if (slider.markerPos &gt;= disp_div and target_pos &gt;= disp_div)\&amp;#10;    or (slider.markerPos &lt;= disp_div and target_pos &lt;= disp_div):&amp;#10;        &amp;#10;        correct = 1&amp;#10;        outcome = 2 if valence == 'rew' else 1&amp;#10;        if outcome == 2:&amp;#10;            coinLR = 1&amp;#10;        elif outcome == 1:&amp;#10;            coinM = 1&amp;#10;            &amp;#10;    else:&amp;#10;        &amp;#10;        correct = -1&amp;#10;        outcome = -1 if valence == 'rew' else -2&amp;#10;        if outcome == -2:&amp;#10;            coinLR, crossLR = 1, 1&amp;#10;        elif outcome == -1:&amp;#10;            coinM, crossM = 1, 1   &amp;#10;    &amp;#10;    block_outcome += outcome&amp;#10;    bonus = 1 - (target_pos - slider.markerPos)**2&amp;#10;    block_bonus += bonus&amp;#10;    &amp;#10;elif not sliderMoved:&amp;#10;    no_resp_txt = 'You must move the slider!'&amp;#10;    &amp;#10;else:&amp;#10;    no_resp_txt = 'Respond faster!'&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="psychoJS.experiment.addData(&quot;correct&quot;, correct);&amp;#10;psychoJS.experiment.addData(&quot;outcome&quot;, outcome);&amp;#10;psychoJS.experiment.addData(&quot;trial_key&quot;, trial_key);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="thisExp.addData('correct', correct)&amp;#10;thisExp.addData('outcome', outcome)&amp;#10;thisExp.addData('trial_key', trial_key)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="fb_code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <TextComponent name="no_resp_text" plugin="None">
+        <Param val="1.0000, 1.0000, 1.0000" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Open Sans" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="no_resp_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="0,0" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$no_resp_txt" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+      <ImageComponent name="Lcoin" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="1" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="stims/coin.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="Lcoin" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="-.2, 0" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val=".3,.3" valType="list" updates="constant" name="size"/>
+        <Param val="0" valType="code" updates="None" name="startEstim"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="$coinLR" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+      </ImageComponent>
+      <ImageComponent name="Rcoin" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="1" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="stims/coin.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="Rcoin" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val=".2, 0" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val=".3,.3" valType="list" updates="constant" name="size"/>
+        <Param val="0" valType="code" updates="None" name="startEstim"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="$coinLR" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+      </ImageComponent>
+      <ImageComponent name="Mcoin" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="1" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="stims/coin.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="Mcoin" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val=".3,.3" valType="list" updates="constant" name="size"/>
+        <Param val="0" valType="code" updates="None" name="startEstim"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="$coinM" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+      </ImageComponent>
+      <ImageComponent name="Lcross" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="1" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="stims/cross.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="Lcross" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="-.2, 0" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val=".3,.3" valType="list" updates="constant" name="size"/>
+        <Param val="0" valType="code" updates="None" name="startEstim"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="$crossLR" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+      </ImageComponent>
+      <ImageComponent name="Rcross" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="1" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="stims/cross.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="Rcross" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val=".2, 0" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val=".3,.3" valType="list" updates="constant" name="size"/>
+        <Param val="0" valType="code" updates="None" name="startEstim"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="$crossLR" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+      </ImageComponent>
+      <ImageComponent name="Mcross" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="1" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="stims/cross.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="Mcross" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val=".3,.3" valType="list" updates="constant" name="size"/>
+        <Param val="0" valType="code" updates="None" name="startEstim"/>
+        <Param val="condition" valType="str" updates="None" name="startType"/>
+        <Param val="$crossM" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+      </ImageComponent>
+    </Routine>
+    <Routine name="end_block">
+      <RoutineSettingsComponent name="end_block" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="end_block" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="block_end_code" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="block_end_txt = `You gained ${block_outcome} big coins,&amp;#10;and a bonus of ${Number.parseInt(np.ceil(block_bonus))} small coins`&amp;#10;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="block_end_txt = f'You gained {block_outcome} big coins,\nand a bonus of {int(np.ceil(block_bonus))} small coins'" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="psychoJS.experiment.addData(&quot;block_outcome&quot;, block_outcome);&amp;#10;psychoJS.experiment.addData(&quot;block_bonus&quot;, block_bonus);&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="thisExp.addData('block_outcome', block_outcome)&amp;#10;thisExp.addData('block_bonus', block_bonus)" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="block_end_code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <TextComponent name="block_end_text" plugin="None">
+        <Param val="1.0000, 1.0000, 1.0000" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="block_end_text" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="4" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="$block_end_txt" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="stim">
+      <RoutineSettingsComponent name="stim" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="stim" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <ImageComponent name="targ_pos" plugin="None">
+        <Param val="center" valType="str" updates="constant" name="anchor"/>
+        <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
+        <Param val="False" valType="bool" updates="constant" name="flipVert"/>
+        <Param val="$target_file" valType="file" updates="set every repeat" name="image"/>
+        <Param val="linear" valType="str" updates="constant" name="interpolate"/>
+        <Param val="" valType="str" updates="constant" name="mask"/>
+        <Param val="targ_pos" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val=".6,.6" valType="list" updates="constant" name="size"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="128" valType="num" updates="constant" name="texture resolution"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+      </ImageComponent>
+      <TextComponent name="debug_stim" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.03" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="debug_stim" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="0,-.2" valType="list" updates="set every frame" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="time (s)" valType="str" updates="None" name="startType"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
+    </Routine>
+    <Routine name="delay">
+      <RoutineSettingsComponent name="delay" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="delay" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1.5" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+    </Routine>
+    <Routine name="ITI">
+      <RoutineSettingsComponent name="ITI" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="ITI" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="1" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+    </Routine>
+    <Routine name="select_rows">
+      <RoutineSettingsComponent name="select_rows" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="select_rows" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+      <CodeComponent name="code" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="trial_rows = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(40);&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push((i + ((blockN - 1) * 40)));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="trial_rows = [i + (blockN-1) * 40 for i in range(40)]&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="code" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+    </Routine>
+  </Routines>
+  <Flow>
+    <LoopInitiator loopType="TrialHandler" name="blocks">
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('blockN', 1)]), OrderedDict([('blockN', 2)]), OrderedDict([('blockN', 3)]), OrderedDict([('blockN', 4)]), OrderedDict([('blockN', 5)]), OrderedDict([('blockN', 6)])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="blocks1.csv" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="False" valType="bool"/>
+      <Param name="loopType" updates="None" val="sequential" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="blocks" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="new_block"/>
+    <LoopInitiator loopType="TrialHandler" name="trials">
+      <Param name="Selected rows" updates="None" val="$trial_rows" valType="str"/>
+      <Param name="conditions" updates="None" val="[OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 0), ('stim_pos', 0.1), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.38), ('target_file', 'stims/white_pngs/Shape_0.10_0.00.png'), ('disp_div', 0.0), ('anchor', -0.1014676925838253), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 1), ('stim_pos', 0.1), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.38), ('target_file', 'stims/white_pngs/Shape_0.10_4.00.png'), ('disp_div', 0.0), ('anchor', 0.2247458906568793), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 2), ('stim_pos', 0.3), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.34), ('target_file', 'stims/white_pngs/Shape_0.30_0.00.png'), ('disp_div', 0.0), ('anchor', -0.1296834122304722), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 3), ('stim_pos', 0.3), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.34), ('target_file', 'stims/white_pngs/Shape_0.30_4.00.png'), ('disp_div', 0.0), ('anchor', 0.1219261151185213), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 4), ('stim_pos', 0.5), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.3), ('target_file', 'stims/white_pngs/Shape_0.50_0.00.png'), ('disp_div', 0.0), ('anchor', -0.1887465900566175), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 5), ('stim_pos', 0.5), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.3), ('target_file', 'stims/white_pngs/Shape_0.50_4.00.png'), ('disp_div', 0.0), ('anchor', 0.1173434824244192), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 6), ('stim_pos', 0.7), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.26), ('target_file', 'stims/white_pngs/Shape_0.70_0.00.png'), ('disp_div', 0.0), ('anchor', -0.1183329091200223), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 7), ('stim_pos', 0.7), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.26), ('target_file', 'stims/white_pngs/Shape_0.70_4.00.png'), ('disp_div', 0.0), ('anchor', 0.3951270577841262), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 8), ('stim_pos', 0.9), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.22), ('target_file', 'stims/white_pngs/Shape_0.90_0.00.png'), ('disp_div', 0.0), ('anchor', -0.3233514239339617), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 9), ('stim_pos', 0.9), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.22), ('target_file', 'stims/white_pngs/Shape_0.90_4.00.png'), ('disp_div', 0.0), ('anchor', -0.0141600716222285), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 10), ('stim_pos', 1.1), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.18), ('target_file', 'stims/white_pngs/Shape_1.10_0.00.png'), ('disp_div', 0.0), ('anchor', -0.0293119768058961), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 11), ('stim_pos', 1.1), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.18), ('target_file', 'stims/white_pngs/Shape_1.10_4.00.png'), ('disp_div', 0.0), ('anchor', 0.3714447680891964), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 12), ('stim_pos', 1.3), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.1399999999999999), ('target_file', 'stims/white_pngs/Shape_1.30_0.00.png'), ('disp_div', 0.0), ('anchor', 0.1090400207460569), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 13), ('stim_pos', 1.3), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.1399999999999999), ('target_file', 'stims/white_pngs/Shape_1.30_4.00.png'), ('disp_div', 0.0), ('anchor', -0.1503743898085985), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 14), ('stim_pos', 1.5), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.1), ('target_file', 'stims/white_pngs/Shape_1.50_0.00.png'), ('disp_div', 0.0), ('anchor', -0.2596603528591916), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 15), ('stim_pos', 1.5), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.1), ('target_file', 'stims/white_pngs/Shape_1.50_4.00.png'), ('disp_div', 0.0), ('anchor', 0.2014915548656823), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 16), ('stim_pos', 1.7), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.06), ('target_file', 'stims/white_pngs/Shape_1.70_0.00.png'), ('disp_div', 0.0), ('anchor', -0.1916225618434915), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 17), ('stim_pos', 1.7), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.06), ('target_file', 'stims/white_pngs/Shape_1.70_4.00.png'), ('disp_div', 0.0), ('anchor', -0.091962873009929), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 18), ('stim_pos', 1.9), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.02), ('target_file', 'stims/white_pngs/Shape_1.90_0.00.png'), ('disp_div', 0.0), ('anchor', -0.2836745595336891), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 19), ('stim_pos', 1.9), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.02), ('target_file', 'stims/white_pngs/Shape_1.90_4.00.png'), ('disp_div', 0.0), ('anchor', -0.2283987920844996), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 20), ('stim_pos', 2.1), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.02), ('target_file', 'stims/white_pngs/Shape_2.10_0.00.png'), ('disp_div', 0.0), ('anchor', 0.1449872846597932), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 21), ('stim_pos', 2.1), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.02), ('target_file', 'stims/white_pngs/Shape_2.10_4.00.png'), ('disp_div', 0.0), ('anchor', 0.2494326040037775), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 22), ('stim_pos', 2.3), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.0599999999999999), ('target_file', 'stims/white_pngs/Shape_2.30_0.00.png'), ('disp_div', 0.0), ('anchor', 0.1747819213590145), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 23), ('stim_pos', 2.3), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.0599999999999999), ('target_file', 'stims/white_pngs/Shape_2.30_4.00.png'), ('disp_div', 0.0), ('anchor', 0.1153869745099169), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 24), ('stim_pos', 2.5), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.1), ('target_file', 'stims/white_pngs/Shape_2.50_0.00.png'), ('disp_div', 0.0), ('anchor', 0.3973745014600792), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 25), ('stim_pos', 2.5), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.1), ('target_file', 'stims/white_pngs/Shape_2.50_4.00.png'), ('disp_div', 0.0), ('anchor', 0.0926605696299122), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 26), ('stim_pos', 2.7), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.14), ('target_file', 'stims/white_pngs/Shape_2.70_0.00.png'), ('disp_div', 0.0), ('anchor', 0.2705878307435044), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 27), ('stim_pos', 2.7), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.14), ('target_file', 'stims/white_pngs/Shape_2.70_4.00.png'), ('disp_div', 0.0), ('anchor', -0.3387470996577688), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 28), ('stim_pos', 2.9), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.18), ('target_file', 'stims/white_pngs/Shape_2.90_0.00.png'), ('disp_div', 0.0), ('anchor', 0.3545507657749659), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 29), ('stim_pos', 2.9), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.18), ('target_file', 'stims/white_pngs/Shape_2.90_4.00.png'), ('disp_div', 0.0), ('anchor', 0.0345215654556699), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 30), ('stim_pos', 3.1), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.22), ('target_file', 'stims/white_pngs/Shape_3.10_0.00.png'), ('disp_div', 0.0), ('anchor', 0.3965178954012066), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 31), ('stim_pos', 3.1), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.22), ('target_file', 'stims/white_pngs/Shape_3.10_4.00.png'), ('disp_div', 0.0), ('anchor', -0.0277416507864282), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 32), ('stim_pos', 3.3), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.2599999999999999), ('target_file', 'stims/white_pngs/Shape_3.30_0.00.png'), ('disp_div', 0.0), ('anchor', 0.0830005595516534), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 33), ('stim_pos', 3.3), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.2599999999999999), ('target_file', 'stims/white_pngs/Shape_3.30_4.00.png'), ('disp_div', 0.0), ('anchor', -0.0720134328933181), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 34), ('stim_pos', 3.5), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.3), ('target_file', 'stims/white_pngs/Shape_3.50_0.00.png'), ('disp_div', 0.0), ('anchor', 0.0762520895883717), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 35), ('stim_pos', 3.5), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.3), ('target_file', 'stims/white_pngs/Shape_3.50_4.00.png'), ('disp_div', 0.0), ('anchor', -0.0600060477617612), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 36), ('stim_pos', 3.7), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.3400000000000001), ('target_file', 'stims/white_pngs/Shape_3.70_0.00.png'), ('disp_div', 0.0), ('anchor', 0.1293069625739541), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 37), ('stim_pos', 3.7), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.3400000000000001), ('target_file', 'stims/white_pngs/Shape_3.70_4.00.png'), ('disp_div', 0.0), ('anchor', -0.1451573830832518), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 38), ('stim_pos', 3.9), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.38), ('target_file', 'stims/white_pngs/Shape_3.90_0.00.png'), ('disp_div', 0.0), ('anchor', 0.2111516005536614), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 1), ('run', 1), ('div', 0.0), ('trial_key', 39), ('stim_pos', 3.9), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.38), ('target_file', 'stims/white_pngs/Shape_3.90_4.00.png'), ('disp_div', 0.0), ('anchor', -0.1980071735636303), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 40), ('stim_pos', 0.1), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.38), ('target_file', 'stims/white_pngs/Shape_0.10_0.00.png'), ('disp_div', -0.2), ('anchor', -0.1767877386261337), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 41), ('stim_pos', 0.1), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.38), ('target_file', 'stims/white_pngs/Shape_0.10_4.00.png'), ('disp_div', 0.2), ('anchor', 0.2671213240672535), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 42), ('stim_pos', 0.1), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.38), ('target_file', 'stims/white_pngs/Shape_0.10_0.00.png'), ('disp_div', -0.2), ('anchor', -0.1849213069354973), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 43), ('stim_pos', 0.1), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.38), ('target_file', 'stims/white_pngs/Shape_0.10_4.00.png'), ('disp_div', 0.2), ('anchor', 0.2641461488298461), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 44), ('stim_pos', 0.3), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.34), ('target_file', 'stims/white_pngs/Shape_0.30_0.00.png'), ('disp_div', -0.2), ('anchor', -0.2387238372836452), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 45), ('stim_pos', 0.3), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.34), ('target_file', 'stims/white_pngs/Shape_0.30_4.00.png'), ('disp_div', 0.2), ('anchor', 0.1560833313072659), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 46), ('stim_pos', 0.3), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.34), ('target_file', 'stims/white_pngs/Shape_0.30_0.00.png'), ('disp_div', -0.2), ('anchor', -0.1088567996639245), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 47), ('stim_pos', 0.3), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.34), ('target_file', 'stims/white_pngs/Shape_0.30_4.00.png'), ('disp_div', 0.2), ('anchor', 0.1328214024071161), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 48), ('stim_pos', 0.5), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.3), ('target_file', 'stims/white_pngs/Shape_0.50_0.00.png'), ('disp_div', -0.2), ('anchor', -0.0868231253182722), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 49), ('stim_pos', 0.5), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.3), ('target_file', 'stims/white_pngs/Shape_0.50_4.00.png'), ('disp_div', 0.2), ('anchor', 0.0998365194193119), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 50), ('stim_pos', 0.5), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.3), ('target_file', 'stims/white_pngs/Shape_0.50_0.00.png'), ('disp_div', -0.2), ('anchor', -0.0970041182148421), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 51), ('stim_pos', 0.5), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.3), ('target_file', 'stims/white_pngs/Shape_0.50_4.00.png'), ('disp_div', 0.2), ('anchor', 0.1431232015183148), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 52), ('stim_pos', 0.7), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.26), ('target_file', 'stims/white_pngs/Shape_0.70_0.00.png'), ('disp_div', -0.2), ('anchor', -0.0294283158804121), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 53), ('stim_pos', 0.7), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.26), ('target_file', 'stims/white_pngs/Shape_0.70_4.00.png'), ('disp_div', 0.2), ('anchor', 0.0473342569752395), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 54), ('stim_pos', 0.7), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.26), ('target_file', 'stims/white_pngs/Shape_0.70_0.00.png'), ('disp_div', -0.2), ('anchor', 0.0347391576852066), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 55), ('stim_pos', 0.7), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.26), ('target_file', 'stims/white_pngs/Shape_0.70_4.00.png'), ('disp_div', 0.2), ('anchor', 0.0121460548134904), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 56), ('stim_pos', 0.9), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.22), ('target_file', 'stims/white_pngs/Shape_0.90_0.00.png'), ('disp_div', -0.2), ('anchor', -0.3975922196939633), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 57), ('stim_pos', 0.9), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.22), ('target_file', 'stims/white_pngs/Shape_0.90_4.00.png'), ('disp_div', 0.2), ('anchor', 0.044790223191458), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 58), ('stim_pos', 0.9), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.22), ('target_file', 'stims/white_pngs/Shape_0.90_0.00.png'), ('disp_div', -0.2), ('anchor', -0.0276208755241872), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 59), ('stim_pos', 0.9), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.22), ('target_file', 'stims/white_pngs/Shape_0.90_4.00.png'), ('disp_div', 0.2), ('anchor', 0.1151624025609978), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 60), ('stim_pos', 1.1), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', -0.18), ('target_file', 'stims/white_pngs/Shape_1.10_0.00.png'), ('disp_div', -0.2), ('anchor', 0.0932808110582548), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 61), ('stim_pos', 1.1), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', 0.18), ('target_file', 'stims/white_pngs/Shape_1.10_4.00.png'), ('disp_div', 0.2), ('anchor', 0.0769293963776459), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 62), ('stim_pos', 1.3), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', -0.1399999999999999), ('target_file', 'stims/white_pngs/Shape_1.30_0.00.png'), ('disp_div', -0.2), ('anchor', -0.3567159570923486), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 63), ('stim_pos', 1.3), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', 0.1399999999999999), ('target_file', 'stims/white_pngs/Shape_1.30_4.00.png'), ('disp_div', 0.2), ('anchor', 0.3358549337894073), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 64), ('stim_pos', 1.5), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', -0.1), ('target_file', 'stims/white_pngs/Shape_1.50_0.00.png'), ('disp_div', -0.2), ('anchor', -0.3930098822049266), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 65), ('stim_pos', 1.5), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', 0.1), ('target_file', 'stims/white_pngs/Shape_1.50_4.00.png'), ('disp_div', 0.2), ('anchor', -0.0959546081328094), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 66), ('stim_pos', 1.7), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', -0.06), ('target_file', 'stims/white_pngs/Shape_1.70_0.00.png'), ('disp_div', -0.2), ('anchor', 0.066227056052594), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 67), ('stim_pos', 1.7), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', 0.06), ('target_file', 'stims/white_pngs/Shape_1.70_4.00.png'), ('disp_div', 0.2), ('anchor', -0.2347918586155096), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 68), ('stim_pos', 1.9), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', -0.02), ('target_file', 'stims/white_pngs/Shape_1.90_0.00.png'), ('disp_div', -0.2), ('anchor', 0.1193298829079629), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 69), ('stim_pos', 1.9), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', 0.02), ('target_file', 'stims/white_pngs/Shape_1.90_4.00.png'), ('disp_div', 0.2), ('anchor', 0.1301229525783015), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 70), ('stim_pos', 2.1), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.02), ('target_file', 'stims/white_pngs/Shape_2.10_0.00.png'), ('disp_div', -0.2), ('anchor', 0.124498505046064), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 71), ('stim_pos', 2.1), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.02), ('target_file', 'stims/white_pngs/Shape_2.10_4.00.png'), ('disp_div', 0.2), ('anchor', 0.2114801062121997), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 72), ('stim_pos', 2.3), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.0599999999999999), ('target_file', 'stims/white_pngs/Shape_2.30_0.00.png'), ('disp_div', -0.2), ('anchor', -0.1828257522053155), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 73), ('stim_pos', 2.3), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.0599999999999999), ('target_file', 'stims/white_pngs/Shape_2.30_4.00.png'), ('disp_div', 0.2), ('anchor', -0.2343515378788096), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 74), ('stim_pos', 2.5), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.1), ('target_file', 'stims/white_pngs/Shape_2.50_0.00.png'), ('disp_div', -0.2), ('anchor', 0.2481962001576881), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 75), ('stim_pos', 2.5), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.1), ('target_file', 'stims/white_pngs/Shape_2.50_4.00.png'), ('disp_div', 0.2), ('anchor', -0.2038615210574677), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 76), ('stim_pos', 2.7), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.14), ('target_file', 'stims/white_pngs/Shape_2.70_0.00.png'), ('disp_div', -0.2), ('anchor', -0.0760626889715245), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 77), ('stim_pos', 2.7), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.14), ('target_file', 'stims/white_pngs/Shape_2.70_4.00.png'), ('disp_div', 0.2), ('anchor', -0.270698403980787), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 78), ('stim_pos', 2.9), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.18), ('target_file', 'stims/white_pngs/Shape_2.90_0.00.png'), ('disp_div', -0.2), ('anchor', -0.0844058891559663), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 2), ('run', 1), ('div', -0.2), ('trial_key', 79), ('stim_pos', 2.9), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.18), ('target_file', 'stims/white_pngs/Shape_2.90_4.00.png'), ('disp_div', 0.2), ('anchor', -0.3134894530001193), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 80), ('stim_pos', 1.1), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.18), ('target_file', 'stims/white_pngs/Shape_1.10_0.00.png'), ('disp_div', 0.2), ('anchor', -0.0293854199004343), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 81), ('stim_pos', 1.1), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.18), ('target_file', 'stims/white_pngs/Shape_1.10_4.00.png'), ('disp_div', -0.2), ('anchor', 0.354088069192361), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 82), ('stim_pos', 1.3), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.1399999999999999), ('target_file', 'stims/white_pngs/Shape_1.30_0.00.png'), ('disp_div', 0.2), ('anchor', -0.2937366439646044), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 83), ('stim_pos', 1.3), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.1399999999999999), ('target_file', 'stims/white_pngs/Shape_1.30_4.00.png'), ('disp_div', -0.2), ('anchor', -0.0441532635048106), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 84), ('stim_pos', 1.5), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.1), ('target_file', 'stims/white_pngs/Shape_1.50_0.00.png'), ('disp_div', 0.2), ('anchor', 0.1112997971691995), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 85), ('stim_pos', 1.5), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.1), ('target_file', 'stims/white_pngs/Shape_1.50_4.00.png'), ('disp_div', -0.2), ('anchor', -0.0004949132174216), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 86), ('stim_pos', 1.7), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.06), ('target_file', 'stims/white_pngs/Shape_1.70_0.00.png'), ('disp_div', 0.2), ('anchor', 0.0447331223196617), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 87), ('stim_pos', 1.7), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.06), ('target_file', 'stims/white_pngs/Shape_1.70_4.00.png'), ('disp_div', -0.2), ('anchor', -0.155064651541229), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 88), ('stim_pos', 1.9), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.02), ('target_file', 'stims/white_pngs/Shape_1.90_0.00.png'), ('disp_div', 0.2), ('anchor', -0.2482729050400356), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 89), ('stim_pos', 1.9), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.02), ('target_file', 'stims/white_pngs/Shape_1.90_4.00.png'), ('disp_div', -0.2), ('anchor', 0.2140319152717748), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 90), ('stim_pos', 2.1), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', 0.02), ('target_file', 'stims/white_pngs/Shape_2.10_0.00.png'), ('disp_div', 0.2), ('anchor', 0.2275070143639804), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 91), ('stim_pos', 2.1), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', -0.02), ('target_file', 'stims/white_pngs/Shape_2.10_4.00.png'), ('disp_div', -0.2), ('anchor', 0.1758476612030233), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 92), ('stim_pos', 2.3), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', 0.0599999999999999), ('target_file', 'stims/white_pngs/Shape_2.30_0.00.png'), ('disp_div', 0.2), ('anchor', -0.1431264336717556), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 93), ('stim_pos', 2.3), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', -0.0599999999999999), ('target_file', 'stims/white_pngs/Shape_2.30_4.00.png'), ('disp_div', -0.2), ('anchor', -0.2842631344121689), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 94), ('stim_pos', 2.5), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', 0.1), ('target_file', 'stims/white_pngs/Shape_2.50_0.00.png'), ('disp_div', 0.2), ('anchor', 0.2313140194632854), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 95), ('stim_pos', 2.5), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', -0.1), ('target_file', 'stims/white_pngs/Shape_2.50_4.00.png'), ('disp_div', -0.2), ('anchor', -0.2694534144315266), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 96), ('stim_pos', 2.7), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', 0.14), ('target_file', 'stims/white_pngs/Shape_2.70_0.00.png'), ('disp_div', 0.2), ('anchor', 0.0367148536405055), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 97), ('stim_pos', 2.7), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', -0.14), ('target_file', 'stims/white_pngs/Shape_2.70_4.00.png'), ('disp_div', -0.2), ('anchor', 0.1539778440338864), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 98), ('stim_pos', 2.9), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', 0.18), ('target_file', 'stims/white_pngs/Shape_2.90_0.00.png'), ('disp_div', 0.2), ('anchor', -0.0924657202644273), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 99), ('stim_pos', 2.9), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', -0.18), ('target_file', 'stims/white_pngs/Shape_2.90_4.00.png'), ('disp_div', -0.2), ('anchor', -0.0476001728568887), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 100), ('stim_pos', 3.1), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.22), ('target_file', 'stims/white_pngs/Shape_3.10_0.00.png'), ('disp_div', 0.2), ('anchor', 0.3785312446043721), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 101), ('stim_pos', 3.1), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.22), ('target_file', 'stims/white_pngs/Shape_3.10_4.00.png'), ('disp_div', -0.2), ('anchor', -0.0364556195728797), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 102), ('stim_pos', 3.1), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.22), ('target_file', 'stims/white_pngs/Shape_3.10_0.00.png'), ('disp_div', 0.2), ('anchor', 0.0429380990928972), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 103), ('stim_pos', 3.1), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.22), ('target_file', 'stims/white_pngs/Shape_3.10_4.00.png'), ('disp_div', -0.2), ('anchor', -0.3701411783801195), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 104), ('stim_pos', 3.3), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.2599999999999999), ('target_file', 'stims/white_pngs/Shape_3.30_0.00.png'), ('disp_div', 0.2), ('anchor', 0.1541289179518563), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 105), ('stim_pos', 3.3), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.2599999999999999), ('target_file', 'stims/white_pngs/Shape_3.30_4.00.png'), ('disp_div', -0.2), ('anchor', -0.0317100088275368), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 106), ('stim_pos', 3.3), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.2599999999999999), ('target_file', 'stims/white_pngs/Shape_3.30_0.00.png'), ('disp_div', 0.2), ('anchor', 0.0500177336007294), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 107), ('stim_pos', 3.3), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.2599999999999999), ('target_file', 'stims/white_pngs/Shape_3.30_4.00.png'), ('disp_div', -0.2), ('anchor', 0.0235681872065431), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 108), ('stim_pos', 3.5), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.3), ('target_file', 'stims/white_pngs/Shape_3.50_0.00.png'), ('disp_div', 0.2), ('anchor', 0.0115885048111453), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 109), ('stim_pos', 3.5), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.3), ('target_file', 'stims/white_pngs/Shape_3.50_4.00.png'), ('disp_div', -0.2), ('anchor', -0.0613121846535001), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 110), ('stim_pos', 3.5), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.3), ('target_file', 'stims/white_pngs/Shape_3.50_0.00.png'), ('disp_div', 0.2), ('anchor', 0.0350901973798222), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 111), ('stim_pos', 3.5), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.3), ('target_file', 'stims/white_pngs/Shape_3.50_4.00.png'), ('disp_div', -0.2), ('anchor', -0.0546609468080808), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 112), ('stim_pos', 3.7), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.3400000000000001), ('target_file', 'stims/white_pngs/Shape_3.70_0.00.png'), ('disp_div', 0.2), ('anchor', 0.1994102482227406), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 113), ('stim_pos', 3.7), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.3400000000000001), ('target_file', 'stims/white_pngs/Shape_3.70_4.00.png'), ('disp_div', -0.2), ('anchor', -0.1241978235816951), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 114), ('stim_pos', 3.7), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.3400000000000001), ('target_file', 'stims/white_pngs/Shape_3.70_0.00.png'), ('disp_div', 0.2), ('anchor', 0.2399983842642716), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 115), ('stim_pos', 3.7), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.3400000000000001), ('target_file', 'stims/white_pngs/Shape_3.70_4.00.png'), ('disp_div', -0.2), ('anchor', -0.1414197465660565), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 116), ('stim_pos', 3.9), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.38), ('target_file', 'stims/white_pngs/Shape_3.90_0.00.png'), ('disp_div', 0.2), ('anchor', 0.2396967895215142), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 117), ('stim_pos', 3.9), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.38), ('target_file', 'stims/white_pngs/Shape_3.90_4.00.png'), ('disp_div', -0.2), ('anchor', -0.1335483316150776), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 118), ('stim_pos', 3.9), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.38), ('target_file', 'stims/white_pngs/Shape_3.90_0.00.png'), ('disp_div', 0.2), ('anchor', 0.0894822539923992), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 3), ('run', 1), ('div', 0.2), ('trial_key', 119), ('stim_pos', 3.9), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.38), ('target_file', 'stims/white_pngs/Shape_3.90_4.00.png'), ('disp_div', -0.2), ('anchor', -0.1763302560795986), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 120), ('stim_pos', 0.1), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.38), ('target_file', 'stims/white_pngs/Shape_0.10_4.00.png'), ('disp_div', 0.0), ('anchor', 0.1175805934829167), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 121), ('stim_pos', 0.1), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.38), ('target_file', 'stims/white_pngs/Shape_0.10_0.00.png'), ('disp_div', 0.0), ('anchor', -0.2706224933437459), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 122), ('stim_pos', 0.3), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.34), ('target_file', 'stims/white_pngs/Shape_0.30_4.00.png'), ('disp_div', 0.0), ('anchor', 0.2135412653909091), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 123), ('stim_pos', 0.3), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.34), ('target_file', 'stims/white_pngs/Shape_0.30_0.00.png'), ('disp_div', 0.0), ('anchor', -0.0499686773259037), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 124), ('stim_pos', 0.5), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.3), ('target_file', 'stims/white_pngs/Shape_0.50_4.00.png'), ('disp_div', 0.0), ('anchor', 0.1801800661372501), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 125), ('stim_pos', 0.5), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.3), ('target_file', 'stims/white_pngs/Shape_0.50_0.00.png'), ('disp_div', 0.0), ('anchor', -0.1947158986499298), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 126), ('stim_pos', 0.7), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.26), ('target_file', 'stims/white_pngs/Shape_0.70_4.00.png'), ('disp_div', 0.0), ('anchor', 0.3881389799109573), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 127), ('stim_pos', 0.7), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.26), ('target_file', 'stims/white_pngs/Shape_0.70_0.00.png'), ('disp_div', 0.0), ('anchor', -0.1000045264090177), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 128), ('stim_pos', 0.9), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.22), ('target_file', 'stims/white_pngs/Shape_0.90_4.00.png'), ('disp_div', 0.0), ('anchor', 0.0450421268108496), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 129), ('stim_pos', 0.9), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.22), ('target_file', 'stims/white_pngs/Shape_0.90_0.00.png'), ('disp_div', 0.0), ('anchor', -0.0427870340380939), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 130), ('stim_pos', 1.1), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.18), ('target_file', 'stims/white_pngs/Shape_1.10_4.00.png'), ('disp_div', 0.0), ('anchor', 0.3523630469660597), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 131), ('stim_pos', 1.1), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.18), ('target_file', 'stims/white_pngs/Shape_1.10_0.00.png'), ('disp_div', 0.0), ('anchor', -0.0038562804836916), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 132), ('stim_pos', 1.3), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.1399999999999999), ('target_file', 'stims/white_pngs/Shape_1.30_4.00.png'), ('disp_div', 0.0), ('anchor', -0.0372587197886902), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 133), ('stim_pos', 1.3), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.1399999999999999), ('target_file', 'stims/white_pngs/Shape_1.30_0.00.png'), ('disp_div', 0.0), ('anchor', -0.3567874366861734), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 134), ('stim_pos', 1.5), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.1), ('target_file', 'stims/white_pngs/Shape_1.50_4.00.png'), ('disp_div', 0.0), ('anchor', -0.1110126041512655), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 135), ('stim_pos', 1.5), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.1), ('target_file', 'stims/white_pngs/Shape_1.50_0.00.png'), ('disp_div', 0.0), ('anchor', -0.3088434704119954), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 136), ('stim_pos', 1.7), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.06), ('target_file', 'stims/white_pngs/Shape_1.70_4.00.png'), ('disp_div', 0.0), ('anchor', -0.190148999360358), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 137), ('stim_pos', 1.7), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.06), ('target_file', 'stims/white_pngs/Shape_1.70_0.00.png'), ('disp_div', 0.0), ('anchor', -0.3236665719474014), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 138), ('stim_pos', 1.9), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.02), ('target_file', 'stims/white_pngs/Shape_1.90_4.00.png'), ('disp_div', 0.0), ('anchor', -0.1667271760535936), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 139), ('stim_pos', 1.9), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.02), ('target_file', 'stims/white_pngs/Shape_1.90_0.00.png'), ('disp_div', 0.0), ('anchor', 0.1968832593244178), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 140), ('stim_pos', 2.1), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.02), ('target_file', 'stims/white_pngs/Shape_2.10_4.00.png'), ('disp_div', 0.0), ('anchor', -0.2529534653740394), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 141), ('stim_pos', 2.1), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.02), ('target_file', 'stims/white_pngs/Shape_2.10_0.00.png'), ('disp_div', 0.0), ('anchor', 0.3011757295285197), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 142), ('stim_pos', 2.3), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.0599999999999999), ('target_file', 'stims/white_pngs/Shape_2.30_4.00.png'), ('disp_div', 0.0), ('anchor', 0.1021741569683097), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 143), ('stim_pos', 2.3), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.0599999999999999), ('target_file', 'stims/white_pngs/Shape_2.30_0.00.png'), ('disp_div', 0.0), ('anchor', -0.2246838529224318), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 144), ('stim_pos', 2.5), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.1), ('target_file', 'stims/white_pngs/Shape_2.50_4.00.png'), ('disp_div', 0.0), ('anchor', 0.0241340295672622), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 145), ('stim_pos', 2.5), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.1), ('target_file', 'stims/white_pngs/Shape_2.50_0.00.png'), ('disp_div', 0.0), ('anchor', -0.0139725813694884), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 146), ('stim_pos', 2.7), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.14), ('target_file', 'stims/white_pngs/Shape_2.70_4.00.png'), ('disp_div', 0.0), ('anchor', -0.3612712465022687), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 147), ('stim_pos', 2.7), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.14), ('target_file', 'stims/white_pngs/Shape_2.70_0.00.png'), ('disp_div', 0.0), ('anchor', 0.2920702771317132), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 148), ('stim_pos', 2.9), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.18), ('target_file', 'stims/white_pngs/Shape_2.90_4.00.png'), ('disp_div', 0.0), ('anchor', -0.0343398987185922), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 149), ('stim_pos', 2.9), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.18), ('target_file', 'stims/white_pngs/Shape_2.90_0.00.png'), ('disp_div', 0.0), ('anchor', 0.0258732145854821), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 150), ('stim_pos', 3.1), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.22), ('target_file', 'stims/white_pngs/Shape_3.10_4.00.png'), ('disp_div', 0.0), ('anchor', -0.3808877454664264), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 151), ('stim_pos', 3.1), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.22), ('target_file', 'stims/white_pngs/Shape_3.10_0.00.png'), ('disp_div', 0.0), ('anchor', 0.0709568505672647), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 152), ('stim_pos', 3.3), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.2599999999999999), ('target_file', 'stims/white_pngs/Shape_3.30_4.00.png'), ('disp_div', 0.0), ('anchor', -0.3730325420484667), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 153), ('stim_pos', 3.3), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.2599999999999999), ('target_file', 'stims/white_pngs/Shape_3.30_0.00.png'), ('disp_div', 0.0), ('anchor', 0.0833799599342647), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 154), ('stim_pos', 3.5), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.3), ('target_file', 'stims/white_pngs/Shape_3.50_4.00.png'), ('disp_div', 0.0), ('anchor', -0.1474082049893819), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 155), ('stim_pos', 3.5), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.3), ('target_file', 'stims/white_pngs/Shape_3.50_0.00.png'), ('disp_div', 0.0), ('anchor', 0.0667500725430231), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 156), ('stim_pos', 3.7), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.3400000000000001), ('target_file', 'stims/white_pngs/Shape_3.70_4.00.png'), ('disp_div', 0.0), ('anchor', -0.1169208903935913), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 157), ('stim_pos', 3.7), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.3400000000000001), ('target_file', 'stims/white_pngs/Shape_3.70_0.00.png'), ('disp_div', 0.0), ('anchor', 0.1017393750321379), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 158), ('stim_pos', 3.9), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.38), ('target_file', 'stims/white_pngs/Shape_3.90_4.00.png'), ('disp_div', 0.0), ('anchor', -0.1023527418576203), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 4), ('run', 2), ('div', 0.0), ('trial_key', 159), ('stim_pos', 3.9), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.38), ('target_file', 'stims/white_pngs/Shape_3.90_0.00.png'), ('disp_div', 0.0), ('anchor', 0.2144306304038784), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 160), ('stim_pos', 0.1), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.38), ('target_file', 'stims/white_pngs/Shape_0.10_4.00.png'), ('disp_div', 0.2), ('anchor', 0.1202644268178809), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 161), ('stim_pos', 0.1), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.38), ('target_file', 'stims/white_pngs/Shape_0.10_0.00.png'), ('disp_div', -0.2), ('anchor', -0.126661762767589), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 162), ('stim_pos', 0.1), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.38), ('target_file', 'stims/white_pngs/Shape_0.10_4.00.png'), ('disp_div', 0.2), ('anchor', 0.2604869768422904), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 163), ('stim_pos', 0.1), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.38), ('target_file', 'stims/white_pngs/Shape_0.10_0.00.png'), ('disp_div', -0.2), ('anchor', -0.1503456485947462), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 164), ('stim_pos', 0.3), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.34), ('target_file', 'stims/white_pngs/Shape_0.30_4.00.png'), ('disp_div', 0.2), ('anchor', 0.0485176394071624), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 165), ('stim_pos', 0.3), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.34), ('target_file', 'stims/white_pngs/Shape_0.30_0.00.png'), ('disp_div', -0.2), ('anchor', -0.2328034599794186), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 166), ('stim_pos', 0.3), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.34), ('target_file', 'stims/white_pngs/Shape_0.30_4.00.png'), ('disp_div', 0.2), ('anchor', 0.1492242329273725), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 167), ('stim_pos', 0.3), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.34), ('target_file', 'stims/white_pngs/Shape_0.30_0.00.png'), ('disp_div', -0.2), ('anchor', -0.1603428965301193), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 168), ('stim_pos', 0.5), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.3), ('target_file', 'stims/white_pngs/Shape_0.50_4.00.png'), ('disp_div', 0.2), ('anchor', 0.1535351841014595), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 169), ('stim_pos', 0.5), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.3), ('target_file', 'stims/white_pngs/Shape_0.50_0.00.png'), ('disp_div', -0.2), ('anchor', -0.0484543064730674), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 170), ('stim_pos', 0.5), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.3), ('target_file', 'stims/white_pngs/Shape_0.50_4.00.png'), ('disp_div', 0.2), ('anchor', 0.0030486500234029), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 171), ('stim_pos', 0.5), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.3), ('target_file', 'stims/white_pngs/Shape_0.50_0.00.png'), ('disp_div', -0.2), ('anchor', -0.1191802361378274), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 172), ('stim_pos', 0.7), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.26), ('target_file', 'stims/white_pngs/Shape_0.70_4.00.png'), ('disp_div', 0.2), ('anchor', 0.0779419004095292), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 173), ('stim_pos', 0.7), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.26), ('target_file', 'stims/white_pngs/Shape_0.70_0.00.png'), ('disp_div', -0.2), ('anchor', -0.3619580427918423), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 174), ('stim_pos', 0.7), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.26), ('target_file', 'stims/white_pngs/Shape_0.70_4.00.png'), ('disp_div', 0.2), ('anchor', 0.3877205398883845), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 175), ('stim_pos', 0.7), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.26), ('target_file', 'stims/white_pngs/Shape_0.70_0.00.png'), ('disp_div', -0.2), ('anchor', 0.0017943470559498), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 176), ('stim_pos', 0.9), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.22), ('target_file', 'stims/white_pngs/Shape_0.90_4.00.png'), ('disp_div', 0.2), ('anchor', 0.0332251146849215), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 177), ('stim_pos', 0.9), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.22), ('target_file', 'stims/white_pngs/Shape_0.90_0.00.png'), ('disp_div', -0.2), ('anchor', -0.1102234435673902), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 178), ('stim_pos', 0.9), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.22), ('target_file', 'stims/white_pngs/Shape_0.90_4.00.png'), ('disp_div', 0.2), ('anchor', 0.3523705246955216), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 179), ('stim_pos', 0.9), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.22), ('target_file', 'stims/white_pngs/Shape_0.90_0.00.png'), ('disp_div', -0.2), ('anchor', 0.0532770257449123), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 180), ('stim_pos', 1.1), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', 0.18), ('target_file', 'stims/white_pngs/Shape_1.10_4.00.png'), ('disp_div', 0.2), ('anchor', 0.0089831825867184), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 181), ('stim_pos', 1.1), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', -0.18), ('target_file', 'stims/white_pngs/Shape_1.10_0.00.png'), ('disp_div', -0.2), ('anchor', 0.0915758999514226), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 182), ('stim_pos', 1.3), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', 0.1399999999999999), ('target_file', 'stims/white_pngs/Shape_1.30_4.00.png'), ('disp_div', 0.2), ('anchor', -0.0623021432192508), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 183), ('stim_pos', 1.3), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', -0.1399999999999999), ('target_file', 'stims/white_pngs/Shape_1.30_0.00.png'), ('disp_div', -0.2), ('anchor', -0.3617967711668814), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 184), ('stim_pos', 1.5), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', 0.1), ('target_file', 'stims/white_pngs/Shape_1.50_4.00.png'), ('disp_div', 0.2), ('anchor', -0.1129086062016099), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 185), ('stim_pos', 1.5), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', -0.1), ('target_file', 'stims/white_pngs/Shape_1.50_0.00.png'), ('disp_div', -0.2), ('anchor', -0.2068445383125093), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 186), ('stim_pos', 1.7), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', 0.06), ('target_file', 'stims/white_pngs/Shape_1.70_4.00.png'), ('disp_div', 0.2), ('anchor', -0.1579443479700917), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 187), ('stim_pos', 1.7), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', -0.06), ('target_file', 'stims/white_pngs/Shape_1.70_0.00.png'), ('disp_div', -0.2), ('anchor', 0.2250935686039274), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 188), ('stim_pos', 1.9), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', 0.02), ('target_file', 'stims/white_pngs/Shape_1.90_4.00.png'), ('disp_div', 0.2), ('anchor', -0.1259895032003187), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 189), ('stim_pos', 1.9), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', -0.02), ('target_file', 'stims/white_pngs/Shape_1.90_0.00.png'), ('disp_div', -0.2), ('anchor', -0.2901880373014916), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 190), ('stim_pos', 2.1), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.02), ('target_file', 'stims/white_pngs/Shape_2.10_4.00.png'), ('disp_div', 0.2), ('anchor', 0.2513431331558375), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 191), ('stim_pos', 2.1), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.02), ('target_file', 'stims/white_pngs/Shape_2.10_0.00.png'), ('disp_div', -0.2), ('anchor', -0.2049134203080224), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 192), ('stim_pos', 2.3), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.0599999999999999), ('target_file', 'stims/white_pngs/Shape_2.30_4.00.png'), ('disp_div', 0.2), ('anchor', -0.2346419327396165), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 193), ('stim_pos', 2.3), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.0599999999999999), ('target_file', 'stims/white_pngs/Shape_2.30_0.00.png'), ('disp_div', -0.2), ('anchor', -0.1171780907630083), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 194), ('stim_pos', 2.5), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.1), ('target_file', 'stims/white_pngs/Shape_2.50_4.00.png'), ('disp_div', 0.2), ('anchor', 0.1810317149838507), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 195), ('stim_pos', 2.5), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.1), ('target_file', 'stims/white_pngs/Shape_2.50_0.00.png'), ('disp_div', -0.2), ('anchor', 0.391436088280956), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 196), ('stim_pos', 2.7), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.14), ('target_file', 'stims/white_pngs/Shape_2.70_4.00.png'), ('disp_div', 0.2), ('anchor', -0.3320225551836653), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 197), ('stim_pos', 2.7), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.14), ('target_file', 'stims/white_pngs/Shape_2.70_0.00.png'), ('disp_div', -0.2), ('anchor', -0.0085002033552764), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 198), ('stim_pos', 2.9), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.18), ('target_file', 'stims/white_pngs/Shape_2.90_4.00.png'), ('disp_div', 0.2), ('anchor', 0.0282968708706957), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 5), ('run', 2), ('div', -0.2), ('trial_key', 199), ('stim_pos', 2.9), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.18), ('target_file', 'stims/white_pngs/Shape_2.90_0.00.png'), ('disp_div', -0.2), ('anchor', 0.0578706972321979), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 200), ('stim_pos', 1.1), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.18), ('target_file', 'stims/white_pngs/Shape_1.10_4.00.png'), ('disp_div', -0.2), ('anchor', -0.0326310298585899), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 201), ('stim_pos', 1.1), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.18), ('target_file', 'stims/white_pngs/Shape_1.10_0.00.png'), ('disp_div', 0.2), ('anchor', -0.3555241927304182), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 202), ('stim_pos', 1.3), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.1399999999999999), ('target_file', 'stims/white_pngs/Shape_1.30_4.00.png'), ('disp_div', -0.2), ('anchor', 0.2810692865309344), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 203), ('stim_pos', 1.3), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.1399999999999999), ('target_file', 'stims/white_pngs/Shape_1.30_0.00.png'), ('disp_div', 0.2), ('anchor', 0.147155279119971), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 204), ('stim_pos', 1.5), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.1), ('target_file', 'stims/white_pngs/Shape_1.50_4.00.png'), ('disp_div', -0.2), ('anchor', -0.1058457841121103), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 205), ('stim_pos', 1.5), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.1), ('target_file', 'stims/white_pngs/Shape_1.50_0.00.png'), ('disp_div', 0.2), ('anchor', -0.3486483176239546), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 206), ('stim_pos', 1.7), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.06), ('target_file', 'stims/white_pngs/Shape_1.70_4.00.png'), ('disp_div', -0.2), ('anchor', -0.0544914417927882), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 207), ('stim_pos', 1.7), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.06), ('target_file', 'stims/white_pngs/Shape_1.70_0.00.png'), ('disp_div', 0.2), ('anchor', -0.2345705835984545), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 208), ('stim_pos', 1.9), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', 0.02), ('target_file', 'stims/white_pngs/Shape_1.90_4.00.png'), ('disp_div', -0.2), ('anchor', -0.2485266361170316), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 209), ('stim_pos', 1.9), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', -0.02), ('target_file', 'stims/white_pngs/Shape_1.90_0.00.png'), ('disp_div', 0.2), ('anchor', -0.2211903478819374), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 210), ('stim_pos', 2.1), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', -0.02), ('target_file', 'stims/white_pngs/Shape_2.10_4.00.png'), ('disp_div', -0.2), ('anchor', -0.2907560722013798), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 211), ('stim_pos', 2.1), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', 0.02), ('target_file', 'stims/white_pngs/Shape_2.10_0.00.png'), ('disp_div', 0.2), ('anchor', -0.2651120453029459), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 212), ('stim_pos', 2.3), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', -0.0599999999999999), ('target_file', 'stims/white_pngs/Shape_2.30_4.00.png'), ('disp_div', -0.2), ('anchor', -0.3502314837126086), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 213), ('stim_pos', 2.3), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', 0.0599999999999999), ('target_file', 'stims/white_pngs/Shape_2.30_0.00.png'), ('disp_div', 0.2), ('anchor', 0.2206544786523213), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 214), ('stim_pos', 2.5), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', -0.1), ('target_file', 'stims/white_pngs/Shape_2.50_4.00.png'), ('disp_div', -0.2), ('anchor', -0.2775496496090802), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 215), ('stim_pos', 2.5), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', 0.1), ('target_file', 'stims/white_pngs/Shape_2.50_0.00.png'), ('disp_div', 0.2), ('anchor', 0.2899312418688895), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 216), ('stim_pos', 2.7), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', -0.14), ('target_file', 'stims/white_pngs/Shape_2.70_4.00.png'), ('disp_div', -0.2), ('anchor', -0.2959153836951763), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 217), ('stim_pos', 2.7), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', 0.14), ('target_file', 'stims/white_pngs/Shape_2.70_0.00.png'), ('disp_div', 0.2), ('anchor', -0.0709906270477455), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 218), ('stim_pos', 2.9), ('noise_pos', 4.0), ('valence', 'pen'), ('valence_disp', 'rew_pen'), ('target_pos', -0.18), ('target_file', 'stims/white_pngs/Shape_2.90_4.00.png'), ('disp_div', -0.2), ('anchor', 0.0070849452136901), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 219), ('stim_pos', 2.9), ('noise_pos', 0.0), ('valence', 'pen'), ('valence_disp', 'pen_rew'), ('target_pos', 0.18), ('target_file', 'stims/white_pngs/Shape_2.90_0.00.png'), ('disp_div', 0.2), ('anchor', 0.046740957812521), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 220), ('stim_pos', 3.1), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.22), ('target_file', 'stims/white_pngs/Shape_3.10_4.00.png'), ('disp_div', -0.2), ('anchor', 0.0015455061997237), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 221), ('stim_pos', 3.1), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.22), ('target_file', 'stims/white_pngs/Shape_3.10_0.00.png'), ('disp_div', 0.2), ('anchor', 0.0072762967019041), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 222), ('stim_pos', 3.1), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.22), ('target_file', 'stims/white_pngs/Shape_3.10_4.00.png'), ('disp_div', -0.2), ('anchor', -0.3212363341283267), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 223), ('stim_pos', 3.1), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.22), ('target_file', 'stims/white_pngs/Shape_3.10_0.00.png'), ('disp_div', 0.2), ('anchor', 0.0061313341002744), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 224), ('stim_pos', 3.3), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.2599999999999999), ('target_file', 'stims/white_pngs/Shape_3.30_4.00.png'), ('disp_div', -0.2), ('anchor', -0.1197331138822572), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 225), ('stim_pos', 3.3), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.2599999999999999), ('target_file', 'stims/white_pngs/Shape_3.30_0.00.png'), ('disp_div', 0.2), ('anchor', 0.1573934645831258), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 226), ('stim_pos', 3.3), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.2599999999999999), ('target_file', 'stims/white_pngs/Shape_3.30_4.00.png'), ('disp_div', -0.2), ('anchor', -0.0419936917648691), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 227), ('stim_pos', 3.3), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.2599999999999999), ('target_file', 'stims/white_pngs/Shape_3.30_0.00.png'), ('disp_div', 0.2), ('anchor', 0.0195881588073356), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 228), ('stim_pos', 3.5), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.3), ('target_file', 'stims/white_pngs/Shape_3.50_4.00.png'), ('disp_div', -0.2), ('anchor', -0.1784112527187354), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 229), ('stim_pos', 3.5), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.3), ('target_file', 'stims/white_pngs/Shape_3.50_0.00.png'), ('disp_div', 0.2), ('anchor', 0.0579438565420498), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 230), ('stim_pos', 3.5), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.3), ('target_file', 'stims/white_pngs/Shape_3.50_4.00.png'), ('disp_div', -0.2), ('anchor', -0.03250538983175), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 231), ('stim_pos', 3.5), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.3), ('target_file', 'stims/white_pngs/Shape_3.50_0.00.png'), ('disp_div', 0.2), ('anchor', 0.0347710265444349), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 232), ('stim_pos', 3.7), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.3400000000000001), ('target_file', 'stims/white_pngs/Shape_3.70_4.00.png'), ('disp_div', -0.2), ('anchor', -0.1825318214000724), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 233), ('stim_pos', 3.7), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.3400000000000001), ('target_file', 'stims/white_pngs/Shape_3.70_0.00.png'), ('disp_div', 0.2), ('anchor', 0.197516664846555), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 234), ('stim_pos', 3.7), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.3400000000000001), ('target_file', 'stims/white_pngs/Shape_3.70_4.00.png'), ('disp_div', -0.2), ('anchor', -0.1003295136089514), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 235), ('stim_pos', 3.7), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.3400000000000001), ('target_file', 'stims/white_pngs/Shape_3.70_0.00.png'), ('disp_div', 0.2), ('anchor', 0.0538060492568895), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 236), ('stim_pos', 3.9), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.38), ('target_file', 'stims/white_pngs/Shape_3.90_4.00.png'), ('disp_div', -0.2), ('anchor', -0.1217315080716354), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 237), ('stim_pos', 3.9), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.38), ('target_file', 'stims/white_pngs/Shape_3.90_0.00.png'), ('disp_div', 0.2), ('anchor', 0.127436869586252), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 238), ('stim_pos', 3.9), ('noise_pos', 4.0), ('valence', 'rew'), ('valence_disp', 'rew_pen'), ('target_pos', -0.38), ('target_file', 'stims/white_pngs/Shape_3.90_4.00.png'), ('disp_div', -0.2), ('anchor', -0.2426614363008038), ('img1_file', 'stims/white_pngs/Shape_4.00_4.00.png'), ('img2_file', 'stims/white_pngs/Shape_0.00_4.00.png')]), OrderedDict([('blockN', 6), ('run', 2), ('div', 0.2), ('trial_key', 239), ('stim_pos', 3.9), ('noise_pos', 0.0), ('valence', 'rew'), ('valence_disp', 'pen_rew'), ('target_pos', 0.38), ('target_file', 'stims/white_pngs/Shape_3.90_0.00.png'), ('disp_div', 0.2), ('anchor', 0.2328184388045805), ('img1_file', 'stims/white_pngs/Shape_0.00_0.00.png'), ('img2_file', 'stims/white_pngs/Shape_4.00_0.00.png')])]" valType="str"/>
+      <Param name="conditionsFile" updates="None" val="trials.csv" valType="file"/>
+      <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
+      <Param name="isTrials" updates="None" val="True" valType="bool"/>
+      <Param name="loopType" updates="None" val="random" valType="str"/>
+      <Param name="nReps" updates="None" val="1" valType="num"/>
+      <Param name="name" updates="None" val="trials" valType="code"/>
+      <Param name="random seed" updates="None" val="" valType="code"/>
+    </LoopInitiator>
+    <Routine name="stim"/>
+    <Routine name="delay"/>
+    <Routine name="task"/>
+    <Routine name="feedback"/>
+    <Routine name="ITI"/>
+    <LoopTerminator name="trials"/>
+    <Routine name="end_block"/>
+    <LoopTerminator name="blocks"/>
+  </Flow>
+</PsychoPy2experiment>

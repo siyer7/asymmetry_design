@@ -488,7 +488,7 @@
         <Param val="1" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="input_data/stims/coin.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="input_data/coin.png" valType="file" updates="set every repeat" name="image"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="" valType="str" updates="constant" name="mask"/>
         <Param val="Lcoin" valType="code" updates="None" name="name"/>
@@ -517,7 +517,7 @@
         <Param val="1" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="input_data/stims/coin.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="input_data/coin.png" valType="file" updates="set every repeat" name="image"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="" valType="str" updates="constant" name="mask"/>
         <Param val="Rcoin" valType="code" updates="None" name="name"/>
@@ -546,7 +546,7 @@
         <Param val="1" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="input_data/stims/coin.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="input_data/coin.png" valType="file" updates="set every repeat" name="image"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="" valType="str" updates="constant" name="mask"/>
         <Param val="Mcoin" valType="code" updates="None" name="name"/>
@@ -575,7 +575,7 @@
         <Param val="1" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="input_data/stims/cross.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="input_data/cross.png" valType="file" updates="set every repeat" name="image"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="" valType="str" updates="constant" name="mask"/>
         <Param val="Lcross" valType="code" updates="None" name="name"/>
@@ -604,7 +604,7 @@
         <Param val="1" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="input_data/stims/cross.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="input_data/cross.png" valType="file" updates="set every repeat" name="image"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="" valType="str" updates="constant" name="mask"/>
         <Param val="Rcross" valType="code" updates="None" name="name"/>
@@ -633,7 +633,7 @@
         <Param val="1" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="input_data/stims/cross.png" valType="file" updates="set every repeat" name="image"/>
+        <Param val="input_data/cross.png" valType="file" updates="set every repeat" name="image"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="" valType="str" updates="constant" name="mask"/>
         <Param val="Mcross" valType="code" updates="None" name="name"/>

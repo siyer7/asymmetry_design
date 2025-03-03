@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Wed Feb 26 18:20:40 2025
+    on Sun Mar  2 20:17:43 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -32,7 +32,6 @@ from psychopy.hardware import keyboard
 
 # Run 'Before Experiment' code from block_start_code
 import random, numpy as np
-
 # Run 'Before Experiment' code from rand_divider_slider
 from psychopy.hardware import keyboard
 kb = keyboard.Keyboard()
@@ -47,7 +46,7 @@ expName = 'asymmetry_v8'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
     'subj': '',
-    'block_order': '1 or 2',
+    'sess_type': 'A or B or C or D',
     'date|hid': data.getDateStr(),
     'expName|hid': expName,
     'psychopyVersion|hid': psychopyVersion,
@@ -63,7 +62,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [1440, 900]
+_winSize = [1920, 1080]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -119,7 +118,7 @@ def setupData(expInfo, dataDir=None):
     # data file name stem = absolute path + name; later add .psyexp, .csv, .log, etc
     if dataDir is None:
         dataDir = _thisDir
-    filename = u'results/%s_subj%s_order%s_%s' % (expName, expInfo['subj'], expInfo['block_order'], expInfo['date'])
+    filename = u'results/%s_subj%s_order%s_%s' % (expName, expInfo['subj'], expInfo['sess_type'], expInfo['date'])
     # make sure filename is relative to dataDir
     if os.path.isabs(filename):
         dataDir = os.path.commonprefix([dataDir, filename])
@@ -365,6 +364,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     # --- Initialize components for Routine "new_block" ---
     # Run 'Begin Experiment' code from block_start_code
     block_outcome, block_bonus = 0, 0
+    #block_file = f'block_order{expInfo["block_order"]}.csv'
+    sess_type_file = f'input_data/sess_type{expInfo["sess_type"]}.csv'
     block_start_text = visual.TextStim(win=win, name='block_start_text',
         text='',
         font='Arial',
@@ -543,7 +544,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         method='sequential', 
         extraInfo=expInfo, 
         originPath=-1, 
-        trialList=data.importConditions('blocks1.csv'), 
+        trialList=data.importConditions(sess_type_file), 
         seed=None, 
     )
     thisExp.addLoop(blocks)  # add the loop to the experiment
@@ -718,7 +719,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             extraInfo=expInfo, 
             originPath=-1, 
             trialList=data.importConditions(
-            'trials.csv', 
+            'input_data/trials.csv', 
             selection=trial_rows
         )
         , 
@@ -1429,6 +1430,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             continueRoutine = True
             # update component parameters for each repeat
             # Run 'Begin Routine' code from fb_code
+            # C0F1 = Curve penalty, Flat reward
+            # stimVal comes from file which depends on experimenter input
+            valence = val_C0F1 if stimVal == 'val_C0F1' else val_C1F0
+                
             no_resp_txt = ''
             coinLR, coinM, crossLR, crossM = 0, 0, 0, 0
             correct, outcome = 0, 0
@@ -1465,12 +1470,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 no_resp_txt = 'Respond faster!'
             
             no_resp_text.setText(no_resp_txt)
-            Lcoin.setImage('stims/coin.png')
-            Rcoin.setImage('stims/coin.png')
-            Mcoin.setImage('stims/coin.png')
-            Lcross.setImage('stims/cross.png')
-            Rcross.setImage('stims/cross.png')
-            Mcross.setImage('stims/cross.png')
+            Lcoin.setImage('input_data/stims/coin.png')
+            Rcoin.setImage('input_data/stims/coin.png')
+            Mcoin.setImage('input_data/stims/coin.png')
+            Lcross.setImage('input_data/stims/cross.png')
+            Rcross.setImage('input_data/stims/cross.png')
+            Mcross.setImage('input_data/stims/cross.png')
             # store start times for feedback
             feedback.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             feedback.tStart = globalClock.getTime(format='float')

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Sun Mar  2 20:17:43 2025
+    on Sun Mar  2 21:05:43 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -1470,12 +1470,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 no_resp_txt = 'Respond faster!'
             
             no_resp_text.setText(no_resp_txt)
-            Lcoin.setImage('input_data/stims/coin.png')
-            Rcoin.setImage('input_data/stims/coin.png')
-            Mcoin.setImage('input_data/stims/coin.png')
-            Lcross.setImage('input_data/stims/cross.png')
-            Rcross.setImage('input_data/stims/cross.png')
-            Mcross.setImage('input_data/stims/cross.png')
+            Lcoin.setImage('input_data/coin.png')
+            Rcoin.setImage('input_data/coin.png')
+            Mcoin.setImage('input_data/coin.png')
+            Lcross.setImage('input_data/cross.png')
+            Rcross.setImage('input_data/cross.png')
+            Mcross.setImage('input_data/cross.png')
             # store start times for feedback
             feedback.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             feedback.tStart = globalClock.getTime(format='float')

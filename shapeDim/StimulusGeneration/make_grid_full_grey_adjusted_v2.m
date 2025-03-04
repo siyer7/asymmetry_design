@@ -28,7 +28,7 @@ my_shape_color = 0.9;
 
 %% Fixed y-coordinate and x-values
 fixed_y = 4.00;  % Fixed y-coordinate for all images
-x_values = 0:0.1:5;  % x-values from 0.00 to 5.00 in steps of 0.10
+x_values = 0:0.1:4;  % x-values from 0.00 to 4.00 in steps of 0.10
 
 %% Loop over stim sets
 for kk = [3]

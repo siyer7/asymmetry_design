@@ -214,7 +214,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="-.6, 0" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val=".5,.5" valType="list" updates="constant" name="size"/>
+        <Param val=".45,.45" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0" valType="code" updates="None" name="startVal"/>
@@ -243,7 +243,7 @@
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val=".6, 0" valType="list" updates="constant" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val=".5,.5" valType="list" updates="constant" name="size"/>
+        <Param val=".45,.45" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0" valType="code" updates="None" name="startVal"/>

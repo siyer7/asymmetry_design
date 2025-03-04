@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Sun Mar  2 21:22:31 2025
+    on Mon Mar  3 14:06:38 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -396,7 +396,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='img1', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[-.6, 0], draggable=False, size=[.5,.5],
+        ori=0.0, pos=[-.6, 0], draggable=False, size=[.45,.45],
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-1.0)
@@ -404,7 +404,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         win=win,
         name='img2', 
         image='default.png', mask=None, anchor='center',
-        ori=0.0, pos=[.6, 0], draggable=False, size=[.5,.5],
+        ori=0.0, pos=[.6, 0], draggable=False, size=[.45,.45],
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-2.0)
@@ -431,13 +431,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         flip=False, ori=0.0, depth=-5, readOnly=False)
     slider_resp = keyboard.Keyboard(deviceName='slider_resp')
     submit_resp = keyboard.Keyboard(deviceName='submit_resp')
-    debug_task_text = visual.TextStim(win=win, name='debug_task_text',
-        text='',
-        font='Arial',
-        pos=[0,0], draggable=False, height=0.03, wrapWidth=None, ori=0.0, 
-        color='white', colorSpace='rgb', opacity=None, 
-        languageStyle='LTR',
-        depth=-8.0);
     
     # --- Initialize components for Routine "feedback" ---
     # Run 'Begin Experiment' code from fb_code
@@ -573,7 +566,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         # Run 'Begin Routine' code from block_start_code
         block_outcome, block_bonus = 0, 0
-        block_start_txt = f'Press space to begin block {blockN}'
+        block_start_txt = f'Press enter to begin block {blockN}'
         
         trial_rows = [i + (blockN-1) * 40 for i in range(40)]
         block_start_text.setText(block_start_txt)
@@ -653,7 +646,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 win.callOnFlip(block_start_resp.clock.reset)  # t=0 on next screen flip
                 win.callOnFlip(block_start_resp.clearEvents, eventType='keyboard')  # clear events on next screen flip
             if block_start_resp.status == STARTED and not waitOnFlip:
-                theseKeys = block_start_resp.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                theseKeys = block_start_resp.getKeys(keyList=['return'], ignoreKeys=["escape"], waitRelease=False)
                 _block_start_resp_allKeys.extend(theseKeys)
                 if len(_block_start_resp_allKeys):
                     block_start_resp.keys = _block_start_resp_allKeys[-1].name  # just the last key pressed
@@ -967,7 +960,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine task
             task = data.Routine(
                 name='task',
-                components=[img1, img2, divider_line, slider_line, slider, slider_resp, submit_resp, debug_task_text],
+                components=[img1, img2, divider_line, slider_line, slider, slider_resp, submit_resp],
             )
             task.status = NOT_STARTED
             continueRoutine = True
@@ -977,7 +970,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             positions = []
             debug_task_txt = f'Trial {trial_key+1}'
             
-            # to collect responses
             kb.clearEvents()
             img1.setImage(img1_file)
             img2.setImage(img2_file)
@@ -991,7 +983,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             submit_resp.keys = []
             submit_resp.rt = []
             _submit_resp_allKeys = []
-            debug_task_text.setText(debug_task_txt)
             # store start times for task
             task.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             task.tStart = globalClock.getTime(format='float')
@@ -1027,6 +1018,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Run 'Each Frame' code from rand_divider_slider
                 # for some reason psychopy doesnt remember this assignment
                 if slider.markerPos == None:
+                #    kb.clearEvents()
                     slider.markerPos = anchor
                 
                 if (not leftPressed and kb.getKeys(['left'], waitRelease=False, clear=False))\
@@ -1048,27 +1040,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 positions.append(slider.markerPos)
                 
                 # check psychopy_notes for link
-                
-                ################################## debugging
-                #if (slider.markerPos >= disp_divider and target >= disp_divider)\
-                #or (slider.markerPos <= disp_divider and target <= disp_divider):
-                #    correct = 1
-                #    outcome = 2 if context == 'rew' else 1
-                #
-                #    error = abs(target - slider.markerPos)
-                #    addn_pts = 1 - 1.5 * error
-                #    
-                #else:
-                #    correct = -1
-                #    outcome = -1 if context == 'rew' else -2
-                #    error = abs(target - slider.markerPos)
-                #    addn_pts = - 1.5 * error 
-                #    
-                #net_reward = outcome + addn_pts
-                #
-                #debug_task_txt  = f'{addn_pts:.03f}'
-                
-                ################################## end of debugging
                 
                 # *img1* updates
                 
@@ -1312,7 +1283,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         submit_resp.status = FINISHED
                         submit_resp.status = FINISHED
                 if submit_resp.status == STARTED and not waitOnFlip:
-                    theseKeys = submit_resp.getKeys(keyList=['space'], ignoreKeys=["escape"], waitRelease=False)
+                    theseKeys = submit_resp.getKeys(keyList=['return'], ignoreKeys=["escape"], waitRelease=False)
                     _submit_resp_allKeys.extend(theseKeys)
                     if len(_submit_resp_allKeys):
                         submit_resp.keys = _submit_resp_allKeys[-1].name  # just the last key pressed
@@ -1320,40 +1291,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         submit_resp.duration = _submit_resp_allKeys[-1].duration
                         # a response ends the routine
                         continueRoutine = False
-                
-                # *debug_task_text* updates
-                
-                # if debug_task_text is starting this frame...
-                if debug_task_text.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
-                    # keep track of start time/frame for later
-                    debug_task_text.frameNStart = frameN  # exact frame index
-                    debug_task_text.tStart = t  # local t and not account for scr refresh
-                    debug_task_text.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(debug_task_text, 'tStartRefresh')  # time at next scr refresh
-                    # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'debug_task_text.started')
-                    # update status
-                    debug_task_text.status = STARTED
-                    debug_task_text.setAutoDraw(True)
-                
-                # if debug_task_text is active this frame...
-                if debug_task_text.status == STARTED:
-                    # update params
-                    debug_task_text.setPos([0,-.2], log=False)
-                
-                # if debug_task_text is stopping this frame...
-                if debug_task_text.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > debug_task_text.tStartRefresh + 3-frameTolerance:
-                        # keep track of stop time/frame for later
-                        debug_task_text.tStop = t  # not accounting for scr refresh
-                        debug_task_text.tStopRefresh = tThisFlipGlobal  # on global time
-                        debug_task_text.frameNStop = frameN  # exact frame index
-                        # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'debug_task_text.stopped')
-                        # update status
-                        debug_task_text.status = FINISHED
-                        debug_task_text.setAutoDraw(False)
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1396,6 +1333,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             thisExp.addData('task.stopped', task.tStop)
             # Run 'End Routine' code from rand_divider_slider
             thisExp.addData('positions', positions)
+            kb.clearEvents()
             trials.addData('slider.response', slider.getRating())
             trials.addData('slider.rt', slider.getRT())
             # check responses
@@ -1438,7 +1376,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             coinLR, coinM, crossLR, crossM = 0, 0, 0, 0
             correct, outcome = 0, 0
             
-            if sliderMoved and not submit_resp.keys == None and 'space' in submit_resp.keys:
+            if sliderMoved and not submit_resp.keys == None and 'return' in submit_resp.keys:
                 
                 if (slider.markerPos >= disp_div and target_pos >= disp_div)\
                 or (slider.markerPos <= disp_div and target_pos <= disp_div):

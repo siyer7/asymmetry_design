@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Tue Mar  4 18:35:53 2025
+    on Tue Mar  4 23:11:41 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -42,7 +42,7 @@ deviceManager = hardware.DeviceManager()
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
 psychopyVersion = '2024.2.4'
-expName = 'asymmetry_v8'  # from the Builder filename that created this script
+expName = 'asymmetry_v10'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
     'subj': '',
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/f0064z8/Library/CloudStorage/GoogleDrive-si2442@columbia.edu/My Drive/research/asymmetry_design/asymmetry_v9_streamline_lastrun.py',
+        originPath='/Users/f0064z8/Library/CloudStorage/GoogleDrive-si2442@columbia.edu/My Drive/research/asymmetry_design/asymmetry_v10_cursor_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -380,10 +380,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=-1.0);
     block_start_resp = keyboard.Keyboard(deviceName='block_start_resp')
     
+    # --- Initialize components for Routine "ITI" ---
+    ISI1 = clock.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI1')
+    
     # --- Initialize components for Routine "stim" ---
-    targ_pos = visual.ImageStim(
+    target_stim = visual.ImageStim(
         win=win,
-        name='targ_pos', 
+        name='target_stim', 
         image='default.png', mask=None, anchor='center',
         ori=0.0, pos=(0, 0), draggable=False, size=[.6,.6],
         color=[1,1,1], colorSpace='rgb', opacity=None,
@@ -391,6 +394,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         texRes=128.0, interpolate=True, depth=0.0)
     
     # --- Initialize components for Routine "delay" ---
+    ISI2 = clock.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI2')
     
     # --- Initialize components for Routine "task" ---
     # Run 'Begin Experiment' code from rand_divider_slider
@@ -495,8 +499,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
         texRes=128.0, interpolate=True, depth=-7.0)
-    
-    # --- Initialize components for Routine "ITI" ---
     
     # --- Initialize components for Routine "end_block" ---
     block_end_text = visual.TextStim(win=win, name='block_end_text',
@@ -745,22 +747,130 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 for paramName in thisTrial:
                     globals()[paramName] = thisTrial[paramName]
             
+            # --- Prepare to start Routine "ITI" ---
+            # create an object to store info about Routine ITI
+            ITI = data.Routine(
+                name='ITI',
+                components=[ISI1],
+            )
+            ITI.status = NOT_STARTED
+            continueRoutine = True
+            # update component parameters for each repeat
+            # store start times for ITI
+            ITI.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            ITI.tStart = globalClock.getTime(format='float')
+            ITI.status = STARTED
+            thisExp.addData('ITI.started', ITI.tStart)
+            ITI.maxDuration = None
+            # keep track of which components have finished
+            ITIComponents = ITI.components
+            for thisComponent in ITI.components:
+                thisComponent.tStart = None
+                thisComponent.tStop = None
+                thisComponent.tStartRefresh = None
+                thisComponent.tStopRefresh = None
+                if hasattr(thisComponent, 'status'):
+                    thisComponent.status = NOT_STARTED
+            # reset timers
+            t = 0
+            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
+            frameN = -1
+            
+            # --- Run Routine "ITI" ---
+            # if trial has changed, end Routine now
+            if isinstance(trials, data.TrialHandler2) and thisTrial.thisN != trials.thisTrial.thisN:
+                continueRoutine = False
+            ITI.forceEnded = routineForceEnded = not continueRoutine
+            while continueRoutine and routineTimer.getTime() < 1.0:
+                # get current time
+                t = routineTimer.getTime()
+                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
+                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
+                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
+                # update/draw components on each frame
+                # *ISI1* period
+                
+                # if ISI1 is starting this frame...
+                if ISI1.status == NOT_STARTED and t >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    ISI1.frameNStart = frameN  # exact frame index
+                    ISI1.tStart = t  # local t and not account for scr refresh
+                    ISI1.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(ISI1, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.addData('ISI1.started', t)
+                    # update status
+                    ISI1.status = STARTED
+                    ISI1.start(1)
+                elif ISI1.status == STARTED:  # one frame should pass before updating params and completing
+                    # Updating other components during *ISI1*
+                    target_stim.setImage(target_file)
+                    # Component updates done
+                    ISI1.complete()  # finish the static period
+                    ISI1.tStop = ISI1.tStart + 1  # record stop time
+                
+                # check for quit (typically the Esc key)
+                if defaultKeyboard.getKeys(keyList=["escape"]):
+                    thisExp.status = FINISHED
+                if thisExp.status == FINISHED or endExpNow:
+                    endExperiment(thisExp, win=win)
+                    return
+                # pause experiment here if requested
+                if thisExp.status == PAUSED:
+                    pauseExperiment(
+                        thisExp=thisExp, 
+                        win=win, 
+                        timers=[routineTimer], 
+                        playbackComponents=[]
+                    )
+                    # skip the frame we paused on
+                    continue
+                
+                # check if all components have finished
+                if not continueRoutine:  # a component has requested a forced-end of Routine
+                    ITI.forceEnded = routineForceEnded = True
+                    break
+                continueRoutine = False  # will revert to True if at least one component still running
+                for thisComponent in ITI.components:
+                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
+                        continueRoutine = True
+                        break  # at least one component has not yet finished
+                
+                # refresh the screen
+                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
+                    win.flip()
+            
+            # --- Ending Routine "ITI" ---
+            for thisComponent in ITI.components:
+                if hasattr(thisComponent, "setAutoDraw"):
+                    thisComponent.setAutoDraw(False)
+            # store stop times for ITI
+            ITI.tStop = globalClock.getTime(format='float')
+            ITI.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('ITI.stopped', ITI.tStop)
+            # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
+            if ITI.maxDurationReached:
+                routineTimer.addTime(-ITI.maxDuration)
+            elif ITI.forceEnded:
+                routineTimer.reset()
+            else:
+                routineTimer.addTime(-1.000000)
+            
             # --- Prepare to start Routine "stim" ---
             # create an object to store info about Routine stim
             stim = data.Routine(
                 name='stim',
-                components=[targ_pos],
+                components=[target_stim],
             )
             stim.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            targ_pos.setImage(target_file)
             # store start times for stim
             stim.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             stim.tStart = globalClock.getTime(format='float')
             stim.status = STARTED
             thisExp.addData('stim.started', stim.tStart)
-            stim.maxDuration = None
+            stim.maxDuration = 1
             # keep track of which components have finished
             stimComponents = stim.components
             for thisComponent in stim.components:
@@ -787,40 +897,44 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 tThisFlipGlobal = win.getFutureFlipTime(clock=None)
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
+                # is it time to end the Routine? (based on local clock)
+                if tThisFlip > stim.maxDuration-frameTolerance:
+                    stim.maxDurationReached = True
+                    continueRoutine = False
                 
-                # *targ_pos* updates
+                # *target_stim* updates
                 
-                # if targ_pos is starting this frame...
-                if targ_pos.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                # if target_stim is starting this frame...
+                if target_stim.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
                     # keep track of start time/frame for later
-                    targ_pos.frameNStart = frameN  # exact frame index
-                    targ_pos.tStart = t  # local t and not account for scr refresh
-                    targ_pos.tStartRefresh = tThisFlipGlobal  # on global time
-                    win.timeOnFlip(targ_pos, 'tStartRefresh')  # time at next scr refresh
+                    target_stim.frameNStart = frameN  # exact frame index
+                    target_stim.tStart = t  # local t and not account for scr refresh
+                    target_stim.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(target_stim, 'tStartRefresh')  # time at next scr refresh
                     # add timestamp to datafile
-                    thisExp.timestampOnFlip(win, 'targ_pos.started')
+                    thisExp.timestampOnFlip(win, 'target_stim.started')
                     # update status
-                    targ_pos.status = STARTED
-                    targ_pos.setAutoDraw(True)
+                    target_stim.status = STARTED
+                    target_stim.setAutoDraw(True)
                 
-                # if targ_pos is active this frame...
-                if targ_pos.status == STARTED:
+                # if target_stim is active this frame...
+                if target_stim.status == STARTED:
                     # update params
                     pass
                 
-                # if targ_pos is stopping this frame...
-                if targ_pos.status == STARTED:
+                # if target_stim is stopping this frame...
+                if target_stim.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > targ_pos.tStartRefresh + 1-frameTolerance:
+                    if tThisFlipGlobal > target_stim.tStartRefresh + 1-frameTolerance:
                         # keep track of stop time/frame for later
-                        targ_pos.tStop = t  # not accounting for scr refresh
-                        targ_pos.tStopRefresh = tThisFlipGlobal  # on global time
-                        targ_pos.frameNStop = frameN  # exact frame index
+                        target_stim.tStop = t  # not accounting for scr refresh
+                        target_stim.tStopRefresh = tThisFlipGlobal  # on global time
+                        target_stim.frameNStop = frameN  # exact frame index
                         # add timestamp to datafile
-                        thisExp.timestampOnFlip(win, 'targ_pos.stopped')
+                        thisExp.timestampOnFlip(win, 'target_stim.stopped')
                         # update status
-                        targ_pos.status = FINISHED
-                        targ_pos.setAutoDraw(False)
+                        target_stim.status = FINISHED
+                        target_stim.setAutoDraw(False)
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -873,7 +987,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # create an object to store info about Routine delay
             delay = data.Routine(
                 name='delay',
-                components=[],
+                components=[ISI2],
             )
             delay.status = NOT_STARTED
             continueRoutine = True
@@ -914,6 +1028,33 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if tThisFlip > delay.maxDuration-frameTolerance:
                     delay.maxDurationReached = True
                     continueRoutine = False
+                # *ISI2* period
+                
+                # if ISI2 is starting this frame...
+                if ISI2.status == NOT_STARTED and t >= 0.0-frameTolerance:
+                    # keep track of start time/frame for later
+                    ISI2.frameNStart = frameN  # exact frame index
+                    ISI2.tStart = t  # local t and not account for scr refresh
+                    ISI2.tStartRefresh = tThisFlipGlobal  # on global time
+                    win.timeOnFlip(ISI2, 'tStartRefresh')  # time at next scr refresh
+                    # add timestamp to datafile
+                    thisExp.addData('ISI2.started', t)
+                    # update status
+                    ISI2.status = STARTED
+                    ISI2.start(1.5)
+                elif ISI2.status == STARTED:  # one frame should pass before updating params and completing
+                    # Updating other components during *ISI2*
+                    img1.setImage(img1_file)
+                    img2.setImage(img2_file)
+                    Lcoin.setImage('input_data/coin.png')
+                    Rcoin.setImage('input_data/coin.png')
+                    Mcoin.setImage('input_data/coin.png')
+                    Lcross.setImage('input_data/cross.png')
+                    Rcross.setImage('input_data/cross.png')
+                    Mcross.setImage('input_data/cross.png')
+                    # Component updates done
+                    ISI2.complete()  # finish the static period
+                    ISI2.tStop = ISI2.tStart + 1.5  # record stop time
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -977,8 +1118,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             debug_task_txt = f'Trial {trial_key+1}'
             
             kb.clearEvents()
-            img1.setImage(img1_file)
-            img2.setImage(img2_file)
             divider_line.setPos([disp_div, 0])
             slider.reset()
             # create starting attributes for slider_resp
@@ -1027,24 +1166,57 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 #    kb.clearEvents()
                     slider.markerPos = anchor
                 
-                print(kb.getKeys(['left'], waitRelease=False, clear=False))
+                #if (not leftPressed and kb.getKeys(['left'], waitRelease=False, clear=False))\
+                #or (leftPressed and not kb.getKeys(['left'], waitRelease=True, clear=False)):
+                #    leftPressed, sliderMoved = 1, 1
+                #    print(kb.getKeys(['left'], waitRelease=False, clear=False))
+                #    print(leftPressed)
+                #    if slider.markerPos >= (-.4 + .01):
+                #        slider.markerPos -= 0.01
+                #elif not leftPressed or kb.getKeys(['left'], waitRelease=True, clear=True):
+                #    leftPressed = 0
+                #    
+                #if (not rightPressed and kb.getKeys(['right'], waitRelease=False, clear=False))\
+                #or (rightPressed and not kb.getKeys(['right'], waitRelease=True, clear=False)):
+                #    rightPressed, sliderMoved = 1, 1    
+                #    if slider.markerPos <= (.4 - .01):
+                #        slider.markerPos += 0.01
+                #elif not rightPressed or kb.getKeys(['right'], waitRelease=True, clear=True):
+                #    rightPressed = 0
+                #    
                 
-                if (not leftPressed and kb.getKeys(['left'], waitRelease=False, clear=False))\
-                or (leftPressed and not kb.getKeys(['left'], waitRelease=True, clear=False)):
+                #if (not leftPressed and kb.getKeys(['left'], waitRelease=False, clear=False)) or leftPressed:
+                #    leftPressed, sliderMoved = 1, 1
+                #    if slider.markerPos >= (-.4 + .01):
+                #        slider.markerPos -= 0.01
+                #elif kb.getKeys(['left'], waitRelease=True, clear=True):
+                #    leftPressed = 0
+                #else:
+                #    print('left released')
+                #    
+                #if (not rightPressed and kb.getKeys(['right'], waitRelease=False, clear=False)) or rightPressed:
+                #    rightPressed, sliderMoved = 1, 1    
+                #    if slider.markerPos <= (.4 - .01):
+                #        slider.markerPos += 0.01
+                #elif kb.getKeys(['right'], waitRelease=True, clear=True):
+                #    rightPressed = 0
+                
+                
+                if kb.getKeys(['left'], waitRelease=True, clear=True): # registers release
+                    leftPressed = 0
+                elif kb.getKeys(['left'], waitRelease=False, clear=True): # registers click
                     leftPressed, sliderMoved = 1, 1
+                else:
                     if slider.markerPos >= (-.4 + .01):
                         slider.markerPos -= 0.01
-                elif not leftPressed or kb.getKeys(['left'], waitRelease=True, clear=True):
-                    leftPressed = 0
-                    
-                if (not rightPressed and kb.getKeys(['right'], waitRelease=False, clear=False))\
-                or (rightPressed and not kb.getKeys(['right'], waitRelease=True, clear=False)):
-                    rightPressed, sliderMoved = 1, 1    
-                    if slider.markerPos <= (.4 - .01):
-                        slider.markerPos += 0.01
-                elif not rightPressed or kb.getKeys(['right'], waitRelease=True, clear=True):
+                        
+                if kb.getKeys(['right'], waitRelease=True, clear=True): # registers release
                     rightPressed = 0
-                
+                #else:
+                #    rightPressed, sliderMoved = 1, 1
+                #    if slider.markerPos <= (.4 - .01):
+                #        slider.markerPos += 0.01
+                        
                 positions.append(slider.markerPos)
                 
                 # check psychopy_notes for link
@@ -1416,12 +1588,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 no_resp_txt = 'Respond faster!'
             
             no_resp_text.setText(no_resp_txt)
-            Lcoin.setImage('input_data/coin.png')
-            Rcoin.setImage('input_data/coin.png')
-            Mcoin.setImage('input_data/coin.png')
-            Lcross.setImage('input_data/cross.png')
-            Rcross.setImage('input_data/cross.png')
-            Mcross.setImage('input_data/cross.png')
             # store start times for feedback
             feedback.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             feedback.tStart = globalClock.getTime(format='float')
@@ -1458,6 +1624,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if tThisFlip > feedback.maxDuration-frameTolerance:
                     feedback.maxDurationReached = True
                     continueRoutine = False
+                # Run 'Each Frame' code from fb_code
+                #Lcoin.setAutoDraw(bool(coinLR))
+                #Rcoin.setAutoDraw(bool(coinLR))
+                #Mcoin.setAutoDraw(bool(coinM))
+                #Lcross.setAutoDraw(bool(crossLR))
+                #Rcross.setAutoDraw(bool(crossLR))
+                #Mcross.setAutoDraw(bool(crossM))
                 
                 # *no_resp_text* updates
                 
@@ -1742,99 +1915,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             thisExp.addData('trial_key', trial_key)
             # the Routine "feedback" was not non-slip safe, so reset the non-slip timer
             routineTimer.reset()
-            
-            # --- Prepare to start Routine "ITI" ---
-            # create an object to store info about Routine ITI
-            ITI = data.Routine(
-                name='ITI',
-                components=[],
-            )
-            ITI.status = NOT_STARTED
-            continueRoutine = True
-            # update component parameters for each repeat
-            # store start times for ITI
-            ITI.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-            ITI.tStart = globalClock.getTime(format='float')
-            ITI.status = STARTED
-            thisExp.addData('ITI.started', ITI.tStart)
-            ITI.maxDuration = 1
-            # keep track of which components have finished
-            ITIComponents = ITI.components
-            for thisComponent in ITI.components:
-                thisComponent.tStart = None
-                thisComponent.tStop = None
-                thisComponent.tStartRefresh = None
-                thisComponent.tStopRefresh = None
-                if hasattr(thisComponent, 'status'):
-                    thisComponent.status = NOT_STARTED
-            # reset timers
-            t = 0
-            _timeToFirstFrame = win.getFutureFlipTime(clock="now")
-            frameN = -1
-            
-            # --- Run Routine "ITI" ---
-            # if trial has changed, end Routine now
-            if isinstance(trials, data.TrialHandler2) and thisTrial.thisN != trials.thisTrial.thisN:
-                continueRoutine = False
-            ITI.forceEnded = routineForceEnded = not continueRoutine
-            while continueRoutine and routineTimer.getTime() < 1.0:
-                # get current time
-                t = routineTimer.getTime()
-                tThisFlip = win.getFutureFlipTime(clock=routineTimer)
-                tThisFlipGlobal = win.getFutureFlipTime(clock=None)
-                frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
-                # update/draw components on each frame
-                # is it time to end the Routine? (based on local clock)
-                if tThisFlip > ITI.maxDuration-frameTolerance:
-                    ITI.maxDurationReached = True
-                    continueRoutine = False
-                
-                # check for quit (typically the Esc key)
-                if defaultKeyboard.getKeys(keyList=["escape"]):
-                    thisExp.status = FINISHED
-                if thisExp.status == FINISHED or endExpNow:
-                    endExperiment(thisExp, win=win)
-                    return
-                # pause experiment here if requested
-                if thisExp.status == PAUSED:
-                    pauseExperiment(
-                        thisExp=thisExp, 
-                        win=win, 
-                        timers=[routineTimer], 
-                        playbackComponents=[]
-                    )
-                    # skip the frame we paused on
-                    continue
-                
-                # check if all components have finished
-                if not continueRoutine:  # a component has requested a forced-end of Routine
-                    ITI.forceEnded = routineForceEnded = True
-                    break
-                continueRoutine = False  # will revert to True if at least one component still running
-                for thisComponent in ITI.components:
-                    if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
-                        continueRoutine = True
-                        break  # at least one component has not yet finished
-                
-                # refresh the screen
-                if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
-                    win.flip()
-            
-            # --- Ending Routine "ITI" ---
-            for thisComponent in ITI.components:
-                if hasattr(thisComponent, "setAutoDraw"):
-                    thisComponent.setAutoDraw(False)
-            # store stop times for ITI
-            ITI.tStop = globalClock.getTime(format='float')
-            ITI.tStopRefresh = tThisFlipGlobal
-            thisExp.addData('ITI.stopped', ITI.tStop)
-            # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-            if ITI.maxDurationReached:
-                routineTimer.addTime(-ITI.maxDuration)
-            elif ITI.forceEnded:
-                routineTimer.reset()
-            else:
-                routineTimer.addTime(-1.000000)
             thisExp.nextEntry()
             
         # completed 1.0 repeats of 'trials'

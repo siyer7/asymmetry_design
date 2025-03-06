@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Tue Mar  4 22:15:20 2025
+    on Wed Mar  5 23:35:50 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -42,7 +42,7 @@ deviceManager = hardware.DeviceManager()
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
 psychopyVersion = '2024.2.4'
-expName = 'asymmetry_v10'  # from the Builder filename that created this script
+expName = 'asymmetry_v11'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
     'subj': '',
@@ -62,7 +62,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [1920, 1080]
+_winSize = [1440, 900]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/f0064z8/Library/CloudStorage/GoogleDrive-si2442@columbia.edu/My Drive/research/asymmetry_design/asymmetry_v10_streamline_lastrun.py',
+        originPath='/Users/f0064z8/Library/CloudStorage/GoogleDrive-si2442@columbia.edu/My Drive/research/asymmetry_design/asymmetry_v12_frames_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -199,10 +199,7 @@ def setupWindow(expInfo=None, win=None):
         win.backgroundFit = 'none'
         win.units = 'height'
     if expInfo is not None:
-        # get/measure frame rate if not already in expInfo
-        if win._monitorFrameRate is None:
-            win._monitorFrameRate = win.getActualFrameRate(infoMsg='Attempting to measure frame rate of screen, please wait...')
-        expInfo['frameRate'] = win._monitorFrameRate
+        expInfo['frameRate'] = 120
     win.hideMessage()
     # show a visual indicator if we're in piloting mode
     if PILOTING and prefs.piloting['showPilotingIndicator']:
@@ -380,7 +377,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=-1.0);
     block_start_resp = keyboard.Keyboard(deviceName='block_start_resp')
     
-    # --- Initialize components for Routine "ITI" ---
+    # --- Initialize components for Routine "baseline" ---
     ISI1 = clock.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI1')
     
     # --- Initialize components for Routine "stim" ---
@@ -398,7 +395,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "task" ---
     # Run 'Begin Experiment' code from rand_divider_slider
-    leftPressed, rightPressed, sliderMoved = .0, .0, .0
+    leftPressed, rightPressed, slider_moved = .0, .0, .0
     positions = []
     debug_task_txt = ''
     img1 = visual.ImageStim(
@@ -747,24 +744,23 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 for paramName in thisTrial:
                     globals()[paramName] = thisTrial[paramName]
             
-            # --- Prepare to start Routine "ITI" ---
-            # create an object to store info about Routine ITI
-            ITI = data.Routine(
-                name='ITI',
+            # --- Prepare to start Routine "baseline" ---
+            # create an object to store info about Routine baseline
+            baseline = data.Routine(
+                name='baseline',
                 components=[ISI1],
             )
-            ITI.status = NOT_STARTED
+            baseline.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            # store start times for ITI
-            ITI.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-            ITI.tStart = globalClock.getTime(format='float')
-            ITI.status = STARTED
-            thisExp.addData('ITI.started', ITI.tStart)
-            ITI.maxDuration = None
+            # store start times for baseline
+            baseline.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            baseline.tStart = globalClock.getTime(format='float')
+            baseline.status = STARTED
+            thisExp.addData('baseline.started', baseline.tStart)
             # keep track of which components have finished
-            ITIComponents = ITI.components
-            for thisComponent in ITI.components:
+            baselineComponents = baseline.components
+            for thisComponent in baseline.components:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
                 thisComponent.tStartRefresh = None
@@ -776,11 +772,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             _timeToFirstFrame = win.getFutureFlipTime(clock="now")
             frameN = -1
             
-            # --- Run Routine "ITI" ---
+            # --- Run Routine "baseline" ---
             # if trial has changed, end Routine now
             if isinstance(trials, data.TrialHandler2) and thisTrial.thisN != trials.thisTrial.thisN:
                 continueRoutine = False
-            ITI.forceEnded = routineForceEnded = not continueRoutine
+            baseline.forceEnded = routineForceEnded = not continueRoutine
             while continueRoutine and routineTimer.getTime() < 1.0:
                 # get current time
                 t = routineTimer.getTime()
@@ -788,10 +784,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 tThisFlipGlobal = win.getFutureFlipTime(clock=None)
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
+                # is it time to end the Routine? (based on frames since Routine start)
+                if frameN >= 1*expInfo['frameRate']:
+                    continueRoutine = False
                 # *ISI1* period
                 
                 # if ISI1 is starting this frame...
-                if ISI1.status == NOT_STARTED and t >= 0.0-frameTolerance:
+                if ISI1.status == NOT_STARTED and frameN >= 0:
                     # keep track of start time/frame for later
                     ISI1.frameNStart = frameN  # exact frame index
                     ISI1.tStart = t  # local t and not account for scr refresh
@@ -801,13 +800,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     thisExp.addData('ISI1.started', t)
                     # update status
                     ISI1.status = STARTED
-                    ISI1.start(1)
+                    ISI1.start(1*expInfo['frameRate']*frameDur)
                 elif ISI1.status == STARTED:  # one frame should pass before updating params and completing
                     # Updating other components during *ISI1*
                     target_stim.setImage(target_file)
                     # Component updates done
                     ISI1.complete()  # finish the static period
-                    ISI1.tStop = ISI1.tStart + 1  # record stop time
+                    ISI1.tStop = ISI1.tStart + 1*expInfo['frameRate']*frameDur  # record stop time
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -828,10 +827,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # check if all components have finished
                 if not continueRoutine:  # a component has requested a forced-end of Routine
-                    ITI.forceEnded = routineForceEnded = True
+                    baseline.forceEnded = routineForceEnded = True
                     break
                 continueRoutine = False  # will revert to True if at least one component still running
-                for thisComponent in ITI.components:
+                for thisComponent in baseline.components:
                     if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                         continueRoutine = True
                         break  # at least one component has not yet finished
@@ -840,18 +839,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                     win.flip()
             
-            # --- Ending Routine "ITI" ---
-            for thisComponent in ITI.components:
+            # --- Ending Routine "baseline" ---
+            for thisComponent in baseline.components:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            # store stop times for ITI
-            ITI.tStop = globalClock.getTime(format='float')
-            ITI.tStopRefresh = tThisFlipGlobal
-            thisExp.addData('ITI.stopped', ITI.tStop)
+            # store stop times for baseline
+            baseline.tStop = globalClock.getTime(format='float')
+            baseline.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('baseline.stopped', baseline.tStop)
             # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-            if ITI.maxDurationReached:
-                routineTimer.addTime(-ITI.maxDuration)
-            elif ITI.forceEnded:
+            if baseline.maxDurationReached:
+                routineTimer.addTime(-baseline.maxDuration)
+            elif baseline.forceEnded:
                 routineTimer.reset()
             else:
                 routineTimer.addTime(-1.000000)
@@ -870,7 +869,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             stim.tStart = globalClock.getTime(format='float')
             stim.status = STARTED
             thisExp.addData('stim.started', stim.tStart)
-            stim.maxDuration = 1
             # keep track of which components have finished
             stimComponents = stim.components
             for thisComponent in stim.components:
@@ -897,15 +895,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 tThisFlipGlobal = win.getFutureFlipTime(clock=None)
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
-                # is it time to end the Routine? (based on local clock)
-                if tThisFlip > stim.maxDuration-frameTolerance:
-                    stim.maxDurationReached = True
+                # is it time to end the Routine? (based on frames since Routine start)
+                if frameN >= 1*expInfo['frameRate']:
                     continueRoutine = False
                 
                 # *target_stim* updates
                 
                 # if target_stim is starting this frame...
-                if target_stim.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                if target_stim.status == NOT_STARTED and frameN >= 0:
                     # keep track of start time/frame for later
                     target_stim.frameNStart = frameN  # exact frame index
                     target_stim.tStart = t  # local t and not account for scr refresh
@@ -924,8 +921,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if target_stim is stopping this frame...
                 if target_stim.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > target_stim.tStartRefresh + 1-frameTolerance:
+                    if frameN >= (target_stim.frameNStart + 1*expInfo['frameRate']):
                         # keep track of stop time/frame for later
                         target_stim.tStop = t  # not accounting for scr refresh
                         target_stim.tStopRefresh = tThisFlipGlobal  # on global time
@@ -935,6 +931,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                         # update status
                         target_stim.status = FINISHED
                         target_stim.setAutoDraw(False)
+                # Run 'Each Frame' code from code
+                print(frameN)
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -997,7 +995,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             delay.tStart = globalClock.getTime(format='float')
             delay.status = STARTED
             thisExp.addData('delay.started', delay.tStart)
-            delay.maxDuration = 1.5
             # keep track of which components have finished
             delayComponents = delay.components
             for thisComponent in delay.components:
@@ -1024,14 +1021,13 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 tThisFlipGlobal = win.getFutureFlipTime(clock=None)
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
-                # is it time to end the Routine? (based on local clock)
-                if tThisFlip > delay.maxDuration-frameTolerance:
-                    delay.maxDurationReached = True
+                # is it time to end the Routine? (based on frames since Routine start)
+                if frameN >= 1.5*expInfo['frameRate']:
                     continueRoutine = False
                 # *ISI2* period
                 
                 # if ISI2 is starting this frame...
-                if ISI2.status == NOT_STARTED and t >= 0.0-frameTolerance:
+                if ISI2.status == NOT_STARTED and frameN >= 0.0:
                     # keep track of start time/frame for later
                     ISI2.frameNStart = frameN  # exact frame index
                     ISI2.tStart = t  # local t and not account for scr refresh
@@ -1041,7 +1037,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     thisExp.addData('ISI2.started', t)
                     # update status
                     ISI2.status = STARTED
-                    ISI2.start(1.5)
+                    ISI2.start(1.5*expInfo['frameRate']*frameDur)
                 elif ISI2.status == STARTED:  # one frame should pass before updating params and completing
                     # Updating other components during *ISI2*
                     img1.setImage(img1_file)
@@ -1054,7 +1050,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                     Mcross.setImage('input_data/cross.png')
                     # Component updates done
                     ISI2.complete()  # finish the static period
-                    ISI2.tStop = ISI2.tStart + 1.5  # record stop time
+                    ISI2.tStop = ISI2.tStart + 1.5*expInfo['frameRate']*frameDur  # record stop time
                 
                 # check for quit (typically the Esc key)
                 if defaultKeyboard.getKeys(keyList=["escape"]):
@@ -1113,7 +1109,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             continueRoutine = True
             # update component parameters for each repeat
             # Run 'Begin Routine' code from rand_divider_slider
-            leftPressed, rightPressed, sliderMoved = .0, .0, .0
+            leftPressed, rightPressed, slider_moved = .0, .0, .0
             positions = []
             debug_task_txt = f'Trial {trial_key+1}'
             
@@ -1133,7 +1129,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             task.tStart = globalClock.getTime(format='float')
             task.status = STARTED
             thisExp.addData('task.started', task.tStart)
-            task.maxDuration = None
             # keep track of which components have finished
             taskComponents = task.components
             for thisComponent in task.components:
@@ -1160,31 +1155,35 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 tThisFlipGlobal = win.getFutureFlipTime(clock=None)
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
+                # is it time to end the Routine? (based on frames since Routine start)
+                if frameN >= 3*expInfo['frameRate']:
+                    continueRoutine = False
                 # Run 'Each Frame' code from rand_divider_slider
                 # for some reason psychopy doesnt remember this assignment
                 if slider.markerPos == None:
-                #    kb.clearEvents()
                     slider.markerPos = anchor
                 
-                print('each frame:')
-                print(kb.getKeys(['left'], waitRelease=False, clear=False))
-                print(leftPressed)
+                move_dist = .6/expInfo['frameRate']
                 
-                if (not leftPressed and kb.getKeys(['left'], waitRelease=False, clear=False))\
-                or (leftPressed and not kb.getKeys(['left'], waitRelease=True, clear=False)):
-                    leftPressed, sliderMoved = 1, 1
-                    if slider.markerPos >= (-.4 + .01):
-                        slider.markerPos -= 0.01
-                elif not leftPressed or kb.getKeys(['left'], waitRelease=True, clear=True):
+                # FYI, by default press & release are false, only temporarily true
+                if kb.getKeys(['left'], waitRelease=True, clear=True):
+                # released
                     leftPressed = 0
-                    
-                if (not rightPressed and kb.getKeys(['right'], waitRelease=False, clear=False))\
-                or (rightPressed and not kb.getKeys(['right'], waitRelease=True, clear=False)):
-                    rightPressed, sliderMoved = 1, 1    
-                    if slider.markerPos <= (.4 - .01):
-                        slider.markerPos += 0.01
-                elif not rightPressed or kb.getKeys(['right'], waitRelease=True, clear=True):
+                if leftPressed or kb.getKeys(['left'], waitRelease=False, clear=True):
+                # pressed
+                    leftPressed, slider_moved = 1, 1
+                    if (-.4 + .01) <= slider.markerPos:
+                        slider.markerPos -= move_dist
+                
+                if kb.getKeys(['right'], waitRelease=True, clear=True):
+                # released
                     rightPressed = 0
+                if rightPressed or kb.getKeys(['right'], waitRelease=False, clear=True):
+                # pressed
+                    rightPressed, slider_moved = 1, 1
+                    if slider.markerPos <= (.4 - .01):
+                        slider.markerPos += move_dist   
+                
                 
                 positions.append(slider.markerPos)
                 
@@ -1193,7 +1192,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # *img1* updates
                 
                 # if img1 is starting this frame...
-                if img1.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                if img1.status == NOT_STARTED and frameN >= 0:
                     # keep track of start time/frame for later
                     img1.frameNStart = frameN  # exact frame index
                     img1.tStart = t  # local t and not account for scr refresh
@@ -1212,8 +1211,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if img1 is stopping this frame...
                 if img1.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > img1.tStartRefresh + 3-frameTolerance:
+                    if frameN >= (img1.frameNStart + 3*expInfo['frameRate']):
                         # keep track of stop time/frame for later
                         img1.tStop = t  # not accounting for scr refresh
                         img1.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1227,7 +1225,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # *img2* updates
                 
                 # if img2 is starting this frame...
-                if img2.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                if img2.status == NOT_STARTED and frameN >= 0:
                     # keep track of start time/frame for later
                     img2.frameNStart = frameN  # exact frame index
                     img2.tStart = t  # local t and not account for scr refresh
@@ -1246,8 +1244,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if img2 is stopping this frame...
                 if img2.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > img2.tStartRefresh + 3-frameTolerance:
+                    if frameN >= (img2.frameNStart + 3*expInfo['frameRate']):
                         # keep track of stop time/frame for later
                         img2.tStop = t  # not accounting for scr refresh
                         img2.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1261,7 +1258,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # *divider_line* updates
                 
                 # if divider_line is starting this frame...
-                if divider_line.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                if divider_line.status == NOT_STARTED and frameN >= 0:
                     # keep track of start time/frame for later
                     divider_line.frameNStart = frameN  # exact frame index
                     divider_line.tStart = t  # local t and not account for scr refresh
@@ -1280,8 +1277,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if divider_line is stopping this frame...
                 if divider_line.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > divider_line.tStartRefresh + 3-frameTolerance:
+                    if frameN >= (divider_line.frameNStart + 3*expInfo['frameRate']):
                         # keep track of stop time/frame for later
                         divider_line.tStop = t  # not accounting for scr refresh
                         divider_line.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1295,7 +1291,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # *slider_line* updates
                 
                 # if slider_line is starting this frame...
-                if slider_line.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                if slider_line.status == NOT_STARTED and frameN >= 0:
                     # keep track of start time/frame for later
                     slider_line.frameNStart = frameN  # exact frame index
                     slider_line.tStart = t  # local t and not account for scr refresh
@@ -1314,8 +1310,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if slider_line is stopping this frame...
                 if slider_line.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > slider_line.tStartRefresh + 3-frameTolerance:
+                    if frameN >= (slider_line.frameNStart + 3*expInfo['frameRate']):
                         # keep track of stop time/frame for later
                         slider_line.tStop = t  # not accounting for scr refresh
                         slider_line.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1329,7 +1324,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # *slider* updates
                 
                 # if slider is starting this frame...
-                if slider.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                if slider.status == NOT_STARTED and frameN >= 0:
                     # keep track of start time/frame for later
                     slider.frameNStart = frameN  # exact frame index
                     slider.tStart = t  # local t and not account for scr refresh
@@ -1348,8 +1343,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if slider is stopping this frame...
                 if slider.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > slider.tStartRefresh + 3-frameTolerance:
+                    if frameN >= (slider.frameNStart + 3*expInfo['frameRate']):
                         # keep track of stop time/frame for later
                         slider.tStop = t  # not accounting for scr refresh
                         slider.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1364,7 +1358,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 waitOnFlip = False
                 
                 # if slider_resp is starting this frame...
-                if slider_resp.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                if slider_resp.status == NOT_STARTED and frameN >= 0:
                     # keep track of start time/frame for later
                     slider_resp.frameNStart = frameN  # exact frame index
                     slider_resp.tStart = t  # local t and not account for scr refresh
@@ -1380,8 +1374,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if slider_resp is stopping this frame...
                 if slider_resp.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > slider_resp.tStartRefresh + 3-frameTolerance:
+                    if frameN >= (slider_resp.frameNStart + 3*expInfo['frameRate']):
                         # keep track of stop time/frame for later
                         slider_resp.tStop = t  # not accounting for scr refresh
                         slider_resp.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1403,7 +1396,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 waitOnFlip = False
                 
                 # if submit_resp is starting this frame...
-                if submit_resp.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                if submit_resp.status == NOT_STARTED and frameN >= 0:
                     # keep track of start time/frame for later
                     submit_resp.frameNStart = frameN  # exact frame index
                     submit_resp.tStart = t  # local t and not account for scr refresh
@@ -1420,8 +1413,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if submit_resp is stopping this frame...
                 if submit_resp.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > submit_resp.tStartRefresh + 3-frameTolerance:
+                    if frameN >= (submit_resp.frameNStart + 3*expInfo['frameRate']):
                         # keep track of stop time/frame for later
                         submit_resp.tStop = t  # not accounting for scr refresh
                         submit_resp.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1525,7 +1517,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             coinLR, coinM, crossLR, crossM = 0, 0, 0, 0
             correct, outcome = 0, 0
             
-            if sliderMoved and not submit_resp.keys == None and 'return' in submit_resp.keys:
+            if slider_moved and not submit_resp.keys == None and 'return' in submit_resp.keys:
                 
                 if (slider.markerPos >= disp_div and target_pos >= disp_div)\
                 or (slider.markerPos <= disp_div and target_pos <= disp_div):
@@ -1550,19 +1542,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 bonus = 1 - (target_pos - slider.markerPos)**2
                 block_bonus += bonus
                 
-            elif not sliderMoved:
+            elif not slider_moved:
                 no_resp_txt = 'You must move the slider!'
                 
             else:
                 no_resp_txt = 'Respond faster!'
-            
+                
             no_resp_text.setText(no_resp_txt)
             # store start times for feedback
             feedback.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             feedback.tStart = globalClock.getTime(format='float')
             feedback.status = STARTED
             thisExp.addData('feedback.started', feedback.tStart)
-            feedback.maxDuration = 1
             # keep track of which components have finished
             feedbackComponents = feedback.components
             for thisComponent in feedback.components:
@@ -1589,23 +1580,21 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 tThisFlipGlobal = win.getFutureFlipTime(clock=None)
                 frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
                 # update/draw components on each frame
-                # is it time to end the Routine? (based on local clock)
-                if tThisFlip > feedback.maxDuration-frameTolerance:
-                    feedback.maxDurationReached = True
+                # is it time to end the Routine? (based on frames since Routine start)
+                if frameN >= 1*expInfo['frameRate']:
                     continueRoutine = False
                 # Run 'Each Frame' code from fb_code
-                Lcoin.setAutoDraw(bool(coinLR))
-                Rcoin.setAutoDraw(bool(coinLR))
-                Mcoin.setAutoDraw(bool(coinM))
-                Lcross.setAutoDraw(bool(crossLR))
-                Rcross.setAutoDraw(bool(crossLR))
-                Mcross.setAutoDraw(bool(crossM))
-                
+                #Lcoin.setAutoDraw(bool(coinLR))
+                #Rcoin.setAutoDraw(bool(coinLR))
+                #Mcoin.setAutoDraw(bool(coinM))
+                #Lcross.setAutoDraw(bool(crossLR))
+                #Rcross.setAutoDraw(bool(crossLR))
+                #Mcross.setAutoDraw(bool(crossM))
                 
                 # *no_resp_text* updates
                 
                 # if no_resp_text is starting this frame...
-                if no_resp_text.status == NOT_STARTED and tThisFlip >= 0.0-frameTolerance:
+                if no_resp_text.status == NOT_STARTED and frameN >= 0.0:
                     # keep track of start time/frame for later
                     no_resp_text.frameNStart = frameN  # exact frame index
                     no_resp_text.tStart = t  # local t and not account for scr refresh
@@ -1624,8 +1613,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if no_resp_text is stopping this frame...
                 if no_resp_text.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > no_resp_text.tStartRefresh + 1-frameTolerance:
+                    if frameN >= (no_resp_text.frameNStart + 1*expInfo['frameRate']):
                         # keep track of stop time/frame for later
                         no_resp_text.tStop = t  # not accounting for scr refresh
                         no_resp_text.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1639,7 +1627,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # *Lcoin* updates
                 
                 # if Lcoin is starting this frame...
-                if Lcoin.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                if Lcoin.status == NOT_STARTED and coinLR:
                     # keep track of start time/frame for later
                     Lcoin.frameNStart = frameN  # exact frame index
                     Lcoin.tStart = t  # local t and not account for scr refresh
@@ -1659,7 +1647,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # if Lcoin is stopping this frame...
                 if Lcoin.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > Lcoin.tStartRefresh + 1-frameTolerance:
+                    if tThisFlipGlobal > Lcoin.tStartRefresh + 1*expInfo['frameRate']-frameTolerance:
                         # keep track of stop time/frame for later
                         Lcoin.tStop = t  # not accounting for scr refresh
                         Lcoin.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1673,7 +1661,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # *Rcoin* updates
                 
                 # if Rcoin is starting this frame...
-                if Rcoin.status == NOT_STARTED and 0:
+                if Rcoin.status == NOT_STARTED and coinLR:
                     # keep track of start time/frame for later
                     Rcoin.frameNStart = frameN  # exact frame index
                     Rcoin.tStart = t  # local t and not account for scr refresh
@@ -1693,7 +1681,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # if Rcoin is stopping this frame...
                 if Rcoin.status == STARTED:
                     # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > Rcoin.tStartRefresh + 1-frameTolerance:
+                    if tThisFlipGlobal > Rcoin.tStartRefresh + 1*expInfo['frameRate']-frameTolerance:
                         # keep track of stop time/frame for later
                         Rcoin.tStop = t  # not accounting for scr refresh
                         Rcoin.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1707,7 +1695,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # *Mcoin* updates
                 
                 # if Mcoin is starting this frame...
-                if Mcoin.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                if Mcoin.status == NOT_STARTED and coinM:
                     # keep track of start time/frame for later
                     Mcoin.frameNStart = frameN  # exact frame index
                     Mcoin.tStart = t  # local t and not account for scr refresh
@@ -1726,8 +1714,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if Mcoin is stopping this frame...
                 if Mcoin.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > Mcoin.tStartRefresh + 1-frameTolerance:
+                    if frameN >= (Mcoin.frameNStart + 1*expInfo['frameRate']):
                         # keep track of stop time/frame for later
                         Mcoin.tStop = t  # not accounting for scr refresh
                         Mcoin.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1741,7 +1728,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # *Lcross* updates
                 
                 # if Lcross is starting this frame...
-                if Lcross.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                if Lcross.status == NOT_STARTED and crossLR:
                     # keep track of start time/frame for later
                     Lcross.frameNStart = frameN  # exact frame index
                     Lcross.tStart = t  # local t and not account for scr refresh
@@ -1760,8 +1747,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if Lcross is stopping this frame...
                 if Lcross.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > Lcross.tStartRefresh + 1-frameTolerance:
+                    if frameN >= 1*expInfo['frameRate']:
                         # keep track of stop time/frame for later
                         Lcross.tStop = t  # not accounting for scr refresh
                         Lcross.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1775,7 +1761,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # *Rcross* updates
                 
                 # if Rcross is starting this frame...
-                if Rcross.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                if Rcross.status == NOT_STARTED and crossLR:
                     # keep track of start time/frame for later
                     Rcross.frameNStart = frameN  # exact frame index
                     Rcross.tStart = t  # local t and not account for scr refresh
@@ -1794,8 +1780,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if Rcross is stopping this frame...
                 if Rcross.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > Rcross.tStartRefresh + 1-frameTolerance:
+                    if frameN >= (Rcross.frameNStart + 1*expInfo['frameRate']):
                         # keep track of stop time/frame for later
                         Rcross.tStop = t  # not accounting for scr refresh
                         Rcross.tStopRefresh = tThisFlipGlobal  # on global time
@@ -1809,7 +1794,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # *Mcross* updates
                 
                 # if Mcross is starting this frame...
-                if Mcross.status == NOT_STARTED and tThisFlip >= 0-frameTolerance:
+                if Mcross.status == NOT_STARTED and crossM:
                     # keep track of start time/frame for later
                     Mcross.frameNStart = frameN  # exact frame index
                     Mcross.tStart = t  # local t and not account for scr refresh
@@ -1828,8 +1813,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # if Mcross is stopping this frame...
                 if Mcross.status == STARTED:
-                    # is it time to stop? (based on global clock, using actual start)
-                    if tThisFlipGlobal > Mcross.tStartRefresh + 1-frameTolerance:
+                    if frameN >= (Mcross.frameNStart + 1*expInfo['frameRate']):
                         # keep track of stop time/frame for later
                         Mcross.tStop = t  # not accounting for scr refresh
                         Mcross.tStopRefresh = tThisFlipGlobal  # on global time

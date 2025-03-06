@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Tue Mar  4 23:11:41 2025
+    on Wed Mar  5 23:45:32 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -42,7 +42,7 @@ deviceManager = hardware.DeviceManager()
 _thisDir = os.path.dirname(os.path.abspath(__file__))
 # store info about the experiment session
 psychopyVersion = '2024.2.4'
-expName = 'asymmetry_v10'  # from the Builder filename that created this script
+expName = 'asymmetry_v11'  # from the Builder filename that created this script
 # information about this experiment
 expInfo = {
     'subj': '',
@@ -128,7 +128,7 @@ def setupData(expInfo, dataDir=None):
     thisExp = data.ExperimentHandler(
         name=expName, version='',
         extraInfo=expInfo, runtimeInfo=None,
-        originPath='/Users/f0064z8/Library/CloudStorage/GoogleDrive-si2442@columbia.edu/My Drive/research/asymmetry_design/asymmetry_v10_cursor_lastrun.py',
+        originPath='/Users/f0064z8/Library/CloudStorage/GoogleDrive-si2442@columbia.edu/My Drive/research/asymmetry_design/asymmetry_v11_cursor_lastrun.py',
         savePickle=True, saveWideText=True,
         dataFileName=dataDir + os.sep + filename, sortColumns='time'
     )
@@ -380,7 +380,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         depth=-1.0);
     block_start_resp = keyboard.Keyboard(deviceName='block_start_resp')
     
-    # --- Initialize components for Routine "ITI" ---
+    # --- Initialize components for Routine "baseline" ---
     ISI1 = clock.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI1')
     
     # --- Initialize components for Routine "stim" ---
@@ -391,14 +391,14 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0, 0), draggable=False, size=[.6,.6],
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=0.0)
+        texRes=128.0, interpolate=True, depth=-1.0)
     
     # --- Initialize components for Routine "delay" ---
     ISI2 = clock.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI2')
     
     # --- Initialize components for Routine "task" ---
     # Run 'Begin Experiment' code from rand_divider_slider
-    leftPressed, rightPressed, sliderMoved = .0, .0, .0
+    leftPressed, rightPressed, slider_moved = .0, .0, .0
     positions = []
     debug_task_txt = ''
     img1 = visual.ImageStim(
@@ -747,24 +747,24 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 for paramName in thisTrial:
                     globals()[paramName] = thisTrial[paramName]
             
-            # --- Prepare to start Routine "ITI" ---
-            # create an object to store info about Routine ITI
-            ITI = data.Routine(
-                name='ITI',
+            # --- Prepare to start Routine "baseline" ---
+            # create an object to store info about Routine baseline
+            baseline = data.Routine(
+                name='baseline',
                 components=[ISI1],
             )
-            ITI.status = NOT_STARTED
+            baseline.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
-            # store start times for ITI
-            ITI.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
-            ITI.tStart = globalClock.getTime(format='float')
-            ITI.status = STARTED
-            thisExp.addData('ITI.started', ITI.tStart)
-            ITI.maxDuration = None
+            # store start times for baseline
+            baseline.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
+            baseline.tStart = globalClock.getTime(format='float')
+            baseline.status = STARTED
+            thisExp.addData('baseline.started', baseline.tStart)
+            baseline.maxDuration = None
             # keep track of which components have finished
-            ITIComponents = ITI.components
-            for thisComponent in ITI.components:
+            baselineComponents = baseline.components
+            for thisComponent in baseline.components:
                 thisComponent.tStart = None
                 thisComponent.tStop = None
                 thisComponent.tStartRefresh = None
@@ -776,11 +776,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             _timeToFirstFrame = win.getFutureFlipTime(clock="now")
             frameN = -1
             
-            # --- Run Routine "ITI" ---
+            # --- Run Routine "baseline" ---
             # if trial has changed, end Routine now
             if isinstance(trials, data.TrialHandler2) and thisTrial.thisN != trials.thisTrial.thisN:
                 continueRoutine = False
-            ITI.forceEnded = routineForceEnded = not continueRoutine
+            baseline.forceEnded = routineForceEnded = not continueRoutine
             while continueRoutine and routineTimer.getTime() < 1.0:
                 # get current time
                 t = routineTimer.getTime()
@@ -791,7 +791,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # *ISI1* period
                 
                 # if ISI1 is starting this frame...
-                if ISI1.status == NOT_STARTED and t >= 0.0-frameTolerance:
+                if ISI1.status == NOT_STARTED and t >= 0-frameTolerance:
                     # keep track of start time/frame for later
                     ISI1.frameNStart = frameN  # exact frame index
                     ISI1.tStart = t  # local t and not account for scr refresh
@@ -828,10 +828,10 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 
                 # check if all components have finished
                 if not continueRoutine:  # a component has requested a forced-end of Routine
-                    ITI.forceEnded = routineForceEnded = True
+                    baseline.forceEnded = routineForceEnded = True
                     break
                 continueRoutine = False  # will revert to True if at least one component still running
-                for thisComponent in ITI.components:
+                for thisComponent in baseline.components:
                     if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                         continueRoutine = True
                         break  # at least one component has not yet finished
@@ -840,18 +840,18 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
                     win.flip()
             
-            # --- Ending Routine "ITI" ---
-            for thisComponent in ITI.components:
+            # --- Ending Routine "baseline" ---
+            for thisComponent in baseline.components:
                 if hasattr(thisComponent, "setAutoDraw"):
                     thisComponent.setAutoDraw(False)
-            # store stop times for ITI
-            ITI.tStop = globalClock.getTime(format='float')
-            ITI.tStopRefresh = tThisFlipGlobal
-            thisExp.addData('ITI.stopped', ITI.tStop)
+            # store stop times for baseline
+            baseline.tStop = globalClock.getTime(format='float')
+            baseline.tStopRefresh = tThisFlipGlobal
+            thisExp.addData('baseline.stopped', baseline.tStop)
             # using non-slip timing so subtract the expected duration of this Routine (unless ended on request)
-            if ITI.maxDurationReached:
-                routineTimer.addTime(-ITI.maxDuration)
-            elif ITI.forceEnded:
+            if baseline.maxDurationReached:
+                routineTimer.addTime(-baseline.maxDuration)
+            elif baseline.forceEnded:
                 routineTimer.reset()
             else:
                 routineTimer.addTime(-1.000000)
@@ -901,6 +901,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if tThisFlip > stim.maxDuration-frameTolerance:
                     stim.maxDurationReached = True
                     continueRoutine = False
+                # Run 'Each Frame' code from load_stim
+                print(frameN, end=', ')
                 
                 # *target_stim* updates
                 
@@ -1113,7 +1115,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             continueRoutine = True
             # update component parameters for each repeat
             # Run 'Begin Routine' code from rand_divider_slider
-            leftPressed, rightPressed, sliderMoved = .0, .0, .0
+            leftPressed, rightPressed, slider_moved = .0, .0, .0
             positions = []
             debug_task_txt = f'Trial {trial_key+1}'
             
@@ -1163,60 +1165,30 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 # Run 'Each Frame' code from rand_divider_slider
                 # for some reason psychopy doesnt remember this assignment
                 if slider.markerPos == None:
-                #    kb.clearEvents()
                     slider.markerPos = anchor
                 
-                #if (not leftPressed and kb.getKeys(['left'], waitRelease=False, clear=False))\
-                #or (leftPressed and not kb.getKeys(['left'], waitRelease=True, clear=False)):
-                #    leftPressed, sliderMoved = 1, 1
-                #    print(kb.getKeys(['left'], waitRelease=False, clear=False))
-                #    print(leftPressed)
-                #    if slider.markerPos >= (-.4 + .01):
-                #        slider.markerPos -= 0.01
-                #elif not leftPressed or kb.getKeys(['left'], waitRelease=True, clear=True):
-                #    leftPressed = 0
-                #    
-                #if (not rightPressed and kb.getKeys(['right'], waitRelease=False, clear=False))\
-                #or (rightPressed and not kb.getKeys(['right'], waitRelease=True, clear=False)):
-                #    rightPressed, sliderMoved = 1, 1    
-                #    if slider.markerPos <= (.4 - .01):
-                #        slider.markerPos += 0.01
-                #elif not rightPressed or kb.getKeys(['right'], waitRelease=True, clear=True):
-                #    rightPressed = 0
-                #    
+                move_dist = .6/expInfo['frameRate']
                 
-                #if (not leftPressed and kb.getKeys(['left'], waitRelease=False, clear=False)) or leftPressed:
-                #    leftPressed, sliderMoved = 1, 1
-                #    if slider.markerPos >= (-.4 + .01):
-                #        slider.markerPos -= 0.01
-                #elif kb.getKeys(['left'], waitRelease=True, clear=True):
-                #    leftPressed = 0
-                #else:
-                #    print('left released')
-                #    
-                #if (not rightPressed and kb.getKeys(['right'], waitRelease=False, clear=False)) or rightPressed:
-                #    rightPressed, sliderMoved = 1, 1    
-                #    if slider.markerPos <= (.4 - .01):
-                #        slider.markerPos += 0.01
-                #elif kb.getKeys(['right'], waitRelease=True, clear=True):
-                #    rightPressed = 0
-                
-                
-                if kb.getKeys(['left'], waitRelease=True, clear=True): # registers release
+                # FYI, by default press & release are false, only temporarily true
+                if kb.getKeys(['left'], waitRelease=True, clear=True):
+                # released
                     leftPressed = 0
-                elif kb.getKeys(['left'], waitRelease=False, clear=True): # registers click
-                    leftPressed, sliderMoved = 1, 1
-                else:
-                    if slider.markerPos >= (-.4 + .01):
-                        slider.markerPos -= 0.01
-                        
-                if kb.getKeys(['right'], waitRelease=True, clear=True): # registers release
+                if leftPressed or kb.getKeys(['left'], waitRelease=False, clear=True):
+                # pressed
+                    leftPressed, slider_moved = 1, 1
+                    if (-.4 + .01) <= slider.markerPos:
+                        slider.markerPos -= move_dist
+                
+                if kb.getKeys(['right'], waitRelease=True, clear=True):
+                # released
                     rightPressed = 0
-                #else:
-                #    rightPressed, sliderMoved = 1, 1
-                #    if slider.markerPos <= (.4 - .01):
-                #        slider.markerPos += 0.01
-                        
+                if rightPressed or kb.getKeys(['right'], waitRelease=False, clear=True):
+                # pressed
+                    rightPressed, slider_moved = 1, 1
+                    if slider.markerPos <= (.4 - .01):
+                        slider.markerPos += move_dist   
+                
+                
                 positions.append(slider.markerPos)
                 
                 # check psychopy_notes for link
@@ -1556,7 +1528,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             coinLR, coinM, crossLR, crossM = 0, 0, 0, 0
             correct, outcome = 0, 0
             
-            if sliderMoved and not submit_resp.keys == None and 'return' in submit_resp.keys:
+            if slider_moved and not submit_resp.keys == None and 'return' in submit_resp.keys:
                 
                 if (slider.markerPos >= disp_div and target_pos >= disp_div)\
                 or (slider.markerPos <= disp_div and target_pos <= disp_div):
@@ -1581,12 +1553,12 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 bonus = 1 - (target_pos - slider.markerPos)**2
                 block_bonus += bonus
                 
-            elif not sliderMoved:
+            elif not slider_moved:
                 no_resp_txt = 'You must move the slider!'
                 
             else:
                 no_resp_txt = 'Respond faster!'
-            
+                
             no_resp_text.setText(no_resp_txt)
             # store start times for feedback
             feedback.tStartRefresh = win.getFutureFlipTime(clock=globalClock)

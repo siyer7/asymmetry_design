@@ -46,16 +46,16 @@
     <Param val="False" valType="bool" updates="None" name="elSimMode"/>
     <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
     <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
-    <Param val="asymmetry_v10" valType="str" updates="None" name="expName"/>
+    <Param val="asymmetry_v11" valType="str" updates="None" name="expName"/>
     <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
-    <Param val="" valType="code" updates="None" name="frameRate"/>
+    <Param val="60" valType="code" updates="None" name="frameRate"/>
     <Param val="Attempting to measure frame rate of screen, please wait..." valType="str" updates="None" name="frameRateMsg"/>
     <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
     <Param val="4242" valType="num" updates="None" name="gpPort"/>
     <Param val="PsychToolbox" valType="str" updates="None" name="keyboardBackend"/>
     <Param val="exp" valType="code" updates="None" name="logging level"/>
-    <Param val="True" valType="bool" updates="None" name="measureFrameRate"/>
+    <Param val="False" valType="bool" updates="None" name="measureFrameRate"/>
     <Param val="('MIDDLE_BUTTON',)" valType="list" updates="None" name="mgBlink"/>
     <Param val="CONTINUOUS" valType="str" updates="None" name="mgMove"/>
     <Param val="0.5" valType="num" updates="None" name="mgSaccade"/>
@@ -179,23 +179,6 @@
         <Param val="1" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
-      <CodeComponent name="load_stim" plugin="None">
-        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="console.log(target_file);&amp;#10;target_stim.setImage((&quot;/Users/f0064z8/Library/CloudStorage/GoogleDrive-si2442@columbia.edu/My Drive/research/asymmetry_design/&quot; + target_file));&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="print(target_file)&amp;#10;target_stim.setImage('/Users/f0064z8/Library/CloudStorage/GoogleDrive-si2442@columbia.edu/My Drive/research/asymmetry_design/'+target_file)" valType="extendedCode" updates="constant" name="Begin Routine"/>
-        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
-        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
-        <Param val="True" valType="bool" updates="None" name="disabled"/>
-        <Param val="load_stim" valType="code" updates="None" name="name"/>
-      </CodeComponent>
       <ImageComponent name="target_stim" plugin="None">
         <Param val="center" valType="str" updates="constant" name="anchor"/>
         <Param val="$[1,1,1]" valType="color" updates="constant" name="color"/>
@@ -206,7 +189,7 @@
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="bool" updates="constant" name="flipHoriz"/>
         <Param val="False" valType="bool" updates="constant" name="flipVert"/>
-        <Param val="$target_file" valType="file" updates="set during: ITI.ISI1" name="image"/>
+        <Param val="$target_file" valType="file" updates="set during: baseline.ISI1" name="image"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="" valType="str" updates="constant" name="mask"/>
         <Param val="target_stim" valType="code" updates="None" name="name"/>
@@ -304,13 +287,13 @@
       <CodeComponent name="rand_divider_slider" plugin="None">
         <Param val="from psychopy.hardware import keyboard&amp;#10;kb = keyboard.Keyboard()" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="import {keyboard} from 'psychopy/hardware';&amp;#10;kb = new keyboard.Keyboard();&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="leftPressed, rightPressed, sliderMoved = .0, .0, .0&amp;#10;positions = []&amp;#10;debug_task_txt = ''" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="[leftPressed, rightPressed, sliderMoved] = [0.0, 0.0, 0.0];&amp;#10;positions = [];&amp;#10;debug_task_txt = &quot;&quot;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="[leftPressed, rightPressed, sliderMoved] = [0.0, 0.0, 0.0];&amp;#10;positions = [];&amp;#10;debug_task_txt = `Trial ${(trial_key + 1)}`;&amp;#10;kb.clearEvents();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="leftPressed, rightPressed, sliderMoved = .0, .0, .0&amp;#10;positions = []&amp;#10;debug_task_txt = f'Trial {trial_key+1}'&amp;#10;&amp;#10;kb.clearEvents()" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="leftPressed, rightPressed, slider_moved = .0, .0, .0&amp;#10;positions = []&amp;#10;debug_task_txt = ''" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="[leftPressed, rightPressed, slider_moved] = [0.0, 0.0, 0.0];&amp;#10;positions = [];&amp;#10;debug_task_txt = &quot;&quot;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="[leftPressed, rightPressed, slider_moved] = [0.0, 0.0, 0.0];&amp;#10;positions = [];&amp;#10;debug_task_txt = `Trial ${(trial_key + 1)}`;&amp;#10;kb.clearEvents();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="leftPressed, rightPressed, slider_moved = .0, .0, .0&amp;#10;positions = []&amp;#10;debug_task_txt = f'Trial {trial_key+1}'&amp;#10;&amp;#10;kb.clearEvents()" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="# for some reason psychopy doesnt remember this assignment&amp;#10;if slider.markerPos == None:&amp;#10;#    kb.clearEvents()&amp;#10;    slider.markerPos = anchor&amp;#10;&amp;#10;#if (not leftPressed and kb.getKeys(['left'], waitRelease=False, clear=False))\&amp;#10;#or (leftPressed and not kb.getKeys(['left'], waitRelease=True, clear=False)):&amp;#10;#    leftPressed, sliderMoved = 1, 1&amp;#10;#    print(kb.getKeys(['left'], waitRelease=False, clear=False))&amp;#10;#    print(leftPressed)&amp;#10;#    if slider.markerPos &gt;= (-.4 + .01):&amp;#10;#        slider.markerPos -= 0.01&amp;#10;#elif not leftPressed or kb.getKeys(['left'], waitRelease=True, clear=True):&amp;#10;#    leftPressed = 0&amp;#10;#    &amp;#10;#if (not rightPressed and kb.getKeys(['right'], waitRelease=False, clear=False))\&amp;#10;#or (rightPressed and not kb.getKeys(['right'], waitRelease=True, clear=False)):&amp;#10;#    rightPressed, sliderMoved = 1, 1    &amp;#10;#    if slider.markerPos &lt;= (.4 - .01):&amp;#10;#        slider.markerPos += 0.01&amp;#10;#elif not rightPressed or kb.getKeys(['right'], waitRelease=True, clear=True):&amp;#10;#    rightPressed = 0&amp;#10;#    &amp;#10;&amp;#10;#if (not leftPressed and kb.getKeys(['left'], waitRelease=False, clear=False)) or leftPressed:&amp;#10;#    leftPressed, sliderMoved = 1, 1&amp;#10;#    if slider.markerPos &gt;= (-.4 + .01):&amp;#10;#        slider.markerPos -= 0.01&amp;#10;#elif kb.getKeys(['left'], waitRelease=True, clear=True):&amp;#10;#    leftPressed = 0&amp;#10;#else:&amp;#10;#    print('left released')&amp;#10;#    &amp;#10;#if (not rightPressed and kb.getKeys(['right'], waitRelease=False, clear=False)) or rightPressed:&amp;#10;#    rightPressed, sliderMoved = 1, 1    &amp;#10;#    if slider.markerPos &lt;= (.4 - .01):&amp;#10;#        slider.markerPos += 0.01&amp;#10;#elif kb.getKeys(['right'], waitRelease=True, clear=True):&amp;#10;#    rightPressed = 0&amp;#10;&amp;#10;&amp;#10;if kb.getKeys(['left'], waitRelease=True, clear=True): # registers release&amp;#10;    leftPressed = 0&amp;#10;elif kb.getKeys(['left'], waitRelease=False, clear=True): # registers click&amp;#10;    leftPressed, sliderMoved = 1, 1&amp;#10;else:&amp;#10;    if slider.markerPos &gt;= (-.4 + .01):&amp;#10;        slider.markerPos -= 0.01&amp;#10;        &amp;#10;if kb.getKeys(['right'], waitRelease=True, clear=True): # registers release&amp;#10;    rightPressed = 0&amp;#10;#else:&amp;#10;#    rightPressed, sliderMoved = 1, 1&amp;#10;#    if slider.markerPos &lt;= (.4 - .01):&amp;#10;#        slider.markerPos += 0.01&amp;#10;        &amp;#10;positions.append(slider.markerPos)&amp;#10;&amp;#10;# check psychopy_notes for link" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="if ((slider.markerPos === null)) {&amp;#10;    slider.markerPos = anchor;&amp;#10;}&amp;#10;if (kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: true})) {&amp;#10;    leftPressed = 0;&amp;#10;} else {&amp;#10;    if (kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: false, &quot;clear&quot;: true})) {&amp;#10;        [leftPressed, sliderMoved] = [1, 1];&amp;#10;    } else {&amp;#10;        if ((slider.markerPos &gt;= ((- 0.4) + 0.01))) {&amp;#10;            slider.markerPos -= 0.01;&amp;#10;        }&amp;#10;    }&amp;#10;}&amp;#10;if (kb.getKeys([&quot;right&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: true})) {&amp;#10;    rightPressed = 0;&amp;#10;}&amp;#10;positions.push(slider.markerPos);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="# for some reason psychopy doesnt remember this assignment&amp;#10;if slider.markerPos == None:&amp;#10;    slider.markerPos = anchor&amp;#10;&amp;#10;move_dist = .6/expInfo['frameRate']&amp;#10;&amp;#10;# FYI, by default press &amp; release are false, only temporarily true&amp;#10;if kb.getKeys(['left'], waitRelease=True, clear=True):&amp;#10;# released&amp;#10;    leftPressed = 0&amp;#10;if leftPressed or kb.getKeys(['left'], waitRelease=False, clear=True):&amp;#10;# pressed&amp;#10;    leftPressed, slider_moved = 1, 1&amp;#10;    if (-.4 + .01) &lt;= slider.markerPos:&amp;#10;        slider.markerPos -= move_dist&amp;#10;&amp;#10;if kb.getKeys(['right'], waitRelease=True, clear=True):&amp;#10;# released&amp;#10;    rightPressed = 0&amp;#10;if rightPressed or kb.getKeys(['right'], waitRelease=False, clear=True):&amp;#10;# pressed&amp;#10;    rightPressed, slider_moved = 1, 1&amp;#10;    if slider.markerPos &lt;= (.4 - .01):&amp;#10;        slider.markerPos += move_dist   &amp;#10;&amp;#10;&amp;#10;positions.append(slider.markerPos)&amp;#10;&amp;#10;# check psychopy_notes for link" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if ((slider.markerPos === null)) {&amp;#10;    slider.markerPos = anchor;&amp;#10;}&amp;#10;move_dist = (0.6 / expInfo[&quot;frameRate&quot;]);&amp;#10;if (kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: true})) {&amp;#10;    leftPressed = 0;&amp;#10;}&amp;#10;if ((leftPressed || kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: false, &quot;clear&quot;: true}))) {&amp;#10;    [leftPressed, slider_moved] = [1, 1];&amp;#10;    if ((((- 0.4) + 0.01) &lt;= slider.markerPos)) {&amp;#10;        slider.markerPos -= move_dist;&amp;#10;    }&amp;#10;}&amp;#10;if (kb.getKeys([&quot;right&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: true})) {&amp;#10;    rightPressed = 0;&amp;#10;}&amp;#10;if ((rightPressed || kb.getKeys([&quot;right&quot;], {&quot;waitRelease&quot;: false, &quot;clear&quot;: true}))) {&amp;#10;    [rightPressed, slider_moved] = [1, 1];&amp;#10;    if ((slider.markerPos &lt;= (0.4 - 0.01))) {&amp;#10;        slider.markerPos += move_dist;&amp;#10;    }&amp;#10;}&amp;#10;positions.push(slider.markerPos);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="psychoJS.experiment.addData(&quot;positions&quot;, positions);&amp;#10;kb.clearEvents();&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
@@ -561,8 +544,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="correct, outcome = .0, .0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="[correct, outcome] = [0.0, 0.0];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;valence = ((stimVal === &quot;val_C0F1&quot;) ? val_C0F1 : val_C1F0);&amp;#10;no_resp_txt = &quot;&quot;;&amp;#10;[coinLR, coinM, crossLR, crossM] = [0, 0, 0, 0];&amp;#10;[correct, outcome] = [0, 0];&amp;#10;if (((sliderMoved &amp;&amp; (! (submit_resp.keys === null))) &amp;&amp; _pj.in_es6(&quot;return&quot;, submit_resp.keys))) {&amp;#10;    if ((((slider.markerPos &gt;= disp_div) &amp;&amp; (target_pos &gt;= disp_div)) || ((slider.markerPos &lt;= disp_div) &amp;&amp; (target_pos &lt;= disp_div)))) {&amp;#10;        correct = 1;&amp;#10;        outcome = ((valence === &quot;rew&quot;) ? 2 : 1);&amp;#10;        if ((outcome === 2)) {&amp;#10;            coinLR = 1;&amp;#10;        } else {&amp;#10;            if ((outcome === 1)) {&amp;#10;                coinM = 1;&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        correct = (- 1);&amp;#10;        outcome = ((valence === &quot;rew&quot;) ? (- 1) : (- 2));&amp;#10;        if ((outcome === (- 2))) {&amp;#10;            [coinLR, crossLR] = [1, 1];&amp;#10;        } else {&amp;#10;            if ((outcome === (- 1))) {&amp;#10;                [coinM, crossM] = [1, 1];&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    block_outcome += outcome;&amp;#10;    bonus = (1 - Math.pow((target_pos - slider.markerPos), 2));&amp;#10;    block_bonus += bonus;&amp;#10;} else {&amp;#10;    if ((! sliderMoved)) {&amp;#10;        no_resp_txt = &quot;You must move the slider!&quot;;&amp;#10;    } else {&amp;#10;        no_resp_txt = &quot;Respond faster!&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# C0F1 = Curve penalty, Flat reward&amp;#10;# stimVal comes from file which depends on experimenter input&amp;#10;valence = val_C0F1 if stimVal == 'val_C0F1' else val_C1F0&amp;#10;    &amp;#10;no_resp_txt = ''&amp;#10;coinLR, coinM, crossLR, crossM = 0, 0, 0, 0&amp;#10;correct, outcome = 0, 0&amp;#10;&amp;#10;if sliderMoved and not submit_resp.keys == None and 'return' in submit_resp.keys:&amp;#10;    &amp;#10;    if (slider.markerPos &gt;= disp_div and target_pos &gt;= disp_div)\&amp;#10;    or (slider.markerPos &lt;= disp_div and target_pos &lt;= disp_div):&amp;#10;        &amp;#10;        correct = 1&amp;#10;        outcome = 2 if valence == 'rew' else 1&amp;#10;        if outcome == 2:&amp;#10;            coinLR = 1&amp;#10;        elif outcome == 1:&amp;#10;            coinM = 1&amp;#10;            &amp;#10;    else:&amp;#10;        &amp;#10;        correct = -1&amp;#10;        outcome = -1 if valence == 'rew' else -2&amp;#10;        if outcome == -2:&amp;#10;            coinLR, crossLR = 1, 1&amp;#10;        elif outcome == -1:&amp;#10;            coinM, crossM = 1, 1   &amp;#10;    &amp;#10;    block_outcome += outcome&amp;#10;    bonus = 1 - (target_pos - slider.markerPos)**2&amp;#10;    block_bonus += bonus&amp;#10;    &amp;#10;elif not sliderMoved:&amp;#10;    no_resp_txt = 'You must move the slider!'&amp;#10;    &amp;#10;else:&amp;#10;    no_resp_txt = 'Respond faster!'&amp;#10;" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;valence = ((stimVal === &quot;val_C0F1&quot;) ? val_C0F1 : val_C1F0);&amp;#10;no_resp_txt = &quot;&quot;;&amp;#10;[coinLR, coinM, crossLR, crossM] = [0, 0, 0, 0];&amp;#10;[correct, outcome] = [0, 0];&amp;#10;if (((slider_moved &amp;&amp; (! (submit_resp.keys === null))) &amp;&amp; _pj.in_es6(&quot;return&quot;, submit_resp.keys))) {&amp;#10;    if ((((slider.markerPos &gt;= disp_div) &amp;&amp; (target_pos &gt;= disp_div)) || ((slider.markerPos &lt;= disp_div) &amp;&amp; (target_pos &lt;= disp_div)))) {&amp;#10;        correct = 1;&amp;#10;        outcome = ((valence === &quot;rew&quot;) ? 2 : 1);&amp;#10;        if ((outcome === 2)) {&amp;#10;            coinLR = 1;&amp;#10;        } else {&amp;#10;            if ((outcome === 1)) {&amp;#10;                coinM = 1;&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        correct = (- 1);&amp;#10;        outcome = ((valence === &quot;rew&quot;) ? (- 1) : (- 2));&amp;#10;        if ((outcome === (- 2))) {&amp;#10;            [coinLR, crossLR] = [1, 1];&amp;#10;        } else {&amp;#10;            if ((outcome === (- 1))) {&amp;#10;                [coinM, crossM] = [1, 1];&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    block_outcome += outcome;&amp;#10;    bonus = (1 - Math.pow((target_pos - slider.markerPos), 2));&amp;#10;    block_bonus += bonus;&amp;#10;} else {&amp;#10;    if ((! slider_moved)) {&amp;#10;        no_resp_txt = &quot;You must move the slider!&quot;;&amp;#10;    } else {&amp;#10;        no_resp_txt = &quot;Respond faster!&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# C0F1 = Curve penalty, Flat reward&amp;#10;# stimVal comes from file which depends on experimenter input&amp;#10;valence = val_C0F1 if stimVal == 'val_C0F1' else val_C1F0&amp;#10;    &amp;#10;no_resp_txt = ''&amp;#10;coinLR, coinM, crossLR, crossM = 0, 0, 0, 0&amp;#10;correct, outcome = 0, 0&amp;#10;&amp;#10;if slider_moved and not submit_resp.keys == None and 'return' in submit_resp.keys:&amp;#10;    &amp;#10;    if (slider.markerPos &gt;= disp_div and target_pos &gt;= disp_div)\&amp;#10;    or (slider.markerPos &lt;= disp_div and target_pos &lt;= disp_div):&amp;#10;        &amp;#10;        correct = 1&amp;#10;        outcome = 2 if valence == 'rew' else 1&amp;#10;        if outcome == 2:&amp;#10;            coinLR = 1&amp;#10;        elif outcome == 1:&amp;#10;            coinM = 1&amp;#10;            &amp;#10;    else:&amp;#10;        &amp;#10;        correct = -1&amp;#10;        outcome = -1 if valence == 'rew' else -2&amp;#10;        if outcome == -2:&amp;#10;            coinLR, crossLR = 1, 1&amp;#10;        elif outcome == -1:&amp;#10;            coinM, crossM = 1, 1   &amp;#10;    &amp;#10;    block_outcome += outcome&amp;#10;    bonus = 1 - (target_pos - slider.markerPos)**2&amp;#10;    block_bonus += bonus&amp;#10;    &amp;#10;elif not slider_moved:&amp;#10;    no_resp_txt = 'You must move the slider!'&amp;#10;    &amp;#10;else:&amp;#10;    no_resp_txt = 'Respond faster!'&amp;#10;    " valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="#Lcoin.setAutoDraw(bool(coinLR))&amp;#10;#Rcoin.setAutoDraw(bool(coinLR))&amp;#10;#Mcoin.setAutoDraw(bool(coinM))&amp;#10;#Lcross.setAutoDraw(bool(crossLR))&amp;#10;#Rcross.setAutoDraw(bool(crossLR))&amp;#10;#Mcross.setAutoDraw(bool(crossM))" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -857,8 +840,8 @@
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
     </Routine>
-    <Routine name="ITI">
-      <RoutineSettingsComponent name="ITI" plugin="None">
+    <Routine name="baseline">
+      <RoutineSettingsComponent name="baseline" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
         <Param val="" valType="str" updates="None" name="backgroundImg"/>
         <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
@@ -867,7 +850,7 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
         <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
-        <Param val="ITI" valType="code" updates="None" name="name"/>
+        <Param val="baseline" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
@@ -882,7 +865,7 @@
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="0" valType="code" updates="None" name="startVal"/>
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="1" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
@@ -913,7 +896,7 @@
       <Param name="name" updates="None" val="trials" valType="code"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
     </LoopInitiator>
-    <Routine name="ITI"/>
+    <Routine name="baseline"/>
     <Routine name="stim"/>
     <Routine name="delay"/>
     <Routine name="task"/>

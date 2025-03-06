@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Tue Mar  4 23:42:27 2025
+    on Thu Mar  6 00:53:01 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -62,7 +62,7 @@ or run the experiment with `--pilot` as an argument. To change what pilot
 PILOTING = core.setPilotModeFromArgs()
 # start off with values from experiment settings
 _fullScr = True
-_winSize = [1920, 1080]
+_winSize = [1440, 900]
 # if in pilot mode, apply overrides according to preferences
 if PILOTING:
     # force windowed mode
@@ -199,10 +199,7 @@ def setupWindow(expInfo=None, win=None):
         win.backgroundFit = 'none'
         win.units = 'height'
     if expInfo is not None:
-        # get/measure frame rate if not already in expInfo
-        if win._monitorFrameRate is None:
-            win._monitorFrameRate = win.getActualFrameRate(infoMsg='Attempting to measure frame rate of screen, please wait...')
-        expInfo['frameRate'] = win._monitorFrameRate
+        expInfo['frameRate'] = 60
     win.hideMessage()
     # show a visual indicator if we're in piloting mode
     if PILOTING and prefs.piloting['showPilotingIndicator']:
@@ -391,7 +388,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         ori=0.0, pos=(0, 0), draggable=False, size=[.6,.6],
         color=[1,1,1], colorSpace='rgb', opacity=None,
         flipHoriz=False, flipVert=False,
-        texRes=128.0, interpolate=True, depth=0.0)
+        texRes=128.0, interpolate=True, depth=-1.0)
     
     # --- Initialize components for Routine "delay" ---
     ISI2 = clock.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI2')
@@ -901,6 +898,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if tThisFlip > stim.maxDuration-frameTolerance:
                     stim.maxDurationReached = True
                     continueRoutine = False
+                # Run 'Each Frame' code from load_stim
+                print(frameN, end=', ')
                 
                 # *target_stim* updates
                 
@@ -1168,8 +1167,6 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
                 if (not leftPressed and kb.getKeys(['left'], waitRelease=False, clear=False))\
                 or (leftPressed and not kb.getKeys(['left'], waitRelease=True, clear=False)):
                     leftPressed, sliderMoved = 1, 1
-                    print(kb.getKeys(['left'], waitRelease=False, clear=False))
-                    print(leftPressed)
                     if slider.markerPos >= (-.4 + .01):
                         slider.markerPos -= 0.01
                 elif not leftPressed or kb.getKeys(['left'], waitRelease=True, clear=True):

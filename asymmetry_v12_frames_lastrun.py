@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy3 Experiment Builder (v2024.2.4),
-    on Thu Mar  6 18:27:48 2025
+    on Fri Mar  7 16:38:30 2025
 If you publish work using this script the most relevant publication is:
 
     Peirce J, Gray JR, Simpson S, MacAskill M, Höchenberger R, Sogo H, Kastman E, Lindeløv JK. (2019) 
@@ -384,7 +384,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
     
     # --- Initialize components for Routine "new_block" ---
     # Run 'Begin Experiment' code from block_start_code
-    block_outcome, block_bonus = 0, 0
+    block_outcome, block_bonus, disp_blockN = 0, 0, 0
     sess_type_file = f'input_data/sess_type{expInfo["sess_type"]}.csv'
     block_start_text = visual.TextStim(win=win, name='block_start_text',
         text='',
@@ -619,7 +619,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
         # update component parameters for each repeat
         # Run 'Begin Routine' code from block_start_code
         block_outcome, block_bonus = 0, 0
-        block_start_txt = f'Press enter to begin block {blockN}'
+        disp_blockN += 1
+        block_start_txt = f'Press enter to begin block {disp_blockN}'
         
         trial_rows = [i + (blockN-1) * 40 for i in range(40)]
         block_start_text.setText(block_start_txt)
@@ -801,6 +802,11 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             baseline.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
+            # Run 'Begin Routine' code from draw_target_stim
+            target_stim.image = f'./{target_file}'
+            target_stim.draw()
+            #target_stim.setAutoDraw(True)  # Keep it hidden until flip
+            win.flip()  # Draw but do not present yet
             # store start times for baseline
             baseline.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             baseline.tStart = globalClock.getTime(format='float')
@@ -912,6 +918,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             stim.status = NOT_STARTED
             continueRoutine = True
             # update component parameters for each repeat
+            # Run 'Begin Routine' code from code
+            win.flip()
             # store start times for stim
             stim.tStartRefresh = win.getFutureFlipTime(clock=globalClock)
             stim.tStart = globalClock.getTime(format='float')
@@ -1162,7 +1170,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             debug_task_txt = f'Trial {trial_key+1}'
             
             kb.clearEvents()
-            divider_line.setPos([disp_div, 0])
+            divider_line.setPos([div_pos, 0])
             slider.reset()
             # create starting attributes for slider_resp
             slider_resp.keys = []
@@ -1558,7 +1566,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             # Run 'Begin Routine' code from fb_code
             # C0F1 = Curve penalty, Flat reward
             # stimVal comes from file which depends on experimenter input
-            valence = val_C0F1 if stimVal == 'val_C0F1' else val_C1F0
+            valence = subj_C0F1_val if stimVal == 'subj_C0F1_val' else subj_C1F0_val
                 
             no_resp_txt = ''
             coinLR, coinM, crossLR, crossM = 0, 0, 0, 0
@@ -1566,8 +1574,8 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             
             if slider_moved and not submit_resp.keys == None and 'return' in submit_resp.keys:
                 
-                if (slider.markerPos >= disp_div and target_pos >= disp_div)\
-                or (slider.markerPos <= disp_div and target_pos <= disp_div):
+                if (slider.markerPos >= div_pos and target_pos >= div_pos)\
+                or (slider.markerPos <= div_pos and target_pos <= div_pos):
                     
                     correct = 1
                     outcome = 2 if valence == 'rew' else 1
@@ -1904,6 +1912,7 @@ def run(expInfo, thisExp, win, globalClock=None, thisSession=None):
             feedback.tStopRefresh = tThisFlipGlobal
             thisExp.addData('feedback.stopped', feedback.tStop)
             # Run 'End Routine' code from fb_code
+            thisExp.addData('valence', valence)
             thisExp.addData('correct', correct)
             thisExp.addData('outcome', outcome)
             thisExp.addData('trial_key', trial_key)

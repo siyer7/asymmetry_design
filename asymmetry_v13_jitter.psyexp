@@ -46,7 +46,7 @@
     <Param val="False" valType="bool" updates="None" name="elSimMode"/>
     <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
     <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
-    <Param val="asymmetry_v12" valType="str" updates="None" name="expName"/>
+    <Param val="asymmetry_v13" valType="str" updates="None" name="expName"/>
     <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
     <Param val="60" valType="code" updates="None" name="frameRate"/>
@@ -100,10 +100,10 @@
       <CodeComponent name="block_start_code" plugin="None">
         <Param val="import random, numpy as np" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="import * as random from 'random';&amp;#10;import * as np from 'numpy';&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="block_outcome, block_bonus = 0, 0&amp;#10;sess_type_file = f'input_data/sess_type{expInfo[&quot;sess_type&quot;]}.csv'" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="[block_outcome, block_bonus] = [0, 0];&amp;#10;sess_type_file = `input_data/sess_type${expInfo[&quot;sess_type&quot;]}.csv`;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="[block_outcome, block_bonus] = [0, 0];&amp;#10;block_start_txt = `Press up arrow to begin block ${blockN}`;&amp;#10;trial_rows = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(40);&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push((i + ((blockN - 1) * 40)));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="block_outcome, block_bonus = 0, 0&amp;#10;block_start_txt = f'Press up arrow to begin block {blockN}'&amp;#10;&amp;#10;trial_rows = [i + (blockN-1) * 40 for i in range(40)]" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="block_outcome, block_bonus, disp_blockN = 0, 0, 0&amp;#10;sess_type_file = f'input_data/sess_type{expInfo[&quot;sess_type&quot;]}.csv'" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="[block_outcome, block_bonus, disp_blockN] = [0, 0, 0];&amp;#10;sess_type_file = `input_data/sess_type${expInfo[&quot;sess_type&quot;]}.csv`;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="[block_outcome, block_bonus] = [0, 0];&amp;#10;disp_blockN += 1;&amp;#10;block_start_txt = `Press up arrow to begin block ${disp_blockN}`;&amp;#10;trial_rows = function () {&amp;#10;    var _pj_a = [], _pj_b = util.range(40);&amp;#10;    for (var _pj_c = 0, _pj_d = _pj_b.length; (_pj_c &lt; _pj_d); _pj_c += 1) {&amp;#10;        var i = _pj_b[_pj_c];&amp;#10;        _pj_a.push((i + ((blockN - 1) * 40)));&amp;#10;    }&amp;#10;    return _pj_a;&amp;#10;}&amp;#10;.call(this);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="block_outcome, block_bonus = 0, 0&amp;#10;disp_blockN += 1&amp;#10;block_start_txt = f'Press up arrow to begin block {disp_blockN}'&amp;#10;&amp;#10;trial_rows = [i + (blockN-1) * 40 for i in range(40)]" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -171,12 +171,12 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="1" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="baseline" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="frame N" valType="str" updates="None" name="stopType"/>
-        <Param val="1*expInfo['frameRate']" valType="code" updates="constant" name="stopVal"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
       <StaticComponent name="ISI1" plugin="None">
@@ -192,6 +192,50 @@
         <Param val="1*expInfo['frameRate']" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
       </StaticComponent>
+      <CodeComponent name="debug_base" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="base_dur = ((1 + np.random.choice(np.arange(0, 0.31, 0.05))) * expInfo[&quot;frameRate&quot;]);&amp;#10;console.log(&quot;\nbase frames:&quot;);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="base_dur = ( 1 + np.random.choice(np.arange(0, 0.31, 0.05)) ) * expInfo['frameRate']&amp;#10;print('\nbase frames:')" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="print(frameN, end=', ')" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="console.log(frameN);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="debug_base" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <TextComponent name="placeHolder_base" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="placeHolder_base" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="frame N" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (frames)" valType="str" updates="None" name="stopType"/>
+        <Param val="$base_dur" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
     </Routine>
     <Routine name="stim">
       <RoutineSettingsComponent name="stim" plugin="None">
@@ -201,13 +245,13 @@
         <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="1" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="stim" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="frame N" valType="str" updates="None" name="stopType"/>
-        <Param val="1*expInfo['frameRate']" valType="code" updates="constant" name="stopVal"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
       <ImageComponent name="target_stim" plugin="None">
@@ -266,7 +310,7 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
-      <CodeComponent name="code" plugin="None">
+      <CodeComponent name="debug_stim" plugin="None">
         <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
@@ -274,14 +318,14 @@
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="print(frameN, end=', ')" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="console.log(frameN);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="#print(frameN, end=', ')" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="code" valType="code" updates="None" name="name"/>
+        <Param val="debug_stim" valType="code" updates="None" name="name"/>
       </CodeComponent>
     </Routine>
     <Routine name="delay">
@@ -293,12 +337,12 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="1.5" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="delay" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="frame N" valType="str" updates="None" name="stopType"/>
-        <Param val="1.5*expInfo['frameRate']" valType="code" updates="constant" name="stopVal"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
       <StaticComponent name="ISI2" plugin="None">
@@ -314,6 +358,50 @@
         <Param val="1.5*expInfo['frameRate']" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
       </StaticComponent>
+      <CodeComponent name="debug_delay" plugin="None">
+        <Param val="" valType="extendedCode" updates="constant" name="Before Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="delay_dur = ((1.5 + np.random.choice(np.arange(0, 0.31, 0.05))) * expInfo[&quot;frameRate&quot;]);&amp;#10;console.log(&quot;\ndelay frames&quot;);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="delay_dur = ( 1.5 + np.random.choice(np.arange(0, 0.31, 0.05)) ) * expInfo['frameRate']&amp;#10;print('\ndelay frames')" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
+        <Param val="print(frameN, end=', ')" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="console.log(frameN);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
+        <Param val="" valType="extendedCode" updates="constant" name="End Routine"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="debug_delay" valType="code" updates="None" name="name"/>
+      </CodeComponent>
+      <TextComponent name="placeeHolder_delay" plugin="None">
+        <Param val="white" valType="color" updates="constant" name="color"/>
+        <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
+        <Param val="1" valType="num" updates="constant" name="contrast"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="False" valType="code" updates="constant" name="draggable"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="None" valType="str" updates="constant" name="flip"/>
+        <Param val="Arial" valType="str" updates="constant" name="font"/>
+        <Param val="LTR" valType="str" updates="None" name="languageStyle"/>
+        <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
+        <Param val="placeeHolder_delay" valType="code" updates="None" name="name"/>
+        <Param val="" valType="num" updates="constant" name="opacity"/>
+        <Param val="0" valType="num" updates="constant" name="ori"/>
+        <Param val="(0, 0)" valType="list" updates="constant" name="pos"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="None" name="startEstim"/>
+        <Param val="frame N" valType="str" updates="None" name="startType"/>
+        <Param val="0.0" valType="code" updates="None" name="startVal"/>
+        <Param val="duration (frames)" valType="str" updates="None" name="stopType"/>
+        <Param val="$delay_dur" valType="code" updates="constant" name="stopVal"/>
+        <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
+        <Param val="" valType="str" updates="set every repeat" name="text"/>
+        <Param val="from exp settings" valType="str" updates="None" name="units"/>
+        <Param val="" valType="code" updates="None" name="validator"/>
+        <Param val="" valType="num" updates="constant" name="wrapWidth"/>
+      </TextComponent>
     </Routine>
     <Routine name="task">
       <RoutineSettingsComponent name="task" plugin="None">
@@ -324,12 +412,12 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="3" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="task" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>
         <Param val="frame N" valType="str" updates="None" name="stopType"/>
-        <Param val="3*expInfo['frameRate']" valType="code" updates="constant" name="stopVal"/>
+        <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
       </RoutineSettingsComponent>
       <CodeComponent name="rand_divider_slider" plugin="None">
@@ -340,8 +428,8 @@
         <Param val="[leftPressed, rightPressed, slider_moved] = [0.0, 0.0, 0.0];&amp;#10;positions = [];&amp;#10;debug_task_txt = `Trial ${(trial_key + 1)}`;&amp;#10;kb.clearEvents();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
         <Param val="leftPressed, rightPressed, slider_moved = .0, .0, .0&amp;#10;positions = []&amp;#10;debug_task_txt = f'Trial {trial_key+1}'&amp;#10;&amp;#10;kb.clearEvents()" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="# for some reason psychopy doesnt remember this assignment&amp;#10;if slider.markerPos == None:&amp;#10;    slider.markerPos = anchor&amp;#10;&amp;#10;&amp;#10;# FYI, by default press &amp; release are false, only temporarily true&amp;#10;if kb.getKeys(['left'], waitRelease=True, clear=True):&amp;#10;# released&amp;#10;    leftPressed = 0&amp;#10;if leftPressed or kb.getKeys(['left'], waitRelease=False, clear=False):&amp;#10;# pressed&amp;#10;    leftPressed, slider_moved = 1, 1&amp;#10;    if (-.4 + .01) &lt;= slider.markerPos:&amp;#10;        slider.markerPos -= .01&amp;#10;&amp;#10;if kb.getKeys(['right'], waitRelease=True, clear=True):&amp;#10;# released&amp;#10;    rightPressed = 0&amp;#10;if rightPressed or kb.getKeys(['right'], waitRelease=False, clear=True):&amp;#10;# pressed&amp;#10;    rightPressed, slider_moved = 1, 1&amp;#10;    if slider.markerPos &lt;= (.4 - .01):&amp;#10;        slider.markerPos += .01   &amp;#10;&amp;#10;&amp;#10;positions.append(slider.markerPos)&amp;#10;&amp;#10;# check psychopy_notes for link" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="if ((slider.markerPos === null)) {&amp;#10;    slider.markerPos = anchor;&amp;#10;}&amp;#10;if (kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: true})) {&amp;#10;    leftPressed = 0;&amp;#10;}&amp;#10;if ((leftPressed || kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: false, &quot;clear&quot;: false}))) {&amp;#10;    [leftPressed, slider_moved] = [1, 1];&amp;#10;    if ((((- 0.4) + 0.01) &lt;= slider.markerPos)) {&amp;#10;        slider.markerPos -= 0.01;&amp;#10;    }&amp;#10;}&amp;#10;if (kb.getKeys([&quot;right&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: true})) {&amp;#10;    rightPressed = 0;&amp;#10;}&amp;#10;if ((rightPressed || kb.getKeys([&quot;right&quot;], {&quot;waitRelease&quot;: false, &quot;clear&quot;: true}))) {&amp;#10;    [rightPressed, slider_moved] = [1, 1];&amp;#10;    if ((slider.markerPos &lt;= (0.4 - 0.01))) {&amp;#10;        slider.markerPos += 0.01;&amp;#10;    }&amp;#10;}&amp;#10;positions.push(slider.markerPos);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="# for some reason psychopy doesnt remember this assignment&amp;#10;if slider.markerPos == None:&amp;#10;    slider.markerPos = anchor&amp;#10;&amp;#10;&amp;#10;# FYI, by default press &amp; release are false, only temporarily true&amp;#10;if kb.getKeys(['left'], waitRelease=True, clear=True):&amp;#10;# released&amp;#10;    leftPressed = 0&amp;#10;if leftPressed or kb.getKeys(['left'], waitRelease=False, clear=False):&amp;#10;# pressed&amp;#10;    leftPressed, slider_moved = 1, 1&amp;#10;    if (-.4 + .01) &lt;= slider.markerPos:&amp;#10;        slider.markerPos -= .01&amp;#10;&amp;#10;if kb.getKeys(['right'], waitRelease=True, clear=True):&amp;#10;# released&amp;#10;    rightPressed = 0&amp;#10;if rightPressed or kb.getKeys(['right'], waitRelease=False, clear=False):&amp;#10;# pressed&amp;#10;    rightPressed, slider_moved = 1, 1&amp;#10;    if slider.markerPos &lt;= (.4 - .01):&amp;#10;        slider.markerPos += .01   &amp;#10;&amp;#10;&amp;#10;positions.append(slider.markerPos)&amp;#10;&amp;#10;# check psychopy_notes for link" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if ((slider.markerPos === null)) {&amp;#10;    slider.markerPos = anchor;&amp;#10;}&amp;#10;if (kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: true})) {&amp;#10;    leftPressed = 0;&amp;#10;}&amp;#10;if ((leftPressed || kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: false, &quot;clear&quot;: false}))) {&amp;#10;    [leftPressed, slider_moved] = [1, 1];&amp;#10;    if ((((- 0.4) + 0.01) &lt;= slider.markerPos)) {&amp;#10;        slider.markerPos -= 0.01;&amp;#10;    }&amp;#10;}&amp;#10;if (kb.getKeys([&quot;right&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: true})) {&amp;#10;    rightPressed = 0;&amp;#10;}&amp;#10;if ((rightPressed || kb.getKeys([&quot;right&quot;], {&quot;waitRelease&quot;: false, &quot;clear&quot;: false}))) {&amp;#10;    [rightPressed, slider_moved] = [1, 1];&amp;#10;    if ((slider.markerPos &lt;= (0.4 - 0.01))) {&amp;#10;        slider.markerPos += 0.01;&amp;#10;    }&amp;#10;}&amp;#10;positions.push(slider.markerPos);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="psychoJS.experiment.addData(&quot;positions&quot;, positions);&amp;#10;kb.clearEvents();&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
@@ -552,7 +640,7 @@
         <Param val="" valType="str" updates="constant" name="desc"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="1" valType="code" updates="None" name="durationEstim"/>
-        <Param val="True" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
         <Param val="feedback" valType="code" updates="None" name="name"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="" valType="code" updates="constant" name="skipIf"/>

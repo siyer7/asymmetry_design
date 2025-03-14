@@ -5,7 +5,7 @@
     <Param val="use prefs" valType="str" updates="None" name="Audio lib"/>
     <Param val="" valType="str" updates="None" name="Completed URL"/>
     <Param val="auto" valType="str" updates="None" name="Data file delimiter"/>
-    <Param val="u'results/%s_subj%s_order%s_%s' % (expName, expInfo['subj'], expInfo['sess_type'], expInfo['date'])" valType="code" updates="None" name="Data filename"/>
+    <Param val="u'results/%s_subj-%s_order%s_%s' % (expName, expInfo['subj'], expInfo['sess_type'], expInfo['date'])" valType="code" updates="None" name="Data filename"/>
     <Param val="True" valType="bool" updates="None" name="Enable Escape"/>
     <Param val="Thank you for your patience." valType="str" updates="None" name="End Message"/>
     <Param val="{'subj': '', 'sess_type': 'A or B or C or D'}" valType="code" updates="None" name="Experiment info"/>
@@ -46,11 +46,11 @@
     <Param val="False" valType="bool" updates="None" name="elSimMode"/>
     <Param val="RIGHT_EYE" valType="str" updates="None" name="elTrackEyes"/>
     <Param val="PUPIL_CR_TRACKING" valType="str" updates="None" name="elTrackingMode"/>
-    <Param val="asymmetry_v13" valType="str" updates="None" name="expName"/>
+    <Param val="asymmetry_final" valType="str" updates="None" name="expName"/>
     <Param val="on Sync" valType="str" updates="None" name="exportHTML"/>
     <Param val="None" valType="str" updates="None" name="eyetracker"/>
     <Param val="60" valType="code" updates="None" name="frameRate"/>
-    <Param val="measuring" valType="str" updates="None" name="frameRateMsg"/>
+    <Param val="Measuring frame rate" valType="str" updates="None" name="frameRateMsg"/>
     <Param val="127.0.0.1" valType="str" updates="None" name="gpAddress"/>
     <Param val="4242" valType="num" updates="None" name="gpPort"/>
     <Param val="PsychToolbox" valType="str" updates="None" name="keyboardBackend"/>
@@ -70,7 +70,7 @@
     <Param val="1000" valType="num" updates="None" name="plPupilRemoteTimeoutMs"/>
     <Param val="False" valType="bool" updates="None" name="plPupillometryOnly"/>
     <Param val="psychopy_iohub_surface" valType="str" updates="None" name="plSurfaceName"/>
-    <Param val="0" valType="code" updates="None" name="runMode"/>
+    <Param val="1" valType="code" updates="None" name="runMode"/>
     <Param val="False" valType="bool" updates="None" name="rush"/>
     <Param val="time" valType="str" updates="None" name="sortColumns"/>
     <Param val="" valType="str" updates="None" name="tbLicenseFile"/>
@@ -197,8 +197,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="base_dur = 0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="base_dur = 0;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="base_dur = (1 + np.random.choice(np.arange((- 0.15), 0.16, 0.05)));&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="base_dur = 1 + np.random.choice(np.arange(-.15, 0.16, 0.05))&amp;#10;#print('base frames: ')" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="base_dur = 1;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="base_dur = 1# + np.random.choice(np.arange(-.1, 0.11, 0.05))&amp;#10;#print(f'RR: {expInfo[&quot;frameRate&quot;]}')&amp;#10;#print('base frames: ')" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="#print(frameN, end=', ')" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -292,11 +292,11 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="delay_dur = (1.5 + np.random.choice(np.arange((- 0.15), 0.16, 0.05)));&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="delay_dur = 1.5 + np.random.choice(np.arange(-.15, 0.16, 0.05))&amp;#10;#print('delay frames: ')" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="delay_dur = 1.4;&amp;#10;console.log(&quot;delay frames: &quot;);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="delay_dur = 1.4# + np.random.choice(np.arange(-.1, 0.11, 0.05))&amp;#10;print('delay frames: ')" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="#print(frameN, end=', ')" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="print(frameN, end=', ')" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="console.log(frameN);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Routine"/>
@@ -325,13 +325,13 @@
       <CodeComponent name="rand_divider_slider" plugin="None">
         <Param val="from psychopy.hardware import keyboard&amp;#10;kb = keyboard.Keyboard()" valType="extendedCode" updates="constant" name="Before Experiment"/>
         <Param val="import {keyboard} from 'psychopy/hardware';&amp;#10;kb = new keyboard.Keyboard();&amp;#10;" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
-        <Param val="leftPressed, rightPressed, slider_moved = .0, .0, .0&amp;#10;positions = []&amp;#10;response_move = .005&amp;#10;debug_task_txt = ''" valType="extendedCode" updates="constant" name="Begin Experiment"/>
-        <Param val="[leftPressed, rightPressed, slider_moved] = [0.0, 0.0, 0.0];&amp;#10;positions = [];&amp;#10;response_move = 0.005;&amp;#10;debug_task_txt = &quot;&quot;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="[leftPressed, rightPressed, slider_moved] = [0.0, 0.0, 0.0];&amp;#10;positions = [];&amp;#10;debug_task_txt = `Trial ${(trial_key + 1)}`;&amp;#10;kb.clearEvents();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="leftPressed, rightPressed, slider_moved = .0, .0, .0&amp;#10;positions = []&amp;#10;debug_task_txt = f'Trial {trial_key+1}'&amp;#10;&amp;#10;kb.clearEvents()" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="leftPressed, rightPressed, marker_moved = .0, .0, .0&amp;#10;positions = []&amp;#10;response_move = .005&amp;#10;debug_task_txt = ''" valType="extendedCode" updates="constant" name="Begin Experiment"/>
+        <Param val="[leftPressed, rightPressed, marker_moved] = [0.0, 0.0, 0.0];&amp;#10;positions = [];&amp;#10;response_move = 0.005;&amp;#10;debug_task_txt = &quot;&quot;;&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
+        <Param val="[leftPressed, rightPressed, marker_moved] = [0.0, 0.0, 0.0];&amp;#10;positions = [];&amp;#10;debug_task_txt = `Trial ${(trial_key + 1)}`;&amp;#10;kb.clearEvents();&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="leftPressed, rightPressed, marker_moved = .0, .0, .0&amp;#10;positions = []&amp;#10;debug_task_txt = f'Trial {trial_key+1}'&amp;#10;&amp;#10;kb.clearEvents()" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
-        <Param val="debug_task.text = trial_key&amp;#10;&amp;#10;# for some reason psychopy doesnt remember this assignment&amp;#10;if slider.markerPos == None:&amp;#10;    slider.markerPos = anchor&amp;#10;&amp;#10;# FYI, by default press &amp; release are false, only temporarily true&amp;#10;if kb.getKeys(['left'], waitRelease=True, clear=True):&amp;#10;# released&amp;#10;    leftPressed = 0&amp;#10;if leftPressed or kb.getKeys(['left'], waitRelease=False, clear=False):&amp;#10;# pressed&amp;#10;    leftPressed, slider_moved = 1, 1&amp;#10;    if (-.4 + .01) &lt;= slider.markerPos:&amp;#10;        slider.markerPos -= response_move&amp;#10;&amp;#10;if kb.getKeys(['right'], waitRelease=True, clear=True):&amp;#10;# released&amp;#10;    rightPressed = 0&amp;#10;if rightPressed or kb.getKeys(['right'], waitRelease=False, clear=False):&amp;#10;# pressed&amp;#10;    rightPressed, slider_moved = 1, 1&amp;#10;    if slider.markerPos &lt;= (.4 - .01):&amp;#10;        slider.markerPos += response_move   &amp;#10;&amp;#10;&amp;#10;positions.append(slider.markerPos)&amp;#10;&amp;#10;# check psychopy_notes for link" valType="extendedCode" updates="constant" name="Each Frame"/>
-        <Param val="debug_task.text = trial_key;&amp;#10;if ((slider.markerPos === null)) {&amp;#10;    slider.markerPos = anchor;&amp;#10;}&amp;#10;if (kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: true})) {&amp;#10;    leftPressed = 0;&amp;#10;}&amp;#10;if ((leftPressed || kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: false, &quot;clear&quot;: false}))) {&amp;#10;    [leftPressed, slider_moved] = [1, 1];&amp;#10;    if ((((- 0.4) + 0.01) &lt;= slider.markerPos)) {&amp;#10;        slider.markerPos -= response_move;&amp;#10;    }&amp;#10;}&amp;#10;if (kb.getKeys([&quot;right&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: true})) {&amp;#10;    rightPressed = 0;&amp;#10;}&amp;#10;if ((rightPressed || kb.getKeys([&quot;right&quot;], {&quot;waitRelease&quot;: false, &quot;clear&quot;: false}))) {&amp;#10;    [rightPressed, slider_moved] = [1, 1];&amp;#10;    if ((slider.markerPos &lt;= (0.4 - 0.01))) {&amp;#10;        slider.markerPos += response_move;&amp;#10;    }&amp;#10;}&amp;#10;positions.push(slider.markerPos);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
+        <Param val="#debug_task.text = trial_key&amp;#10;&amp;#10;# for some reason psychopy doesnt remember this assignment&amp;#10;if marker.markerPos == None:&amp;#10;    marker.markerPos = anchor&amp;#10;&amp;#10;# FYI, by default press &amp; release are false, only temporarily true&amp;#10;if kb.getKeys(['left'], waitRelease=True, clear=True):&amp;#10;# released&amp;#10;    leftPressed = 0&amp;#10;if leftPressed or kb.getKeys(['left'], waitRelease=False, clear=False):&amp;#10;# pressed&amp;#10;    leftPressed, marker_moved = 1, 1&amp;#10;    if (-.4 + .01) &lt;= marker.markerPos:&amp;#10;        marker.markerPos -= response_move&amp;#10;&amp;#10;if kb.getKeys(['right'], waitRelease=True, clear=True):&amp;#10;# released&amp;#10;    rightPressed = 0&amp;#10;if rightPressed or kb.getKeys(['right'], waitRelease=False, clear=False):&amp;#10;# pressed&amp;#10;    rightPressed, marker_moved = 1, 1&amp;#10;    if marker.markerPos &lt;= (.4 - .01):&amp;#10;        marker.markerPos += response_move   &amp;#10;&amp;#10;&amp;#10;positions.append(marker.markerPos)&amp;#10;&amp;#10;# check psychopy_notes for link" valType="extendedCode" updates="constant" name="Each Frame"/>
+        <Param val="if ((marker.markerPos === null)) {&amp;#10;    marker.markerPos = anchor;&amp;#10;}&amp;#10;if (kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: true})) {&amp;#10;    leftPressed = 0;&amp;#10;}&amp;#10;if ((leftPressed || kb.getKeys([&quot;left&quot;], {&quot;waitRelease&quot;: false, &quot;clear&quot;: false}))) {&amp;#10;    [leftPressed, marker_moved] = [1, 1];&amp;#10;    if ((((- 0.4) + 0.01) &lt;= marker.markerPos)) {&amp;#10;        marker.markerPos -= response_move;&amp;#10;    }&amp;#10;}&amp;#10;if (kb.getKeys([&quot;right&quot;], {&quot;waitRelease&quot;: true, &quot;clear&quot;: true})) {&amp;#10;    rightPressed = 0;&amp;#10;}&amp;#10;if ((rightPressed || kb.getKeys([&quot;right&quot;], {&quot;waitRelease&quot;: false, &quot;clear&quot;: false}))) {&amp;#10;    [rightPressed, marker_moved] = [1, 1];&amp;#10;    if ((marker.markerPos &lt;= (0.4 - 0.01))) {&amp;#10;        marker.markerPos += response_move;&amp;#10;    }&amp;#10;}&amp;#10;positions.push(marker.markerPos);&amp;#10;" valType="extendedCode" updates="constant" name="Each JS Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="End Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="End JS Experiment"/>
         <Param val="psychoJS.experiment.addData(&quot;positions&quot;, positions);&amp;#10;kb.clearEvents();&amp;#10;" valType="extendedCode" updates="constant" name="End JS Routine"/>
@@ -407,7 +407,7 @@
         <Param val="1.0000, 1.0000, 1.0000" valType="color" updates="constant" name="fillColor"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
         <Param val="1.0000, 1.0000, 1.0000" valType="color" updates="constant" name="lineColor"/>
-        <Param val="5" valType="num" updates="constant" name="lineWidth"/>
+        <Param val="3" valType="num" updates="constant" name="lineWidth"/>
         <Param val="4" valType="int" updates="constant" name="nVertices"/>
         <Param val="divider_line" valType="code" updates="None" name="name"/>
         <Param val="" valType="num" updates="constant" name="opacity"/>
@@ -415,7 +415,7 @@
         <Param val="$div_pos, 0" valType="list" updates="set every repeat" name="pos"/>
         <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
         <Param val="line" valType="str" updates="None" name="shape"/>
-        <Param val=".2,0" valType="list" updates="constant" name="size"/>
+        <Param val=".4,0" valType="list" updates="constant" name="size"/>
         <Param val="" valType="code" updates="None" name="startEstim"/>
         <Param val="time (s)" valType="str" updates="None" name="startType"/>
         <Param val="0" valType="code" updates="None" name="startVal"/>
@@ -433,9 +433,9 @@
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="1.0000, 1.0000, 1.0000" valType="color" updates="constant" name="fillColor"/>
+        <Param val="-1.0000, -1.0000, -1.0000" valType="color" updates="constant" name="fillColor"/>
         <Param val="linear" valType="str" updates="constant" name="interpolate"/>
-        <Param val="1.0000, 1.0000, 1.0000" valType="color" updates="constant" name="lineColor"/>
+        <Param val="-1.0000, -1.0000, -1.0000" valType="color" updates="constant" name="lineColor"/>
         <Param val="5" valType="num" updates="constant" name="lineWidth"/>
         <Param val="4" valType="int" updates="constant" name="nVertices"/>
         <Param val="slider_line" valType="code" updates="None" name="name"/>
@@ -455,14 +455,14 @@
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="list" updates="constant" name="vertices"/>
       </PolygonComponent>
-      <SliderComponent name="slider" plugin="None">
+      <SliderComponent name="marker" plugin="None">
         <Param val="" valType="color" updates="constant" name="borderColor"/>
         <Param val="" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
         <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="1.0000, -.5000, 1.0000" valType="color" updates="constant" name="fillColor"/>
+        <Param val="-1.0000, -1.0000, -1.0000" valType="color" updates="constant" name="fillColor"/>
         <Param val="False" valType="bool" updates="constant" name="flip"/>
         <Param val="Open Sans" valType="str" updates="constant" name="font"/>
         <Param val="False" valType="bool" updates="constant" name="forceEndRoutine"/>
@@ -470,7 +470,7 @@
         <Param val="" valType="code" updates="None" name="initVal"/>
         <Param val="" valType="list" updates="constant" name="labels"/>
         <Param val="0.05" valType="num" updates="constant" name="letterHeight"/>
-        <Param val="slider" valType="code" updates="None" name="name"/>
+        <Param val="marker" valType="code" updates="None" name="name"/>
         <Param val="1" valType="num" updates="constant" name="opacity"/>
         <Param val="0" valType="num" updates="constant" name="ori"/>
         <Param val="0,0" valType="list" updates="constant" name="pos"/>
@@ -536,7 +536,7 @@
         <Param val="white" valType="color" updates="constant" name="color"/>
         <Param val="rgb" valType="str" updates="constant" name="colorSpace"/>
         <Param val="1" valType="num" updates="constant" name="contrast"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="True" valType="bool" updates="None" name="disabled"/>
         <Param val="False" valType="code" updates="constant" name="draggable"/>
         <Param val="0" valType="code" updates="None" name="durationEstim"/>
         <Param val="None" valType="str" updates="constant" name="flip"/>
@@ -560,6 +560,24 @@
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
     </Routine>
+    <Routine name="anticipation">
+      <RoutineSettingsComponent name="anticipation" plugin="None">
+        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
+        <Param val="" valType="str" updates="None" name="backgroundImg"/>
+        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
+        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
+        <Param val="" valType="str" updates="constant" name="desc"/>
+        <Param val="False" valType="bool" updates="None" name="disabled"/>
+        <Param val="" valType="code" updates="None" name="durationEstim"/>
+        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
+        <Param val="anticipation" valType="code" updates="None" name="name"/>
+        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
+        <Param val="" valType="code" updates="constant" name="skipIf"/>
+        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
+        <Param val=".25" valType="code" updates="constant" name="stopVal"/>
+        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
+      </RoutineSettingsComponent>
+    </Routine>
     <Routine name="feedback">
       <RoutineSettingsComponent name="feedback" plugin="None">
         <Param val="none" valType="str" updates="None" name="backgroundFit"/>
@@ -582,8 +600,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="correct, outcome = .0, .0" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="[correct, outcome] = [0.0, 0.0];&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;valence = ((stimVal === &quot;subj_C0F1_val&quot;) ? subj_C0F1_val : subj_C1F0_val);&amp;#10;no_resp_txt = &quot;&quot;;&amp;#10;[coinLR, coinM, crossLR, crossM] = [0, 0, 0, 0];&amp;#10;[correct, outcome] = [0, 0];&amp;#10;if (((slider_moved &amp;&amp; (! (submit_resp.keys === null))) &amp;&amp; _pj.in_es6(&quot;up&quot;, submit_resp.keys))) {&amp;#10;    if ((((slider.markerPos &gt;= div_pos) &amp;&amp; (target_pos &gt;= div_pos)) || ((slider.markerPos &lt;= div_pos) &amp;&amp; (target_pos &lt;= div_pos)))) {&amp;#10;        correct = 1;&amp;#10;        outcome = ((valence === &quot;rew&quot;) ? 2 : 1);&amp;#10;        if ((outcome === 2)) {&amp;#10;            coinLR = 1;&amp;#10;        } else {&amp;#10;            if ((outcome === 1)) {&amp;#10;                coinM = 1;&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        correct = 0;&amp;#10;        outcome = ((valence === &quot;rew&quot;) ? (- 1) : (- 2));&amp;#10;        if ((outcome === (- 2))) {&amp;#10;            [coinLR, crossLR] = [1, 1];&amp;#10;        } else {&amp;#10;            if ((outcome === (- 1))) {&amp;#10;                [coinM, crossM] = [1, 1];&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    block_outcome += outcome;&amp;#10;    bonus = (1 - Math.pow((target_pos - slider.markerPos), 2));&amp;#10;    if (correct) {&amp;#10;        block_bonus += bonus;&amp;#10;    }&amp;#10;} else {&amp;#10;    if ((! slider_moved)) {&amp;#10;        no_resp_txt = &quot;You must move the slider!&quot;;&amp;#10;    } else {&amp;#10;        no_resp_txt = &quot;Respond faster!&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="# C0F1 = Curve penalty, Flat reward&amp;#10;# stimVal comes from file which depends on experimenter input&amp;#10;valence = subj_C0F1_val if stimVal == 'subj_C0F1_val' else subj_C1F0_val&amp;#10;    &amp;#10;no_resp_txt = ''&amp;#10;coinLR, coinM, crossLR, crossM = 0, 0, 0, 0&amp;#10;correct, outcome = 0, 0&amp;#10;&amp;#10;if slider_moved and not submit_resp.keys == None and 'up' in submit_resp.keys:&amp;#10;    &amp;#10;    if (slider.markerPos &gt;= div_pos and target_pos &gt;= div_pos)\&amp;#10;    or (slider.markerPos &lt;= div_pos and target_pos &lt;= div_pos):&amp;#10;        &amp;#10;        correct = 1&amp;#10;        outcome = 2 if valence == 'rew' else 1&amp;#10;        if outcome == 2:&amp;#10;            coinLR = 1&amp;#10;        elif outcome == 1:&amp;#10;            coinM = 1&amp;#10;            &amp;#10;    else:&amp;#10;        &amp;#10;        correct = 0&amp;#10;        outcome = -1 if valence == 'rew' else -2&amp;#10;        if outcome == -2:&amp;#10;            coinLR, crossLR = 1, 1&amp;#10;        elif outcome == -1:&amp;#10;            coinM, crossM = 1, 1   &amp;#10;    &amp;#10;    block_outcome += outcome&amp;#10;    bonus = 1 - (target_pos - slider.markerPos)**2&amp;#10;    if correct:&amp;#10;        block_bonus += bonus&amp;#10;    &amp;#10;elif not slider_moved:&amp;#10;    no_resp_txt = 'You must move the slider!'&amp;#10;    &amp;#10;else:&amp;#10;    no_resp_txt = 'Respond faster!'&amp;#10;    " valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="var _pj;&amp;#10;function _pj_snippets(container) {&amp;#10;    function in_es6(left, right) {&amp;#10;        if (((right instanceof Array) || ((typeof right) === &quot;string&quot;))) {&amp;#10;            return (right.indexOf(left) &gt; (- 1));&amp;#10;        } else {&amp;#10;            if (((right instanceof Map) || (right instanceof Set) || (right instanceof WeakMap) || (right instanceof WeakSet))) {&amp;#10;                return right.has(left);&amp;#10;            } else {&amp;#10;                return (left in right);&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    container[&quot;in_es6&quot;] = in_es6;&amp;#10;    return container;&amp;#10;}&amp;#10;_pj = {};&amp;#10;_pj_snippets(_pj);&amp;#10;valence = ((stimVal === &quot;subj_C0F1_val&quot;) ? subj_C0F1_val : subj_C1F0_val);&amp;#10;no_resp_txt = &quot;&quot;;&amp;#10;[coinLR, coinM, crossLR, crossM] = [0, 0, 0, 0];&amp;#10;[correct, outcome] = [0, 0];&amp;#10;if (((marker_moved &amp;&amp; (! (submit_resp.keys === null))) &amp;&amp; _pj.in_es6(&quot;up&quot;, submit_resp.keys))) {&amp;#10;    if ((((marker.markerPos &gt;= div_pos) &amp;&amp; (target_pos &gt;= div_pos)) || ((marker.markerPos &lt;= div_pos) &amp;&amp; (target_pos &lt;= div_pos)))) {&amp;#10;        correct = 1;&amp;#10;        outcome = ((valence === &quot;rew&quot;) ? 2 : 1);&amp;#10;        if ((outcome === 2)) {&amp;#10;            coinLR = 1;&amp;#10;        } else {&amp;#10;            if ((outcome === 1)) {&amp;#10;                coinM = 1;&amp;#10;            }&amp;#10;        }&amp;#10;    } else {&amp;#10;        correct = 0;&amp;#10;        outcome = ((valence === &quot;rew&quot;) ? (- 1) : (- 2));&amp;#10;        if ((outcome === (- 2))) {&amp;#10;            [coinLR, crossLR] = [1, 1];&amp;#10;        } else {&amp;#10;            if ((outcome === (- 1))) {&amp;#10;                [coinM, crossM] = [1, 1];&amp;#10;            }&amp;#10;        }&amp;#10;    }&amp;#10;    block_outcome += outcome;&amp;#10;    bonus = ((Math.abs((target_pos - marker.markerPos)) &lt;= 0.05) ? 1 : 0);&amp;#10;    block_bonus += bonus;&amp;#10;} else {&amp;#10;    if ((! marker_moved)) {&amp;#10;        no_resp_txt = &quot;You must move the marker!&quot;;&amp;#10;    } else {&amp;#10;        no_resp_txt = &quot;Respond faster!&quot;;&amp;#10;    }&amp;#10;}&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="# C0F1 = Curve penalty, Flat reward&amp;#10;# stimVal comes from file which depends on experimenter input&amp;#10;valence = subj_C0F1_val if stimVal == 'subj_C0F1_val' else subj_C1F0_val&amp;#10;    &amp;#10;no_resp_txt = ''&amp;#10;coinLR, coinM, crossLR, crossM = 0, 0, 0, 0&amp;#10;correct, outcome = 0, 0&amp;#10;&amp;#10;if marker_moved and not submit_resp.keys == None and 'up' in submit_resp.keys:&amp;#10;    &amp;#10;    if (marker.markerPos &gt;= div_pos and target_pos &gt;= div_pos)\&amp;#10;    or (marker.markerPos &lt;= div_pos and target_pos &lt;= div_pos):&amp;#10;        &amp;#10;        correct = 1&amp;#10;        outcome = 2 if valence == 'rew' else 1&amp;#10;        if outcome == 2:&amp;#10;            coinLR = 1&amp;#10;        elif outcome == 1:&amp;#10;            coinM = 1&amp;#10;            &amp;#10;    else:&amp;#10;        &amp;#10;        correct = 0&amp;#10;        outcome = -1 if valence == 'rew' else -2&amp;#10;        if outcome == -2:&amp;#10;            coinLR, crossLR = 1, 1&amp;#10;        elif outcome == -1:&amp;#10;            coinM, crossM = 1, 1   &amp;#10;    &amp;#10;    block_outcome += outcome&amp;#10;    bonus = 1 if abs(target_pos-marker.markerPos) &lt;= .05 else 0&amp;#10;    block_bonus += bonus&amp;#10;    &amp;#10;elif not marker_moved:&amp;#10;    no_resp_txt = 'You must move the marker!'&amp;#10;    &amp;#10;else:&amp;#10;    no_resp_txt = 'Respond faster!'&amp;#10;    " valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -818,8 +836,8 @@
         <Param val="" valType="extendedCode" updates="constant" name="Before JS Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin Experiment"/>
         <Param val="" valType="extendedCode" updates="constant" name="Begin JS Experiment"/>
-        <Param val="txt1 = `You gained ${block_outcome} BIG coins,&amp;#10;and a bonus of ${Number.parseInt(np.ceil(block_bonus))} for precision and speed!&amp;#10;`&amp;#10;;&amp;#10;txt2 = &quot;Please continue to maximize your coins, precision, and speed.\n\n&quot;;&amp;#10;txt3 = &quot;Press up arrow to begin next block&quot;;&amp;#10;block_end_txt = ((txt1 + txt2) + txt3);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
-        <Param val="txt1 = f'You gained {block_outcome} BIG coins,\nand a bonus of {int(np.ceil(block_bonus))} for precision and speed!\n\n'&amp;#10;txt2 = 'Please continue to maximize your coins, precision, and speed.\n\n'&amp;#10;txt3 = 'Press up arrow to begin next block'&amp;#10;&amp;#10;block_end_txt = txt1 + txt2 + txt3" valType="extendedCode" updates="constant" name="Begin Routine"/>
+        <Param val="txt1 = `Based on your precision and speed, you gained a bonus of ${block_bonus}.&amp;#10;`&amp;#10;;&amp;#10;txt2 = &quot;Press the up- arrow to begin next block.&quot;;&amp;#10;block_end_txt = (txt1 + txt2);&amp;#10;" valType="extendedCode" updates="constant" name="Begin JS Routine"/>
+        <Param val="txt1 = f'Based on your precision and speed, you gained a bonus of {block_bonus}.\n\n'&amp;#10;txt2 = 'Press the up- arrow to begin next block.'&amp;#10;block_end_txt = txt1 + txt2" valType="extendedCode" updates="constant" name="Begin Routine"/>
         <Param val="Auto-&gt;JS" valType="str" updates="None" name="Code Type"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each Frame"/>
         <Param val="" valType="extendedCode" updates="constant" name="Each JS Frame"/>
@@ -917,7 +935,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Did you notice that one shape *gave* you more coins that the other?&amp;#10;Press Left for Yes, and Right for No." valType="str" updates="constant" name="text"/>
+        <Param val="Did you notice that one shape *gave* you more coins that the other?&amp;#10;Press Left for Curvy, Right for Flat, Up for Same." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
@@ -982,7 +1000,7 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="Did you notice that one shape *cost* you more coins that the other?&amp;#10;Press Left for Yes, and Right for No." valType="str" updates="constant" name="text"/>
+        <Param val="Did you notice that one shape *cost* you more coins that the other?&amp;#10;Press Left for Curvy, Right for Flat, Up for Same." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
@@ -1047,13 +1065,13 @@
         <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
         <Param val="" valType="code" updates="constant" name="stopVal"/>
         <Param val="True" valType="bool" updates="None" name="syncScreenRefresh"/>
-        <Param val="The vertical line sometimes squished the space around the curvier shapes, and sometimes around the flatter shapes. Did you find one easier than the other?&amp;#10;Press Left for Curvy and Right for Flat." valType="str" updates="constant" name="text"/>
+        <Param val="The divider sometimes appeared closer to the curvier shape, and sometimes the flatter shape. Did you find either condition easier?&amp;#10;Press Left for Curvy, Right for Flat, Up for Same." valType="str" updates="constant" name="text"/>
         <Param val="from exp settings" valType="str" updates="None" name="units"/>
         <Param val="" valType="code" updates="None" name="validator"/>
         <Param val="" valType="num" updates="constant" name="wrapWidth"/>
       </TextComponent>
       <KeyboardComponent name="Q3_resp" plugin="None">
-        <Param val="'left','right'" valType="list" updates="constant" name="allowedKeys"/>
+        <Param val="'left','right','up'" valType="list" updates="constant" name="allowedKeys"/>
         <Param val="" valType="str" updates="constant" name="correctAns"/>
         <Param val="" valType="str" updates="None" name="deviceLabel"/>
         <Param val="False" valType="bool" updates="None" name="disabled"/>
@@ -1072,37 +1090,6 @@
         <Param val="False" valType="bool" updates="constant" name="storeCorrect"/>
         <Param val="True" valType="bool" updates="constant" name="syncScreenRefresh"/>
       </KeyboardComponent>
-    </Routine>
-    <Routine name="delay2">
-      <RoutineSettingsComponent name="delay2" plugin="None">
-        <Param val="none" valType="str" updates="None" name="backgroundFit"/>
-        <Param val="" valType="str" updates="None" name="backgroundImg"/>
-        <Param val="$[0,0,0]" valType="color" updates="None" name="color"/>
-        <Param val="rgb" valType="str" updates="None" name="colorSpace"/>
-        <Param val="" valType="str" updates="constant" name="desc"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="False" valType="code" updates="None" name="forceNonSlip"/>
-        <Param val="delay2" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="constant" name="skipIf"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val=".2" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="useWindowParams"/>
-      </RoutineSettingsComponent>
-      <StaticComponent name="ISI" plugin="None">
-        <Param val="" valType="code" updates="None" name="code"/>
-        <Param val="False" valType="bool" updates="None" name="disabled"/>
-        <Param val="" valType="code" updates="None" name="durationEstim"/>
-        <Param val="ISI" valType="code" updates="None" name="name"/>
-        <Param val="True" valType="bool" updates="None" name="saveStartStop"/>
-        <Param val="" valType="code" updates="None" name="startEstim"/>
-        <Param val="time (s)" valType="str" updates="None" name="startType"/>
-        <Param val="0" valType="code" updates="None" name="startVal"/>
-        <Param val="duration (s)" valType="str" updates="None" name="stopType"/>
-        <Param val=".2" valType="code" updates="constant" name="stopVal"/>
-        <Param val="False" valType="bool" updates="None" name="syncScreenRefresh"/>
-      </StaticComponent>
     </Routine>
   </Routines>
   <Flow>
@@ -1133,7 +1120,7 @@
     <Routine name="stim"/>
     <Routine name="delay"/>
     <Routine name="task"/>
-    <Routine name="delay2"/>
+    <Routine name="anticipation"/>
     <Routine name="feedback"/>
     <LoopTerminator name="trials"/>
     <Routine name="end_block"/>

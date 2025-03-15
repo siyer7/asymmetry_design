@@ -18,7 +18,7 @@ clear
 close all;
 
 root = '/mnt/neurocube/local/serenceslab/maggie/shapeDim/';
-root = '/Users/f0064z8/Library/CloudStorage/GoogleDrive-si2442@columbia.edu/My Drive/research/asymmetry_design/stims/white_pngs'
+root = '/Users/f0064z8/Library/CloudStorage/GoogleDrive-si2442@columbia.edu/My Drive/research/asymmetry_design/input_data/stims'
 addpath(genpath(fullfile(pwd,'ODBstims')));
 
 kinds = {'balls','snm','fetus','cater'};
@@ -27,7 +27,7 @@ my_back_color = 0.5; % 0.3
 my_shape_color = 0.9;
 
 %% Fixed y-coordinate and x-values
-fixed_y = 4.00;  % Fixed y-coordinate for all images
+fixed_y = 1.00;  % Fixed y-coordinate for all images
 x_values = 0:0.1:4;  % x-values from 0.00 to 4.00 in steps of 0.10
 
 %% Loop over stim sets

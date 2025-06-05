@@ -1,0 +1,12 @@
+# Byte‐compiled Python
+__pycache__/
+*.py[cod]
+
+# Jupyter checkpoints
+.ipynb_checkpoints/
+
+# DS_Store
+.DS_Store
+
+# pngs
+*.png

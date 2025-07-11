@@ -1,7 +1,0 @@
-blockN,run,condition,trial_key,stim_file_pos,stim_pos,noise_pos,marker_init,shape,shape_order,div_pos,target_pos,subj_C0F1_val,subj_C1F0_val,target_file,img1_file,img2_file
-1,1,baseline,14,1.5,-0.1,1,0.365872417,curv,curv_flat,0,-0.1,pen,rew,input_data/stims/Shape_1.50_1.00.png,input_data/stims/Shape_0.00_1.00.png,input_data/stims/Shape_4.00_1.00.png
-1,1,baseline,25,2.5,0.1,3,-0.345196164,flat,flat_curv,0,-0.1,rew,pen,input_data/stims/Shape_2.50_3.00.png,input_data/stims/Shape_4.00_3.00.png,input_data/stims/Shape_0.00_3.00.png
-2,1,pen_comp,47,0.3,-0.34,1,-0.113649753,curv,flat_curv,0.2,0.34,pen,rew,input_data/stims/Shape_0.30_1.00.png,input_data/stims/Shape_4.00_1.00.png,input_data/stims/Shape_0.00_1.00.png
-2,1,pen_comp,72,2.3,0.06,3,-0.318693696,flat,curv_flat,-0.2,0.06,rew,pen,input_data/stims/Shape_2.30_3.00.png,input_data/stims/Shape_0.00_3.00.png,input_data/stims/Shape_4.00_3.00.png
-3,1,rew_comp,93,2.3,0.06,1,-0.006275271,curv,flat_curv,-0.2,-0.06,pen,rew,input_data/stims/Shape_2.30_1.00.png,input_data/stims/Shape_4.00_1.00.png,input_data/stims/Shape_0.00_1.00.png
-3,1,rew_comp,114,3.7,0.34,3,0.248396101,flat,curv_flat,0.2,0.34,rew,pen,input_data/stims/Shape_3.70_3.00.png,input_data/stims/Shape_0.00_3.00.png,input_data/stims/Shape_4.00_3.00.png

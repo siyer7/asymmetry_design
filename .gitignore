@@ -12,5 +12,5 @@ __pycache__/
 *.png
 
 # ignore certain folders
-results/202509/
+results/*/
 convnwb/

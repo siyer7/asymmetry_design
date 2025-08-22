@@ -3,10 +3,11 @@ addpath(genpath('NPMK'));
 
 % Base name of your Blackrock recording
 base = '../results/202512/datafile_202512b002_DI';
+base = '/home/nuttidalab/Documents/asymmetry_design/results/202512/datafile_202512b002_DI';
 
 %% --- Continuous (NSx) ---
 % Read .ns6 and scale to µV automatically
-nsx = openNSx([base '.ns6'], 'read', 'uV');
+nsx = openNSx([base '.ns2'], 'read', 'uV');
 
 data_uV = nsx.Data;                          % [nChan x nSamples], µV, double
 Fs      = nsx.MetaTags.SamplingFreq;         % sampling rate in Hz

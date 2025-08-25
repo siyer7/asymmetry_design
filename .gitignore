@@ -14,3 +14,7 @@ __pycache__/
 # ignore certain folders
 results/*/
 convnwb/
+
+# mat & m files
+*.mat
+*.m

@@ -12,9 +12,16 @@ __pycache__/
 *.png
 
 # ignore certain folders
-results/*/
+results/*/osort_mat
+results/*/raw
 convnwb/
 
 # mat & m files
 *.mat
 *.m
+*.nev
+*.ns2
+*.ns5
+*.ns6
+*.png
+*.svg

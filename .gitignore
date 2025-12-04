@@ -18,7 +18,6 @@ convnwb/
 
 # mat & m files
 *.mat
-*.m
 *.nev
 *.ns2
 *.ns5

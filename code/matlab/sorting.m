@@ -1,5 +1,5 @@
 addpath(genpath('/home/nuttidalab/Documents/OSort/osort-v4-code'));
-subj = '202512';
+subj = '202518';
 
 % where your BL*.mat files live (from convertNSx_toMat)
 paths = struct();
@@ -18,6 +18,11 @@ if ~exist(paths.pathFigs,'dir'), mkdir(paths.pathFigs); end
 % choose which channels (match your BL*.mat files)
 matFiles = dir(fullfile(paths.pathRaw,'BL*.mat'));
 filesToProcess = sort(arrayfun(@(f) sscanf(f.name,'BL%d.mat'), matFiles));
+
+% ADDED TO SELECT ONLY CHANNELS THAT NEED RE-SORTING.
+wantedChans    = [210];  % the BL numbers you care about
+filesToProcess = filesToProcess(ismember(filesToProcess, wantedChans));
+
 % filesToProcess  = filesToProcess(1:5); % all would be 1:32
 noiseChannels   = [];
 groundChannels  = [];

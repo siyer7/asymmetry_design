@@ -3,22 +3,14 @@ addpath(genpath('/home/nuttidalab/Documents/OSort/osort-v4-code/code/continuous/
 
 % CHANGES WITH PATIENT
 subj = '202521';
-if strcmp(subj, '202512') % only for 1st patient with old recording system
+if strcmp(subj, '202512')
     rawNSX  = sprintf('../../results/%s/raw/datafile_202512b002.ns6', subj);
 else
-    rawDir = sprintf('../../results/%s/raw/', subj);
-    d = dir(fullfile(rawDir, '*.ns6'));
-    assert(~isempty(d), 'No .ns6 files found');
-    rawNSX = fullfile(rawDir, d(1).name);
+    rawNSX  = sprintf('../../results/%s/raw/Hub1-20251004-160040-002.ns6', subj);
 end
 
-% create dir if it doesnt exist
-outDir = fullfile('..','..','results', subj, 'osort_mat', 'nsx2mat');
-if ~exist(outDir, 'dir')
-    mkdir(outDir);
-end
-prefix = 'BL';
-
+outDir  = sprintf('../../results/%s/osort_mat/nsx2mat', subj);
+prefix  = 'BL';
 
 if ~exist(outDir,'dir'); mkdir(outDir); end
 

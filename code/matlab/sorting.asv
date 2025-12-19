@@ -6,7 +6,7 @@ paths = struct();
 % base folder = parent of mat_files/, sort/, figs/, osort_out/
 paths.basePath   = sprintf('../../results/%s/osort_mat/', subj);    % must end with /
 % input
-paths.pathRaw = [paths.basePath 'nsx2mat/'];
+paths.pathRaw    = [paths.basePath 'nsx2mat/'];
 paths.pathOut    = [paths.basePath 'sorted_mats/'];
 paths.pathFigs   = [paths.basePath 'figs/'];
 paths.timestampspath = paths.basePath;

@@ -1,14 +1,27 @@
 addpath(genpath('/home/nuttidalab/Documents/OSort/osort-v4-code'));
+
+% SET VARS
 subj = '202512';
+chanID = 106;
+
+%%% UPDATE .MAT FILES WITH CLEANED SIGNAL
+osort_dir = sprintf('../../results/%s/osort_mat/', subj);
+
+nsx2mat   = load(sprintf('%s/nsx2mat/BL%d.mat', osort_dir, chanID));
+clean_sig   = load(sprintf('%s/clean_sigs/%d.mat', osort_dir, chanID));
+
+nsx2mat.data = clean_sig.data(:)';   % replace ONLY the signal
+save(sprintf('%s/nsx2mat_clean/BL%d.mat', osort_dir, chanID), '-struct', 'nsx2mat', '-v7.3');
+%%%%
 
 % where your BL*.mat files live (from convertNSx_toMat)
 paths = struct();
 % base folder = parent of mat_files/, sort/, figs/, osort_out/
 paths.basePath   = sprintf('../../results/%s/osort_mat/', subj);    % must end with /
 % input
-paths.pathRaw = [paths.basePath 'nsx2mat/'];
-paths.pathOut    = [paths.basePath 'sorted_mats/'];
-paths.pathFigs   = [paths.basePath 'figs/'];
+paths.pathRaw = [paths.basePath 'nsx2mat_clean/'];
+paths.pathOut    = [paths.basePath 'sorted_mats_clean/'];
+paths.pathFigs   = [paths.basePath 'figs_clean/'];
 paths.timestampspath = paths.basePath;
 paths.patientID  = 'P1';   % any label for plots
 
@@ -20,7 +33,7 @@ matFiles = dir(fullfile(paths.pathRaw,'BL*.mat'));
 filesToProcess = sort(arrayfun(@(f) sscanf(f.name,'BL%d.mat'), matFiles));
 
 % % ADDED TO SELECT ONLY CHANNELS THAT NEED RE-SORTING.
-wantedChans    = [105];  % the BL numbers you care about
+wantedChans    = [106];  % the BL numbers you care about
 filesToProcess = filesToProcess(ismember(filesToProcess, wantedChans));
 
 % filesToProcess  = filesToProcess(1:5); % all would be 1:32

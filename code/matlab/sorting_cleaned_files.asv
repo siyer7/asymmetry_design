@@ -3,11 +3,13 @@ addpath(genpath('/home/nuttidalab/Documents/OSort/osort-v4-code'));
 % SET VARS
 subj = '202512';
 chanID = 106;
-to_trim = 'True';
+to_trim = 'False';
 num_std = 3;
 
 %%% UPDATE .MAT FILES WITH CLEANED SIGNAL
-osort_dir = sprintf('../../results/%s/osort_mat', subj);
+old_osort_dir = sprintf('../../results/%s/osort_mat', subj);
+new_osort_dir = sprintf('../../results/%s/osort_mat/clean/%d_std%d_on_trim%s/', subj);
+if ~exist([new_osort_dir 'nsx2mat/'],'dir'), mkdir([new_osort_dir 'nsx2mat/']); end
 
 nsx2mat   = load(sprintf('%s/nsx2mat/BL%d.mat', osort_dir, chanID));
 clean_sig   = load(sprintf('%s_clean/sigs/%d_std%d_on_trim%s.mat', osort_dir, chanID, num_std, to_trim));

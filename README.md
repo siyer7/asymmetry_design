@@ -1,5 +1,12 @@
 **Network Simulations**
-1. 
+1. input2hidden: ReLU
+   hidden2output: sigmoid
+2. stim in (0,1); bound in {.25, .5, .75}; resp in (0,1)
+3. class loss (BCE)
+   stim loss (MSE)
+   bound regularizer (MSE)
+   tail regularizer (MSE)
+
 
 
 

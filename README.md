@@ -1,3 +1,8 @@
+**Network Simulations**
+1. 
+
+
+
 **QC decisions**
 
 * units with missing (or heightened) activity for certain blocks are assigned .5

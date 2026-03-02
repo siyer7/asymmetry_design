@@ -2,53 +2,53 @@ chanID,unitID,keep,notes
 193,21,,
 193,166,,
 193,232,,
-193,268,1,
+193,268,,powerspectrum
 193,331,,
-193,347,1,
-194,174,1,
+193,347,,powerspectrum
+194,174,,powerspectrum
 194,180,,
-194,220,1,FR=.6
-194,224,1,
+194,220,,powerspectrum
+194,224,,powerspectrum
 194,366,,
 194,371,,
 194,372,,
 194,451,,
-195,539,1,
+195,539,,powerspectrum
 195,544,,
 195,580,,
-195,616,1,
+195,616,,powerspectrum
 195,626,,
-195,706,1,"robert, block4 neuron, wide waveform, FR=.6"
-196,563,1,
+195,706,,
+196,563,,powerspectrum
 196,571,,
 196,645,,
 196,660,,
 196,727,,
-196,729,1,
+196,729,,powerspectrum
 196,735,,
-196,855,1,FR=.3
-197,277,1,low activity blocks 5-6
+196,855,,
+197,277,,powerspectrum; spike rate
 197,706,,
-197,741,1,block4 neuron
+197,741,,
 197,776,,
 197,846,,
-197,856,1,
+197,856,,powerspectrum
 197,970,,
-198,530,1,low activity blocks 5-6
+198,530,,powerspectrum; spike rate
 198,558,,
-198,898,1,
-198,973,.5,"block4 neuron, wide waveform amp"
+198,898,,powerspectrum
+198,973,,
 198,994,,
 198,1157,,
 198,1158,,
 198,1182,,
 199,167,,
-199,783,1,low activity blocks 5-6
+199,783,,powerspectrum; spike rate
 199,942,,
 200,103,,
 200,318,,
 200,335,,
-200,340,1,low activity blocks 5-6
+200,340,,powerspectrum; spike rate
 200,656,,
 201,1262,,
 201,1347,,
@@ -121,30 +121,30 @@ chanID,unitID,keep,notes
 216,1814,,
 216,2995,,
 216,4030,,
-216,5338,1,missing blocks
+216,5338,,spike rate
 216,5339,,
 216,5354,,
 217,948,,
 217,1026,,
 217,1036,,
-217,1148,1,missing blocks
-218,3804,.5,missing blocks
+217,1148,,spike rate
+218,3804,,spike rate
 218,3808,,
 218,3810,,
-218,3845,1,robert
+218,3845,1,spike rate
 218,3887,1,
 218,3888,1,
 219,853,,
-219,1329,.5,missing blocks; thick waveform
+219,1329,,prob density
 219,1401,,
 219,1626,,
 219,1688,,
-219,1709,1,missing block4
+219,1709,1,spike rate
 219,1952,,
 220,1733,,
 220,2294,,
-220,2305,1,missing block4
-220,2374,.5,
+220,2305,1,spike rate
+220,2374,1,FR
 222,878,1,
 223,2018,,
 223,2059,,
@@ -155,8 +155,8 @@ chanID,unitID,keep,notes
 223,2481,,
 223,2489,1,
 223,2490,,
-223,2492,1,missing blocks
+223,2492,1,spike rate
 224,1009,,
-224,3097,.5,robert; missing blocks
+224,3097,1,spike rate
 224,3104,,
-224,3117,,missing 1st half
+224,3117,,spike rate

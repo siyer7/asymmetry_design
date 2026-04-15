@@ -6,7 +6,7 @@ paths = struct();
 % base folder = parent of mat_files/, sort/, figs/, osort_out/
 paths.basePath   = sprintf('../../results/%s/osort_mat/', subj);    % must end with /
 % input
-paths.pathRaw = [paths.basePath 'nsx2mat/'];
+paths.pathRaw = [paths.basePath 'nsx2mat_clean/'];
 paths.pathOut    = [paths.basePath 'sorted_mats/'];
 paths.pathFigs   = [paths.basePath 'figs/'];
 paths.timestampspath = paths.basePath;
@@ -41,7 +41,7 @@ thres = repmat(extractionThreshold,1,length(filesToProcess));
 paramsIn = [];
 paramsIn.rawFilePrefix       = 'BL';
 paramsIn.processedFilePrefix = 'A';
-paramsIn.rawFileVersion      = 7;         % Matlab .mat
+paramsIn.rawFileVersion      = 5;         % Matlab .mat
 paramsIn.samplingFreq        = 30000;     % only used if rawFileVersion==3
 
 % display & output

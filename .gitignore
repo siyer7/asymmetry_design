@@ -16,7 +16,7 @@ results/*/osort_mat
 results/*/raw
 convnwb/
 
-# mat & m files
+# mat files
 *.mat
 *.nev
 *.ns2

@@ -19,7 +19,7 @@ chanID,unitID,keep,notes
 196,181,.5,60Hz artifact
 196,328,.5,60Hz artifact
 196,358,,
-197,44,1,
+197,44,.5,
 197,166,,
 197,191,.5,60Hz artifact
 197,297,.5,60Hz artifact

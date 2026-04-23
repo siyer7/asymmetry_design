@@ -1,6 +1,6 @@
 chanID,unitID,keep,merge_cluster,notes
 97,596,,,prob density
-97,612,,,prob density
+97,612,,,?
 98,1432,,,
 98,1502,,,
 98,1543,,1,
@@ -43,9 +43,9 @@ chanID,unitID,keep,merge_cluster,notes
 111,1433,,,
 111,1799,,,isolation
 111,1825,,,
-111,1953,,,drift
+111,1953,,,?
 111,1960,1,,
-111,1972,,,drift
+111,1972,,,?
 112,1712,,,
 112,2185,,,
 112,2226,,,drift

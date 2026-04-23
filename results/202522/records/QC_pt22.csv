@@ -42,9 +42,9 @@ chanID,unitID,keep,merge_cluster,notes
 200,922,,3,FR fluctuation
 201,1360,,,
 201,2103,,,
-201,2271,1,,
+201,2271,1,,?
 201,2276,,,thick waveform
-201,2283,1,,
+201,2283,1,,?
 201,2352,,,
 202,1173,,,
 202,1361,,,
@@ -56,7 +56,7 @@ chanID,unitID,keep,merge_cluster,notes
 204,182,,,
 204,1091,,,
 204,1427,,,FR fluctuation
-204,1726,1,,
+204,1726,1,,?
 204,1746,,,
 204,1751,,,
 204,1770,,,thick waveform

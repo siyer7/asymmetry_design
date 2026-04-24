@@ -38,8 +38,8 @@ chanID,unitID,keep,merge_cluster,notes
 200,832,,,
 200,850,,,
 200,877,,,
-200,889,1,3,
-200,922,,3,FR fluctuation
+200,889,1,,
+200,922,,,FR fluctuation
 201,1360,,,
 201,2103,,,
 201,2271,1,,?

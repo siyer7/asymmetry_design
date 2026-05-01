@@ -1,14 +1,14 @@
 addpath(genpath('/home/nuttidalab/Documents/OSort/osort-v4-code'));
-subj = '202522';
+subj = '202521';
 
 % where your BL*.mat files live (from convertNSx_toMat)
 paths = struct();
 % base folder = parent of mat_files/, sort/, figs/, osort_out/
 paths.basePath   = sprintf('../../results/%s/osort_mat/', subj);    % must end with /
 % input
-paths.pathRaw = [paths.basePath 'nsx2mat_notch/'];
-paths.pathOut    = [paths.basePath 'sorted_mats_notch/'];
-paths.pathFigs   = [paths.basePath 'figs_notch/'];
+paths.pathRaw = [paths.basePath 'nsx2mat/'];
+paths.pathOut    = [paths.basePath 'sorted_mats_max/'];
+paths.pathFigs   = [paths.basePath 'figs_max/'];
 paths.timestampspath = paths.basePath;
 paths.patientID  = 'P1';   % any label for plots
 
@@ -17,8 +17,12 @@ if ~exist(paths.pathFigs,'dir'), mkdir(paths.pathFigs); end
 
 % choose which channels (match your BL*.mat files)
 matFiles = dir(fullfile(paths.pathRaw,'BL*.mat'));
-filesToProcess = sort(arrayfun(@(f) sscanf(f.name,'BL%d.mat'), matFiles));
 
+chans_to_resort = [219, 223, 218, 216, 224];
+matFiles = matFiles(arrayfun(@(f) ismember(sscanf(f.name,'BL%d.mat'), chans_to_resort), matFiles));
+
+filesToProcess = sort(arrayfun(@(f) sscanf(f.name,'BL%d.mat'), matFiles));
+fprintf('Channels to process: %s\n', num2str(filesToProcess'));
 % % ADDED TO SELECT ONLY CHANNELS THAT NEED RE-SORTING.
 % wantedChans    = [105];  % the BL numbers you care about
 % filesToProcess = filesToProcess(ismember(filesToProcess, wantedChans));
@@ -30,8 +34,11 @@ doGroundNormalization = 0;
 normalizeOnly   = [];
 
 % alignment (max/min)
-filesAlignMax = [];
-filesAlignMin = filesToProcess;
+% filesAlignMax = [];
+% filesAlignMin = filesToProcess;
+
+filesAlignMax = filesToProcess;
+filesAlignMin = [];
 
 % threshold
 extractionThreshold = 5;   % adjust as needed

@@ -12,7 +12,7 @@ Basics:
 
 ## do not change my variable names or comments unless I say ok to
 
-## for plotting, instead ax.set_title, ax.set_ylabel, etc. use, ax.set(title, label, etc.), when possible
+## for plotting, instead ax.set_title, ax.set_ylabel, etc. use, ax.set(title, label, etc.), when possible. suptitle should be right after fig, ax.. and ax.set() should be as soon as possible.
 
 ## 1. Think Before Coding
 

@@ -10,7 +10,7 @@ def norm01(x):
     import numpy as np
     return (x - np.nanmin(x)) / (np.nanmax(x) - np.nanmin(x))
 
-def stim_cmap(base_color, l_range=(.84, .17), s_range=(.4, 1.)):
+def stim_cmap(base_color, l_range=(.84, .17), s_range=(1, 1)):
     import numpy as np, colorsys, matplotlib.colors as mcolors
 
     # lets lightness carry stimulus while hue keeps marking context; saturation rides

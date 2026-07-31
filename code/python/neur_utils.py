@@ -27,42 +27,11 @@ def get_pt_epoch_spike_data(patient, epoch, verbose=True):
 
 
 def get_contrast_in_epoch(psychopy_df, contrast, verbose=True):
-    cont_trials, cont_labels = [], []
-    if contrast == 'boundary_context':
-        for cond in ['curv_comp', 'baseline', 'flat_comp']:
-            cont_trials.append(psychopy_df[psychopy_df['condition'] == cond].index)
-            cont_labels.append(cond)
-    elif contrast == 'shape_class':
-        cont_trials.append(psychopy_df[psychopy_df['shape'] == 'curv'].index)
-        cont_trials.append(psychopy_df[psychopy_df['shape'] == 'flat'].index)
-        cont_labels += ['curv', 'flat']
-    elif contrast == 'valence':
-        cont_trials.append(psychopy_df[psychopy_df['stim_pos_aligned'] > psychopy_df['div_pos_aligned']].index)
-        cont_trials.append(psychopy_df[psychopy_df['stim_pos_aligned'] < psychopy_df['div_pos_aligned']].index)
-        cont_labels += ['gain', 'loss']
-    elif contrast == 'ambiguity':
-        cont_trials.append(psychopy_df[~psychopy_df['uncertainty']].index)
-        cont_trials.append(psychopy_df[psychopy_df['uncertainty']].index)
-        cont_labels += ['certain', 'uncertain']
-    elif contrast == 'resp_dir':
-        cont_trials.append(psychopy_df[psychopy_df['chosen_pos'] > psychopy_df['div_pos']].index)
-        cont_trials.append(psychopy_df[psychopy_df['chosen_pos'] < psychopy_df['div_pos']].index)
-        cont_labels += ['right', 'left']
-    elif contrast == 'normed_RT':
-        median_rt = psychopy_df['normed_RT'].median()
-        cont_trials.append(psychopy_df[psychopy_df['normed_RT'] <= median_rt].index)
-        cont_trials.append(psychopy_df[psychopy_df['normed_RT'] > median_rt].index)
-        cont_labels += ['fast', 'slow']
-    elif contrast == 'outcome':
-        for val, label in zip([3, 1, -1, -3], ['3 coins', '1 coin', '-1 coin', '-3 coins']):
-            cont_trials.append(psychopy_df[psychopy_df['outcome'] == val].index)
-            cont_labels.append(label)
-    elif contrast == 'binarized_context':
-        cont_trials.append(psychopy_df[psychopy_df['condition'] == 'baseline'].index)
-        cont_trials.append(psychopy_df[psychopy_df['condition'] != 'baseline'].index)
-        cont_labels += ['base', 'comp']
-    else:
+    if contrast != 'shape_class':
         raise ValueError(f'Invalid contrast: {contrast}')
+    cont_trials = [psychopy_df[psychopy_df['shape'] == 'curv'].index,
+                   psychopy_df[psychopy_df['shape'] == 'flat'].index]
+    cont_labels = ['curv', 'flat']
     if verbose:
         print(f'contrast: {contrast}')
     return cont_trials, cont_labels

@@ -2,18 +2,18 @@
 addpath(genpath('/home/nuttidalab/Documents/OSort/osort-v4-code/code/continuous/blackrock'));
 
 % CHANGES WITH PATIENT
-subj = '202522';
+subj = '202603';
 if strcmp(subj, '202512') % only for 1st patient with old recording system
-    rawNSX  = sprintf('../../results/%s/raw/datafile_202512b002.ns6', subj);
+    rawNSX  = sprintf('../../data/%s/raw/datafile_202512b002.ns6', subj);
 else
-    rawDir = sprintf('../../results/%s/raw/', subj);
+    rawDir = sprintf('../../data/%s/raw/', subj);
     d = dir(fullfile(rawDir, '*.ns6'));
     assert(~isempty(d), 'No .ns6 files found');
     rawNSX = fullfile(rawDir, d(1).name);
 end
 
 % create dir if it doesnt exist
-outDir = fullfile('..','..','results', subj, 'osort_mat', 'nsx2mat');
+outDir = fullfile('..','..','data', subj, 'osort_mat', 'nsx2mat');
 if ~exist(outDir, 'dir')
     mkdir(outDir);
 end

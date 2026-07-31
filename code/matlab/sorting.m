@@ -1,10 +1,10 @@
 addpath(genpath('/home/nuttidalab/Documents/OSort/osort-v4-code'));
-subj = '202521';
+subj = '202603';
 
 % where your BL*.mat files live (from convertNSx_toMat)
 paths = struct();
 % base folder = parent of mat_files/, sort/, figs/, osort_out/
-paths.basePath   = sprintf('../../results/%s/osort_mat/', subj);    % must end with /
+paths.basePath   = sprintf('../../data/%s/osort_mat/', subj);    % must end with /
 % input
 paths.pathRaw = [paths.basePath 'nsx2mat/'];
 paths.pathOut    = [paths.basePath 'sorted_mats_max/'];

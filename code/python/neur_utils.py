@@ -2,14 +2,14 @@ import numpy as np
 import pandas as pd
 
 
-def get_pt_metadata(beh_df, patient, verbose=True):
+def get_pt_metadata(beh_trials_df, patient, verbose=True):
     pt_data_dir = f'../../outputs/processed_data/2025{int(patient)}'
-    pt_beh_df = beh_df.loc[beh_df['subj'] == patient].reset_index(drop=True)
+    pt_beh_trials_df = beh_trials_df.loc[beh_trials_df['subj'] == patient].reset_index(drop=True)
     pt_neur_df = pd.read_parquet(f'{pt_data_dir}/neurs_df.parquet')
     pt_num_neurs = len(pt_neur_df)
     if verbose:
-        print(f'patient={patient}', f'num_trials={len(pt_beh_df)}', f'num_neurons={pt_num_neurs}\n')
-    return pt_beh_df, pt_neur_df, pt_num_neurs
+        print(f'patient={patient}', f'num_trials={len(pt_beh_trials_df)}', f'num_neurons={pt_num_neurs}\n')
+    return pt_beh_trials_df, pt_neur_df, pt_num_neurs
 
 
 def get_pt_epoch_spike_data(patient, epoch, verbose=True):
@@ -26,11 +26,11 @@ def get_pt_epoch_spike_data(patient, epoch, verbose=True):
     return pt_epoch_spikes, pt_epoch_num_spikes, pt_epoch_FRs, pt_epoch_bins
 
 
-def get_contrast_in_epoch(beh_df, contrast, verbose=True):
+def get_contrast_in_epoch(beh_trials_df, contrast, verbose=True):
     if contrast != 'shape_class':
         raise ValueError(f'Invalid contrast: {contrast}')
-    cont_trials = [beh_df[beh_df['shape'] == 'curv'].index,
-                   beh_df[beh_df['shape'] == 'flat'].index]
+    cont_trials = [beh_trials_df[beh_trials_df['shape'] == 'curv'].index,
+                   beh_trials_df[beh_trials_df['shape'] == 'flat'].index]
     cont_labels = ['curv', 'flat']
     if verbose:
         print(f'contrast: {contrast}')

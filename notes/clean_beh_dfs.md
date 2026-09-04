@@ -1,6 +1,10 @@
-# Clean beh_dfs plan (started 2026-09-04)
+# Clean beh_dfs plan (started 2026-09-04; items 1-3 EXECUTED 2026-09-04)
 
 Running plan for cleaning up the behavioral dataframes / beh1–beh2 pipeline. Items accumulate here; execute all together once the list is settled.
+
+## Executed 2026-09-04
+
+Items 1-3 applied. Master csv is now `data/psychopy/all_beh_trials_df.csv` (name per beh1 markdown); old `all_subjs*.csv` all moved to `data/psychopy/arch/`. Readers updated: beh2, neur3, neur4, neur5, quick_viz. Verified: new csv identical to old modulo renames (157 shared cols equal; valence_stim/boundary/resp byte-identical; valence_direction redefined -- old col was v2's native valence sign, NaN for patients, unused downstream). Additions: `eligibility` (patients only), `valence_numeric` (rew=1/pen=0, replaces v2's valence-sign col under unambiguous name). beh1's markdown notes deleted per their own instruction. beh2 review still pending (its markdown mentions thresh-naming: true_thresh, stim/resp_thresh_aligned).
 
 ## Items
 

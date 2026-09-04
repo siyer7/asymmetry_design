@@ -8,18 +8,18 @@ from scipy.stats import pearsonr
 root, out_json = sys.argv[1], sys.argv[2]
 pseudopop_dir, conds, epoch = f'{root}/outputs/processed_data/pseudopop', ['C1', 'C2', 'C3'], 'stim'
 
-all_beh_df = pd.read_csv(f'{root}/data/psychopy/all_subjs.csv'); patients = sorted(all_beh_df.loc[all_beh_df['subj'] > 11, 'subj'].unique())
-beh_df = all_beh_df.loc[all_beh_df['subj'] == patients[0]].sort_values('trial_key').reset_index(drop=True)
-beh_df['condition'] = beh_df['condition'].replace({'curv_comp': 'C1', 'flat_comp': 'C3', 'baseline': 'C2'})
+all_beh_trials_df = pd.read_csv(f'{root}/data/psychopy/all_beh_trials_df.csv'); patients = sorted(all_beh_trials_df.loc[all_beh_trials_df['subj'] > 11, 'subj'].unique())
+beh_trials_df = all_beh_trials_df.loc[all_beh_trials_df['subj'] == patients[0]].sort_values('trial_key').reset_index(drop=True)
+beh_trials_df['condition'] = beh_trials_df['condition'].replace({'curv_comp': 'C1', 'flat_comp': 'C3', 'baseline': 'C2'})
 meanFRs = np.load(f'{pseudopop_dir}/{epoch}/trial_mean_FRs.npy', allow_pickle=True)
 meanFRs = meanFRs - np.load(f'{pseudopop_dir}/baseline/trial_mean_FRs.npy', allow_pickle=True).mean(axis=0, keepdims=True)
 
 stim_by_neur, cond2stims, cond_decode_X, cond_decode_y = {}, {}, {}, {}
 for cond in conds:
-    cond_mask = (beh_df['condition'] == cond).values
-    df_tmp = pd.DataFrame(meanFRs[cond_mask]); df_tmp['true_stim'] = beh_df.loc[cond_mask, 'true_stim'].round(2).values
+    cond_mask = (beh_trials_df['condition'] == cond).values
+    df_tmp = pd.DataFrame(meanFRs[cond_mask]); df_tmp['true_stim'] = beh_trials_df.loc[cond_mask, 'true_stim'].round(2).values
     grouped = df_tmp.groupby('true_stim').mean(); stim_by_neur[cond], cond2stims[cond] = grouped.values, grouped.index.values
-    cond_decode_X[cond] = meanFRs[cond_mask]; cond_decode_y[cond] = (beh_df.loc[cond_mask, 'stim_boundary_aligned'] > 0).astype(int).values
+    cond_decode_X[cond] = meanFRs[cond_mask]; cond_decode_y[cond] = (beh_trials_df.loc[cond_mask, 'stim_boundary_aligned'] > 0).astype(int).values
 
 stats_out = {}
 clf = LogisticRegression(penalty=None, max_iter=1000); cv = StratifiedKFold(n_splits=5, shuffle=True, random_state=0)

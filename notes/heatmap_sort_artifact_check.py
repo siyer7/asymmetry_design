@@ -1,7 +1,7 @@
 import numpy as np, pandas as pd, matplotlib; matplotlib.use('Agg'); import matplotlib.pyplot as plt
 S='/tmp/claude-1000/-home-nuttidalab-Documents-structuring-contexts/209c61e2-8bb9-4a44-b711-466fcb517e63/scratchpad'
 pp='../../outputs/processed_data/pseudopop'
-beh=pd.read_csv('../../data/psychopy/all_subjs.csv'); beh=beh[beh.subj==12].sort_values('trial_key').reset_index(drop=True)
+beh=pd.read_csv('../../data/psychopy/all_beh_trials_df.csv'); beh=beh[beh.subj==12].sort_values('trial_key').reset_index(drop=True)
 FR=np.load(f'{pp}/stim/trial_mean_FRs.npy',allow_pickle=True)   # (240, 57) all neurons
 conds=['curv_comp','baseline','flat_comp']; thr=dict(zip(conds,[-.2,0,.2])); edges=np.linspace(-.4,.4,11)
 rng=np.random.default_rng(0)

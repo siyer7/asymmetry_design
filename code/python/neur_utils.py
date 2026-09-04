@@ -5,11 +5,11 @@ import pandas as pd
 def get_pt_metadata(beh_trials_df, patient, verbose=True):
     pt_data_dir = f'../../outputs/processed_data/2025{int(patient)}'
     pt_beh_trials_df = beh_trials_df.loc[beh_trials_df['subj'] == patient].reset_index(drop=True)
-    pt_neur_df = pd.read_parquet(f'{pt_data_dir}/neurs_df.parquet')
-    pt_num_neurs = len(pt_neur_df)
+    pt_neurs_info_df = pd.read_parquet(f'{pt_data_dir}/neurs_info_df.parquet')
+    pt_num_neurs = len(pt_neurs_info_df)
     if verbose:
         print(f'patient={patient}', f'num_trials={len(pt_beh_trials_df)}', f'num_neurons={pt_num_neurs}\n')
-    return pt_beh_trials_df, pt_neur_df, pt_num_neurs
+    return pt_beh_trials_df, pt_neurs_info_df, pt_num_neurs
 
 
 def get_pt_epoch_spike_data(patient, epoch, verbose=True):

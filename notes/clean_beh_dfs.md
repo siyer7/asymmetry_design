@@ -1,4 +1,4 @@
-# Clean beh_dfs plan (started 2026-09-04; items 1-3 EXECUTED 2026-09-04)
+# Clean beh_dfs plan (started 2026-09-04; items 1-4 EXECUTED 2026-09-04)
 
 Running plan for cleaning up the behavioral dataframes / beh1–beh2 pipeline. Items accumulate here; execute all together once the list is settled.
 
@@ -42,6 +42,10 @@ Reorder combined section to markdown order: rename cols → rename subjects → 
 Verify: rerun beh1 headless; diff new vs current all_subjs.csv under old→new name map (values identical, names only). Readers (beh2, neur3, neur4, neur5) use none of the renamed names. Then delete the two "delete this note" sub-bullets from the markdown.
 
 Open: final csv name stays `true_boundary` (thresh is intermediate only) unless user says otherwise.
+
+### 4. Rename beh_df-family vars -> beh_trials_df (EXECUTED, commit 0e2c544)
+
+`all_beh_df` -> `all_beh_trials_df`, `pt_beh_df(s)` -> `pt_beh_trials_df(s)`, `cond_beh_df` -> `cond_beh_trials_df`, bare `beh_df` -> `beh_trials_df`, across neur3/4/5 + neur_utils.py. NOT renamed: simulation1's `beh_df` (design-csv family), beh2's markdown mention (beh2 review).
 
 ### (more items to come from beh2 review)
 

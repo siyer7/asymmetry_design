@@ -5,6 +5,9 @@
       "Bash(python3 -)",
       "Bash(python -c ' *)",
       "Bash(PYTHONPATH=. python3 /tmp/claude-1000/-home-nuttidalab-Documents-asymmetry-design/1f4a9332-896c-486e-9762-ee99022ec3e4/scratchpad/plot_test10.py tight_1010 10,10)"
+    ],
+    "additionalDirectories": [
+      "/home/nuttidalab/Documents"
     ]
   }
 }

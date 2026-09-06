@@ -1,4 +1,4 @@
-# Clean beh_dfs plan (started 2026-09-04; items 1-4 EXECUTED 2026-09-04)
+# Clean beh_dfs plan (started 2026-09-04; items 1-4 EXECUTED 2026-09-04, item 5 EXECUTED 2026-09-05)
 
 Running plan for cleaning up the behavioral dataframes / beh1–beh2 pipeline. Items accumulate here; execute all together once the list is settled.
 
@@ -47,7 +47,12 @@ Open: final csv name stays `true_boundary` (thresh is intermediate only) unless 
 
 `all_beh_df` -> `all_beh_trials_df`, `pt_beh_df(s)` -> `pt_beh_trials_df(s)`, `cond_beh_df` -> `cond_beh_trials_df`, bare `beh_df` -> `beh_trials_df`, across neur3/4/5 + neur_utils.py. NOT renamed: simulation1's `beh_df` (design-csv family), beh2's markdown mention (beh2 review).
 
-### (more items to come from beh2 review)
+### 5. beh2 review: context + thresh naming, beh2 rebuilt per its markdown (EXECUTED 2026-09-05)
+
+- csv (beh1): `condition` -> `context` with values `C1/C2/C3` (was psychopy's `curv_comp/baseline/flat_comp`); `true_boundary/target_boundary/valence_boundary` -> `true_thresh/target_thresh/valence_thresh`; `stim/resp_boundary_aligned` -> `stim/resp_thresh_aligned`. Verified new csv == old under the name map (values identical; 680 trials per context; C1/C2/C3 <-> -.2/0/.2).
+- Readers: neur4 (`conds = ['C1','C2','C3']`, parallel `cntxts` list dropped, derived neuron x context table uses `context`), neur5 (private remap dropped, `stim_thresh_aligned`), sim1/sim2 (labels `C1/C2/C3`; design-csv lineage keeps its `condition` column; `outputs/simulations/inference_df.csv` labels remapped in place, sim1 NOT rerun since it trains 30 nets). task_design_v2 untouched: psychopy reads `curv_comp/...`.
+- beh2 rebuilt to its Logic-flow markdown: quick viz (one row per patient x context) -> classification (per-context violin of per-patient accuracies + mean ± SEM; 1x3 <thresh/>thresh violins) -> stim vs resp (1x4 distributions + weights violin; 1x2 original / thresh-aligned). Dropped: raw/aligned toggle plot, between-context MSE + paired t-test, poster savefigs, `subj > 2` pilot filter (pilots no longer in csv). All 9 patients; invalid/incomplete trials kept (user decision: that is what accuracy measures). Violins everywhere for across-patient summaries (user asked for one choice for all plots).
+- Reruns: beh1, beh2, neur4, neur5, sim2 headless. neur4 wrote new `pt2512`-style pngs under `outputs/figs/single_units/`; the pre-rename `pt12`-style pngs there are stale duplicates (not deleted).
 
 ## Execution order (once list is settled)
 

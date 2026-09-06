@@ -7,8 +7,8 @@ paths = struct();
 paths.basePath   = sprintf('../../data/%s/osort_mat/', subj);    % must end with /
 % input
 paths.pathRaw = [paths.basePath 'nsx2mat/'];
-paths.pathOut    = [paths.basePath 'sorted_mats_max/'];
-paths.pathFigs   = [paths.basePath 'figs_max/'];
+paths.pathOut    = [paths.basePath 'sorted_mats_notch600/'];
+paths.pathFigs   = [paths.basePath 'figs_notch600/'];
 paths.timestampspath = paths.basePath;
 paths.patientID  = 'P1';   % any label for plots
 
